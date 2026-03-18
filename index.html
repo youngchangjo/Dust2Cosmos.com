@@ -16,7 +16,10 @@
   <meta name="twitter:description" content="A forthcoming iPhone and iPad experience built to make cosmic scale feel real.">
   <meta name="twitter:image" content="https://dust2cosmos.com/assets/og-image.svg">
   <link rel="canonical" href="https://dust2cosmos.com/">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/site-favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/icons/site-favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="assets/icons/site-favicon.png" sizes="1024x1024" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/site-apple-icon.png" sizes="180x180">
   <link rel="stylesheet" href="https://unpkg.com/pretendard@1.3.9/dist/web/variable/pretendardvariable.css">
   <link rel="stylesheet" href="assets/styles.css">
   <script defer src="assets/main.js"></script>
@@ -30,7 +33,10 @@
 
   <div class="site-shell">
     <header class="topbar">
-      <a class="chip chip-link" href="https://dust2cosmos.com">Dust2Cosmos.com</a>
+      <a class="chip chip-link top-brand-link" href="https://dust2cosmos.com">
+        <img class="top-brand-icon" src="assets/icons/site-favicon-32.png" alt="dust2cosmos icon" decoding="async">
+        <span>dust2cosmos.com</span>
+      </a>
       <a class="chip chip-link" href="https://snapworkslab.com" target="_blank" rel="noopener noreferrer" data-en="A SnapWorks Lab project" data-ko="SnapWorks Lab 프로젝트">A SnapWorks Lab project</a>
       <div class="lang-switcher">
         <button id="lang-en" class="lang-btn active" type="button" aria-pressed="true">EN</button>
@@ -48,10 +54,25 @@
       </p>
 
       <div class="app-store-section">
-        <div class="app-store-badge">
-          <img src="assets/app-store-badge.svg" alt="Download on the App Store" decoding="async">
+        <div class="app-store-actions">
+          <div class="store-item">
+            <div class="app-store-badge">
+              <img src="assets/app-store-badge.svg" alt="Download on the App Store" decoding="async">
+            </div>
+            <p class="store-item-text" data-en="Coming soon" data-ko="앱스토어 출시예정">Coming soon</p>
+          </div>
+          <div class="store-item">
+            <a
+              class="testflight-link"
+              href="https://testflight.apple.com/join/GWzf3rGe"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open TestFlight">
+              <img class="testflight-icon" src="assets/testflight-icon.jpg" alt="TestFlight" decoding="async">
+              <span class="testflight-copy" data-en="Beta Testing" data-ko="베타테스트">Beta Testing</span>
+            </a>
+          </div>
         </div>
-      <p class="app-store-text" data-en="Coming soon to the App Store" data-ko="App Store 출 시 예 정">Coming soon to the App Store</p>
       </div>
 
       <div class="signal-row" aria-label="project signals">
