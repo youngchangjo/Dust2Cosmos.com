@@ -374,7 +374,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 8px 4px 2px;
+  padding: 8px 4px calc(34px + env(safe-area-inset-bottom));
   color: rgba(181, 189, 209, 0.70);
   font-size: 0.92rem;
 }
