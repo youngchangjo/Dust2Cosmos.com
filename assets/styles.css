@@ -543,8 +543,8 @@ h1 {
 @media (max-width: 820px) {
   body.page-home,
   body.page-sub {
-    --chrome-top-gap: 24px;
-    --chrome-bottom-gap: 56px;
+    --chrome-top-gap: 25px;
+    --chrome-bottom-gap: 25px;
     padding: calc(var(--chrome-top-gap) + env(safe-area-inset-top)) 0
       calc(var(--chrome-bottom-gap) + env(safe-area-inset-bottom));
   }
