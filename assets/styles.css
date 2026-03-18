@@ -79,7 +79,8 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-body.page-home {
+body.page-home,
+body.page-sub {
   --chrome-top-gap: 32px;
   --chrome-bottom-gap: 32px;
   padding: calc(var(--chrome-top-gap) + env(safe-area-inset-top)) 0
@@ -540,7 +541,8 @@ h1 {
 }
 
 @media (max-width: 820px) {
-  body.page-home {
+  body.page-home,
+  body.page-sub {
     --chrome-top-gap: 8px;
     --chrome-bottom-gap: 76px;
     padding: 8px 0 calc(var(--chrome-bottom-gap) + env(safe-area-inset-bottom));
