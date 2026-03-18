@@ -1,8 +1,9 @@
 (() => {
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const getMotionScale = () => (reduceMotionQuery.matches ? 0.5 : 1);
   const canvas = document.getElementById('starfield');
 
-  if (!canvas || reduceMotion) return;
+  if (!canvas) return;
 
   const ctx = canvas.getContext('2d', { alpha: true });
   let stars = [];
@@ -10,10 +11,8 @@
   let height = 0;
   let dpr = Math.min(window.devicePixelRatio || 1, 2);
   let lastTime = 0;
-  let siderealAngle = 0;
-  const tilt = -0.36;
-  const tiltCos = Math.cos(tilt);
-  const tiltSin = Math.sin(tilt);
+  let driftX = 0;
+  let driftY = 0;
 
   function createStars() {
     const area = width * height;
@@ -21,15 +20,14 @@
 
     stars = Array.from({ length: count }, () => {
       const isBright = Math.random() < 0.22;
-      const lat = (Math.random() - 0.5) * Math.PI * 0.98;
-      const lon = Math.random() * Math.PI * 2;
+      const x = Math.random() * width;
+      const y = Math.random() * height;
 
       return {
-        lat,
-        lon,
+        x,
+        y,
         r: isBright ? Math.random() * 1.04 + 0.52 : Math.random() * 0.84 + 0.256,
         base: isBright ? Math.random() * 0.09 + 0.30 : Math.random() * 0.09 + 0.16, // Base alpha
-        parallax: Math.random() * 0.22 + 0.9,
         // Twinkle + sparkle parameters
         twinkle: isBright ? (Math.random() * 0.08 + 0.06) : (Math.random() * 0.04 + 0.03),
         twinkleSpd: isBright ? (Math.random() * 0.05 + 0.02) : (Math.random() * 0.035 + 0.012),
@@ -57,7 +55,11 @@
   function frame(timestamp) {
     const dt = Math.min(2, (timestamp - lastTime) / (1000 / 60));
     lastTime = timestamp;
-    siderealAngle += dt * 0.000035;
+    const motionScale = getMotionScale();
+    driftX += dt * 0.048 * motionScale;
+    driftY += dt * 0.022 * motionScale;
+    driftX = ((driftX % width) + width) % width;
+    driftY = ((driftY % height) + height) % height;
 
     const t = timestamp * 0.001;
     ctx.clearRect(0, 0, width, height);
@@ -69,23 +71,9 @@
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, width, height);
 
-    const cx = width / 2;
-    const cy = height / 2;
-    const scaleX = Math.min(width, height) * 0.62 * 1.2;
-    const scaleY = Math.min(width, height) * 0.45 * 1.2;
-
     for (const star of stars) {
-      const lon = star.lon + siderealAngle;
-      const cl = Math.cos(star.lat);
-      const sx = cl * Math.cos(lon);
-      const sy = Math.sin(star.lat);
-      const sz = cl * Math.sin(lon);
-
-      const yAxisTilt = sy * tiltCos - sz * tiltSin;
-      const zAxisTilt = sy * tiltSin + sz * tiltCos;
-      const perspective = 1.2 / (1.55 - zAxisTilt);
-      const x = cx + sx * perspective * scaleX * star.parallax;
-      const y = cy + yAxisTilt * perspective * scaleY * star.parallax;
+      const x = (star.x + driftX) % width;
+      const y = (star.y + driftY) % height;
 
       const wave = Math.sin(t * star.twinkleSpd + star.t) * star.twinkle;
       const spark = Math.pow(Math.max(0, Math.sin(t * star.sparkleSpd + star.sparklePhase)), 18);

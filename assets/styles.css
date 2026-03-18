@@ -417,10 +417,6 @@ h1 {
   .aurora-b {
     animation: none;
   }
-
-  canvas#starfield {
-    display: none;
-  }
 }
 
 @media (max-width: 820px) {
