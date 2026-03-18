@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dust2cosmos.com/sitemap.xml
