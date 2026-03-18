@@ -551,7 +551,11 @@ h1 {
 
   .site-shell {
     min-height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 0;
+  }
+
+  .site-footer {
+    padding: 8px 4px calc(15px + env(safe-area-inset-bottom));
   }
 
   .hero-panel {
