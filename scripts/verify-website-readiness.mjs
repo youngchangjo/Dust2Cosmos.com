@@ -216,7 +216,7 @@ function checkAnalytics() {
     assertIncludes(page.path, page.script);
   });
 
-  assertIncludes('assets/analytics.js', 'const googleAnalyticsMeasurementId = ');
+  assertIncludes('assets/analytics.js', "const googleAnalyticsMeasurementId = 'G-XZEX3FRFBS';");
   assertIncludes('assets/analytics.js', 'https://www.googletagmanager.com/gtag/js?id=');
   assertIncludes('assets/analytics.js', "window.gtag('config', googleAnalyticsMeasurementId);");
   assertIncludes('privacy/index.html', 'The iOS and iPadOS app does not collect, store, or share your personal data.');

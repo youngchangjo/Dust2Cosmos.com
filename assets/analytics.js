@@ -1,5 +1,5 @@
 (() => {
-  const googleAnalyticsMeasurementId = '';
+  const googleAnalyticsMeasurementId = 'G-XZEX3FRFBS';
 
   if (!googleAnalyticsMeasurementId) {
     return;
