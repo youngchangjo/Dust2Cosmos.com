@@ -206,6 +206,7 @@ function checkHomepageShareMetadata() {
   assertFile('assets/og-image.png');
 
   [
+    '<link rel="canonical" href="https://dust2cosmos.com/">',
     '<meta property="og:title" content="Dust to Cosmos: Universe Scale">',
     '<meta property="og:description" content="Explore connected worlds, black holes, and cosmic time through a smoother 3D universe-scale journey.">',
     '<meta property="og:type" content="website">',
