@@ -4,28 +4,72 @@ import path from 'node:path';
 const root = process.cwd();
 const failures = [];
 
+function recordFailure(message) {
+  if (!failures.includes(message)) {
+    failures.push(message);
+  }
+}
+
 function readText(relativePath) {
-  return fs.readFileSync(path.join(root, relativePath), 'utf8');
+  try {
+    return fs.readFileSync(path.join(root, relativePath), 'utf8');
+  } catch (error) {
+    if (error?.code === 'ENOENT') {
+      recordFailure(`Missing file: ${relativePath}`);
+      return null;
+    }
+
+    recordFailure(`${relativePath} could not be read: ${error.message}`);
+    return null;
+  }
 }
 
 function assertFile(relativePath) {
   if (!fs.existsSync(path.join(root, relativePath))) {
-    failures.push(`Missing file: ${relativePath}`);
+    recordFailure(`Missing file: ${relativePath}`);
   }
 }
 
 function assertIncludes(relativePath, needle) {
   const text = readText(relativePath);
+  if (text === null) {
+    return;
+  }
+
   if (!text.includes(needle)) {
-    failures.push(`${relativePath} missing: ${needle}`);
+    recordFailure(`${relativePath} missing: ${needle}`);
   }
 }
 
 function assertJson(relativePath, predicate, label) {
-  const json = JSON.parse(readText(relativePath));
-  if (!predicate(json)) {
-    failures.push(`${relativePath} failed JSON check: ${label}`);
+  const text = readText(relativePath);
+  if (text === null) {
+    return;
   }
+
+  let json;
+  try {
+    json = JSON.parse(text);
+  } catch (error) {
+    recordFailure(`${relativePath} has invalid JSON: ${error.message}`);
+    return;
+  }
+
+  let passed;
+  try {
+    passed = predicate(json);
+  } catch (error) {
+    recordFailure(`${relativePath} failed JSON check: ${label} (${error.message})`);
+    return;
+  }
+
+  if (!passed) {
+    recordFailure(`${relativePath} failed JSON check: ${label}`);
+  }
+}
+
+function hasManifestIcon(json, src, sizes) {
+  return Array.isArray(json.icons) && json.icons.some(icon => icon.src === src && icon.sizes === sizes);
 }
 
 function checkPlatform() {
@@ -59,14 +103,14 @@ function checkPlatform() {
   assertJson('manifest.webmanifest', json => json.short_name === 'Dust to Cosmos', 'short_name');
   assertJson('manifest.webmanifest', json => json.start_url === '/', 'start_url');
   assertJson('manifest.webmanifest', json => json.display === 'standalone', 'display');
-  assertJson('manifest.webmanifest', json => json.icons.some(icon => icon.src === '/icon-192.png' && icon.sizes === '192x192'), '192 icon');
-  assertJson('manifest.webmanifest', json => json.icons.some(icon => icon.src === '/icon-512.png' && icon.sizes === '512x512'), '512 icon');
+  assertJson('manifest.webmanifest', json => hasManifestIcon(json, '/icon-192.png', '192x192'), '192 icon');
+  assertJson('manifest.webmanifest', json => hasManifestIcon(json, '/icon-512.png', '512x512'), '512 icon');
 }
 
 const scope = process.argv[2] || 'platform';
 
 if (scope !== 'platform') {
-  failures.push(`Unsupported scope in current script: ${scope}`);
+  recordFailure(`Unsupported scope in current script: ${scope}`);
 }
 
 if (scope === 'platform') {
