@@ -932,11 +932,11 @@ https://www.dust2cosmos.com/ redirects to https://dust2cosmos.com/.
 
 ## Self-Review
 
-**Spec coverage:**  
+**Spec coverage:**
 This plan covers page-level metadata, homepage structured data, platform files, robots/sitemap verification, branded 404, manifest, root icons, PNG social image, host redirect documentation, local verification, live verification, and release.
 
-**Placeholder scan:**  
+**Placeholder scan:**
 The plan contains concrete file paths, snippets, commands, and expected outputs. It does not require unspecified metadata, unspecified schema, or unspecified test coverage.
 
-**Type consistency:**  
+**Type consistency:**
 The verification script uses stable function names throughout: `assertFile`, `assertIncludes`, `assertJson`, `checkPlatform`, `checkHomepageShareMetadata`, `checkHomepageStructuredData`, and `checkSecondaryPageMetadata`. Scope names are consistent: `platform`, `homepage-share`, `structured-data`, `secondary-metadata`, and `all`.
