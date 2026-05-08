@@ -68,6 +68,101 @@ function assertJson(relativePath, predicate, label) {
   }
 }
 
+function isPlainObject(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value);
+}
+
+function extractJsonLdObjects(relativePath) {
+  const text = readText(relativePath);
+  if (text === null) {
+    return [];
+  }
+
+  const objects = [];
+  const scriptPattern = /<script\b([^>]*)>([\s\S]*?)<\/script>/gi;
+  const jsonLdTypePattern = /\btype\s*=\s*(?:(["'])application\/ld\+json\1|application\/ld\+json(?:\s|$))/i;
+  let match;
+  let blockCount = 0;
+
+  while ((match = scriptPattern.exec(text)) !== null) {
+    const [, attributes, scriptBody] = match;
+    if (!jsonLdTypePattern.test(attributes)) {
+      continue;
+    }
+
+    blockCount += 1;
+    const jsonText = scriptBody.trim();
+    if (jsonText.length === 0) {
+      recordFailure(`${relativePath} has empty JSON-LD block ${blockCount}`);
+      continue;
+    }
+
+    let parsed;
+    try {
+      parsed = JSON.parse(jsonText);
+    } catch (error) {
+      recordFailure(`${relativePath} has invalid JSON-LD block ${blockCount}: ${error.message}`);
+      continue;
+    }
+
+    if (Array.isArray(parsed)) {
+      parsed.forEach((entry, index) => {
+        if (isPlainObject(entry)) {
+          objects.push(entry);
+          return;
+        }
+
+        recordFailure(`${relativePath} JSON-LD block ${blockCount} entry ${index + 1} is not an object`);
+      });
+      continue;
+    }
+
+    if (isPlainObject(parsed)) {
+      objects.push(parsed);
+      continue;
+    }
+
+    recordFailure(`${relativePath} JSON-LD block ${blockCount} is not an object`);
+  }
+
+  if (blockCount === 0) {
+    recordFailure(`${relativePath} missing JSON-LD script blocks`);
+  }
+
+  return objects;
+}
+
+function getObjectPath(object, propertyPath) {
+  return propertyPath.reduce((value, key) => {
+    if (value === null || typeof value !== 'object') {
+      return undefined;
+    }
+
+    return value[key];
+  }, object);
+}
+
+function assertJsonLdEquals(relativePath, object, propertyPath, expected, label) {
+  const actual = getObjectPath(object, propertyPath);
+  if (actual !== expected) {
+    recordFailure(`${relativePath} JSON-LD ${label} expected ${JSON.stringify(expected)} but found ${JSON.stringify(actual)}`);
+  }
+}
+
+function assertJsonLdPriceZero(relativePath, object, propertyPath, label) {
+  const actual = getObjectPath(object, propertyPath);
+  if (actual !== '0' && actual !== 0) {
+    recordFailure(`${relativePath} JSON-LD ${label} expected 0 but found ${JSON.stringify(actual)}`);
+  }
+}
+
+function assertJsonLdArrayIncludes(relativePath, object, propertyPath, expected, label) {
+  const actual = getObjectPath(object, propertyPath);
+  if (!Array.isArray(actual) || !actual.includes(expected)) {
+    recordFailure(`${relativePath} JSON-LD ${label} missing ${expected}`);
+  }
+}
+
 function hasManifestIcon(json, src, sizes) {
   return Array.isArray(json.icons) && json.icons.some(icon => icon.src === src && icon.sizes === sizes);
 }
@@ -130,8 +225,48 @@ function checkHomepageShareMetadata() {
   ].forEach(tag => assertIncludes('index.html', tag));
 }
 
+function checkHomepageStructuredData() {
+  const relativePath = 'index.html';
+  const jsonLdObjects = extractJsonLdObjects(relativePath);
+  const website = jsonLdObjects.find(object => object['@type'] === 'WebSite');
+  const softwareApplication = jsonLdObjects.find(object => object['@type'] === 'SoftwareApplication');
+
+  if (!website) {
+    recordFailure(`${relativePath} missing WebSite JSON-LD object`);
+  } else {
+    assertJsonLdEquals(relativePath, website, ['@type'], 'WebSite', 'WebSite @type');
+    assertJsonLdEquals(relativePath, website, ['name'], 'Dust to Cosmos', 'WebSite name');
+    assertJsonLdEquals(relativePath, website, ['url'], 'https://dust2cosmos.com/', 'WebSite url');
+    assertJsonLdEquals(relativePath, website, ['publisher', 'name'], 'SnapWorks Lab', 'WebSite publisher.name');
+  }
+
+  if (!softwareApplication) {
+    recordFailure(`${relativePath} missing SoftwareApplication JSON-LD object`);
+  } else {
+    assertJsonLdEquals(relativePath, softwareApplication, ['@type'], 'SoftwareApplication', 'SoftwareApplication @type');
+    assertJsonLdEquals(relativePath, softwareApplication, ['name'], 'Dust to Cosmos: Universe Scale', 'SoftwareApplication name');
+    assertJsonLdEquals(relativePath, softwareApplication, ['alternateName'], '우주먼지: Dust to Cosmos', 'SoftwareApplication alternateName');
+    assertJsonLdEquals(relativePath, softwareApplication, ['operatingSystem'], 'iOS, iPadOS', 'SoftwareApplication operatingSystem');
+    assertJsonLdEquals(relativePath, softwareApplication, ['applicationCategory'], 'EducationalApplication', 'SoftwareApplication applicationCategory');
+    assertJsonLdEquals(relativePath, softwareApplication, ['url'], 'https://dust2cosmos.com/', 'SoftwareApplication url');
+    assertJsonLdEquals(relativePath, softwareApplication, ['downloadUrl'], 'https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629100', 'SoftwareApplication downloadUrl');
+    assertJsonLdEquals(relativePath, softwareApplication, ['image'], 'https://dust2cosmos.com/assets/og-image.png', 'SoftwareApplication image');
+    [
+      'https://dust2cosmos.com/assets/screenshots/slide-01.webp',
+      'https://dust2cosmos.com/assets/screenshots/slide-03.webp',
+      'https://dust2cosmos.com/assets/screenshots/slide-09.webp',
+    ].forEach(url => assertJsonLdArrayIncludes(relativePath, softwareApplication, ['screenshot'], url, 'SoftwareApplication screenshot'));
+    assertJsonLdEquals(relativePath, softwareApplication, ['description'], 'Explore connected worlds, black holes, and cosmic time through a smoother 3D universe-scale journey.', 'SoftwareApplication description');
+    assertJsonLdEquals(relativePath, softwareApplication, ['offers', '@type'], 'Offer', 'SoftwareApplication offers.@type');
+    assertJsonLdPriceZero(relativePath, softwareApplication, ['offers', 'price'], 'SoftwareApplication offers.price');
+    assertJsonLdEquals(relativePath, softwareApplication, ['offers', 'priceCurrency'], 'USD', 'SoftwareApplication offers.priceCurrency');
+    assertJsonLdEquals(relativePath, softwareApplication, ['publisher', 'name'], 'SnapWorks Lab', 'SoftwareApplication publisher.name');
+    assertJsonLdEquals(relativePath, softwareApplication, ['publisher', 'url'], 'https://snapworkslab.com', 'SoftwareApplication publisher.url');
+  }
+}
+
 const scope = process.argv[2] || 'all';
-const supportedScopes = new Set(['all', 'platform', 'homepage-share']);
+const supportedScopes = new Set(['all', 'platform', 'homepage-share', 'structured-data']);
 
 if (!supportedScopes.has(scope)) {
   recordFailure(`Unsupported scope: ${scope}`);
@@ -143,6 +278,10 @@ if (scope === 'all' || scope === 'platform') {
 
 if (scope === 'all' || scope === 'homepage-share') {
   checkHomepageShareMetadata();
+}
+
+if (scope === 'all' || scope === 'structured-data') {
+  checkHomepageStructuredData();
 }
 
 if (failures.length > 0) {
