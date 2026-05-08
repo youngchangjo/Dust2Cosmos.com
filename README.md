@@ -1,14 +1,17 @@
-# Dust to Cosmos — teaser site
+# Dust to Cosmos — landing site
 
 Static, framework-free landing page for `dust2cosmos.com`.
 
+App Store: https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629100
+
 ## Included
-- `/index.html` — teaser landing page
+- `/index.html` — landing page
 - `/privacy/index.html` — minimal privacy holding page
 - `/support/index.html` — minimal support page
 - `/assets/styles.css`
 - `/assets/main.js`
-- `/assets/favicon.svg`
+- `/assets/icons/` — app icon and favicon assets
+- `/assets/screenshots/` — optimized App Store screenshot assets for the landing page
 - `/assets/og-image.svg`
 - `/robots.txt`
 - `/sitemap.xml`

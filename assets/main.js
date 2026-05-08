@@ -1,4 +1,23 @@
 (() => {
+  const root = document.documentElement;
+  root.classList.add('motion-ready');
+
+  function updateViewportHeight() {
+    const viewportHeight = window.visualViewport && window.visualViewport.height
+      ? window.visualViewport.height
+      : window.innerHeight;
+    const vh = viewportHeight * 0.01;
+    root.style.setProperty('--vh', `${vh}px`);
+  }
+
+  updateViewportHeight();
+  window.addEventListener('resize', updateViewportHeight, { passive: true });
+  window.addEventListener('orientationchange', updateViewportHeight);
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', updateViewportHeight, { passive: true });
+    window.visualViewport.addEventListener('scroll', updateViewportHeight, { passive: true });
+  }
+
   const reduceMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   const getMotionScale = () => (reduceMotionQuery.matches ? 0.5 : 1);
   const canvas = document.getElementById('starfield');
@@ -42,8 +61,10 @@
 
   function resize() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
-    width = window.innerWidth;
-    height = window.innerHeight;
+    width = document.documentElement.clientWidth || window.innerWidth;
+    height = window.visualViewport && window.visualViewport.height
+      ? window.visualViewport.height
+      : window.innerHeight;
     canvas.width = Math.floor(width * dpr);
     canvas.height = Math.floor(height * dpr);
     canvas.style.width = `${width}px`;
@@ -196,4 +217,82 @@
   // Init language
   const savedLang = localStorage.getItem('preferred-lang') || (navigator.language.startsWith('ko') ? 'ko' : 'en');
   setLanguage(savedLang);
+
+  function setupRevealMotion() {
+    const revealItems = Array.from(document.querySelectorAll(
+      '.release-item, .feature-section, .gallery-card, .trust-section, .page-contact'
+    ));
+
+    if (!revealItems.length) return;
+
+    revealItems.forEach((el, index) => {
+      el.classList.add('reveal-item');
+      el.style.setProperty('--reveal-delay', `${Math.min(index % 4, 3) * 80}ms`);
+    });
+
+    if (reduceMotionQuery.matches || !('IntersectionObserver' in window)) {
+      revealItems.forEach(el => el.classList.add('is-visible'));
+      return;
+    }
+
+    const bodyIsScrollRoot = document.body.scrollHeight > document.body.clientHeight
+      && getComputedStyle(document.body).overflowY !== 'visible';
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, {
+      root: bodyIsScrollRoot ? document.body : null,
+      rootMargin: '0px 0px -12% 0px',
+      threshold: 0.12,
+    });
+
+    revealItems.forEach(el => observer.observe(el));
+  }
+
+  function setupHeroPointerMotion() {
+    const heroMedia = document.querySelector('.hero-media');
+    const canUsePointerMotion = window.matchMedia('(pointer: fine) and (hover: hover)').matches;
+
+    if (!heroMedia || !canUsePointerMotion || reduceMotionQuery.matches) return;
+
+    let frameId = 0;
+    let nextX = 0;
+    let nextY = 0;
+
+    function applyPointerMotion() {
+      frameId = 0;
+      heroMedia.style.setProperty('--tilt-y', `${nextX * 2.4}deg`);
+      heroMedia.style.setProperty('--tilt-x', `${nextY * -1.8}deg`);
+      heroMedia.style.setProperty('--hero-drift-x', `${nextX * 5}px`);
+      heroMedia.style.setProperty('--hero-drift-y', `${nextY * 3}px`);
+    }
+
+    heroMedia.addEventListener('pointermove', event => {
+      const rect = heroMedia.getBoundingClientRect();
+      nextX = ((event.clientX - rect.left) / rect.width) - 0.5;
+      nextY = ((event.clientY - rect.top) / rect.height) - 0.5;
+
+      if (!frameId) {
+        frameId = requestAnimationFrame(applyPointerMotion);
+      }
+    }, { passive: true });
+
+    heroMedia.addEventListener('pointerleave', () => {
+      nextX = 0;
+      nextY = 0;
+      if (frameId) cancelAnimationFrame(frameId);
+      frameId = 0;
+      heroMedia.style.setProperty('--tilt-y', '0deg');
+      heroMedia.style.setProperty('--tilt-x', '0deg');
+      heroMedia.style.setProperty('--hero-drift-x', '0px');
+      heroMedia.style.setProperty('--hero-drift-y', '0px');
+    });
+  }
+
+  setupRevealMotion();
+  setupHeroPointerMotion();
 })();

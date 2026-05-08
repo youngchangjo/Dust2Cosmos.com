@@ -32,7 +32,8 @@
   <circle cx="124" cy="568" r="164" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
   <rect x="88" y="104" width="1024" height="422" rx="28" fill="url(#line)" fill-opacity="0.72" stroke="rgba(255,255,255,0.12)"/>
   <text x="148" y="182" fill="rgba(224,231,255,0.88)" font-family="Inter, SF Pro Display, system-ui, sans-serif" font-size="22" letter-spacing="6">A SNAPWORKSLAB PROJECT</text>
-  <text x="148" y="320" fill="#f7f9ff" font-family="Inter, SF Pro Display, system-ui, sans-serif" font-size="90" font-weight="700" letter-spacing="-4">Dust to Cosmos</text>
-  <text x="148" y="388" fill="rgba(220,226,241,0.92)" font-family="Inter, SF Pro Display, system-ui, sans-serif" font-size="30">From where you stand to the edge of the observable universe.</text>
-  <text x="148" y="452" fill="rgba(188,196,215,0.82)" font-family="Inter, SF Pro Text, system-ui, sans-serif" font-size="24">A forthcoming iPhone and iPad experience built to make cosmic scale feel real.</text>
+  <text x="148" y="300" fill="#f7f9ff" font-family="Inter, SF Pro Display, system-ui, sans-serif" font-size="78" font-weight="700" letter-spacing="-4">Dust to Cosmos:</text>
+  <text x="148" y="382" fill="#f7f9ff" font-family="Inter, SF Pro Display, system-ui, sans-serif" font-size="78" font-weight="700" letter-spacing="-4">Universe Scale</text>
+  <text x="148" y="452" fill="rgba(220,226,241,0.92)" font-family="Inter, SF Pro Display, system-ui, sans-serif" font-size="30">Explore connected worlds in honest scale.</text>
+  <text x="148" y="514" fill="rgba(188,196,215,0.82)" font-family="Inter, SF Pro Text, system-ui, sans-serif" font-size="24">Planets, moons, black holes, cosmic time, and Truth Class labels.</text>
 </svg>
