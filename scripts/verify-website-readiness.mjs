@@ -107,14 +107,42 @@ function checkPlatform() {
   assertJson('manifest.webmanifest', json => hasManifestIcon(json, '/icon-512.png', '512x512'), '512 icon');
 }
 
-const scope = process.argv[2] || 'platform';
+function checkHomepageShareMetadata() {
+  assertFile('assets/og-image.png');
 
-if (scope !== 'platform') {
-  recordFailure(`Unsupported scope in current script: ${scope}`);
+  [
+    '<meta property="og:title" content="Dust to Cosmos: Universe Scale">',
+    '<meta property="og:description" content="Explore connected worlds, black holes, and cosmic time through a smoother 3D universe-scale journey.">',
+    '<meta property="og:type" content="website">',
+    '<meta property="og:url" content="https://dust2cosmos.com/">',
+    '<meta property="og:site_name" content="Dust to Cosmos">',
+    '<meta property="og:image" content="https://dust2cosmos.com/assets/og-image.png">',
+    '<meta property="og:image:secure_url" content="https://dust2cosmos.com/assets/og-image.png">',
+    '<meta property="og:image:type" content="image/png">',
+    '<meta property="og:image:width" content="1200">',
+    '<meta property="og:image:height" content="630">',
+    '<meta property="og:image:alt" content="Dust to Cosmos: Universe Scale landing page artwork">',
+    '<meta name="twitter:card" content="summary_large_image">',
+    '<meta name="twitter:title" content="Dust to Cosmos: Universe Scale">',
+    '<meta name="twitter:description" content="Explore connected worlds, black holes, and cosmic time through a smoother 3D universe-scale journey.">',
+    '<meta name="twitter:image" content="https://dust2cosmos.com/assets/og-image.png">',
+    '<meta name="twitter:image:alt" content="Dust to Cosmos: Universe Scale landing page artwork">',
+  ].forEach(tag => assertIncludes('index.html', tag));
 }
 
-if (scope === 'platform') {
+const scope = process.argv[2] || 'all';
+const supportedScopes = new Set(['all', 'platform', 'homepage-share']);
+
+if (!supportedScopes.has(scope)) {
+  recordFailure(`Unsupported scope: ${scope}`);
+}
+
+if (scope === 'all' || scope === 'platform') {
   checkPlatform();
+}
+
+if (scope === 'all' || scope === 'homepage-share') {
+  checkHomepageShareMetadata();
 }
 
 if (failures.length > 0) {
