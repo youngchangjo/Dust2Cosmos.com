@@ -27,3 +27,20 @@ App Store: https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629
 ## Notes
 - The privacy page is a minimal website privacy placeholder, not a final in-app privacy policy.
 - Update the year, contact copy, and launch copy whenever needed.
+
+## Website readiness verification
+
+Run the static readiness checks before shipping:
+
+```bash
+node scripts/verify-website-readiness.mjs all
+```
+
+The checker verifies:
+- canonical and share metadata for `/`, `/privacy`, and `/support`
+- homepage `WebSite` and `SoftwareApplication` JSON-LD
+- `robots.txt` and `sitemap.xml`
+- `manifest.webmanifest`
+- branded `404.html`
+- root icon files: `/apple-touch-icon.png`, `/icon-192.png`, `/icon-512.png`
+- PNG social card: `/assets/og-image.png`
