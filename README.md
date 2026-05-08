@@ -10,6 +10,7 @@ App Store: https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629
 - `/support/index.html` — minimal support page
 - `/assets/styles.css`
 - `/assets/main.js`
+- `/assets/analytics.js` — Vercel Web Analytics and Google Analytics loader
 - `/assets/icons/` — app icon and favicon assets
 - `/assets/screenshots/` — optimized App Store screenshot assets for the landing page
 - `/assets/og-image.svg`
@@ -31,7 +32,9 @@ App Store: https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629
 5. Optional: add email forwarding with an external mail provider.
 
 ## Notes
-- The privacy page is a minimal website privacy placeholder, not a final in-app privacy policy.
+- The privacy page separates the app privacy statement from website analytics disclosure.
+- Vercel Web Analytics is loaded with `/_vercel/insights/script.js`; enable Web Analytics in the Vercel project dashboard before relying on production data.
+- Google Analytics is wired through `/assets/analytics.js`. Set `googleAnalyticsMeasurementId` to the GA4 Measurement ID that starts with `G-` before deploying GA collection.
 - Update the year, contact copy, and launch copy whenever needed.
 
 ## Website readiness verification

@@ -202,6 +202,27 @@ function checkPlatform() {
   assertJson('manifest.webmanifest', json => hasManifestIcon(json, '/icon-512.png', '512x512'), '512 icon');
 }
 
+function checkAnalytics() {
+  assertFile('assets/analytics.js');
+
+  [
+    { path: 'index.html', script: '<script defer src="assets/analytics.js"></script>' },
+    { path: 'privacy/index.html', script: '<script defer src="../assets/analytics.js"></script>' },
+    { path: 'support/index.html', script: '<script defer src="../assets/analytics.js"></script>' },
+    { path: '404.html', script: '<script defer src="/assets/analytics.js"></script>' },
+  ].forEach(page => {
+    assertIncludes(page.path, 'window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };');
+    assertIncludes(page.path, '<script defer src="/_vercel/insights/script.js"></script>');
+    assertIncludes(page.path, page.script);
+  });
+
+  assertIncludes('assets/analytics.js', 'const googleAnalyticsMeasurementId = ');
+  assertIncludes('assets/analytics.js', 'https://www.googletagmanager.com/gtag/js?id=');
+  assertIncludes('assets/analytics.js', "window.gtag('config', googleAnalyticsMeasurementId);");
+  assertIncludes('privacy/index.html', 'The iOS and iPadOS app does not collect, store, or share your personal data.');
+  assertIncludes('privacy/index.html', 'Website analytics are separate from the Dust to Cosmos app');
+}
+
 function checkHomepageShareMetadata() {
   assertFile('assets/og-image.png');
 
@@ -303,7 +324,7 @@ function checkHomepageStructuredData() {
 }
 
 const scope = process.argv[2] || 'all';
-const supportedScopes = new Set(['all', 'platform', 'homepage-share', 'structured-data', 'secondary-metadata']);
+const supportedScopes = new Set(['all', 'platform', 'homepage-share', 'structured-data', 'secondary-metadata', 'analytics']);
 
 if (!supportedScopes.has(scope)) {
   recordFailure(`Unsupported scope: ${scope}`);
@@ -323,6 +344,10 @@ if (scope === 'all' || scope === 'structured-data') {
 
 if (scope === 'all' || scope === 'secondary-metadata') {
   checkSecondaryPageMetadata();
+}
+
+if (scope === 'all' || scope === 'analytics') {
+  checkAnalytics();
 }
 
 if (failures.length > 0) {
