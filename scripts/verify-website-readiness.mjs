@@ -225,6 +225,42 @@ function checkHomepageShareMetadata() {
   ].forEach(tag => assertIncludes('index.html', tag));
 }
 
+function checkSecondaryPageMetadata() {
+  [
+    {
+      path: 'privacy/index.html',
+      title: 'Privacy — Dust to Cosmos: Universe Scale',
+      description: 'Privacy information for Dust to Cosmos: Universe Scale.',
+      url: 'https://dust2cosmos.com/privacy',
+      label: 'Privacy',
+    },
+    {
+      path: 'support/index.html',
+      title: 'Support — Dust to Cosmos: Universe Scale',
+      description: 'Support information for Dust to Cosmos: Universe Scale.',
+      url: 'https://dust2cosmos.com/support',
+      label: 'Support',
+    },
+  ].forEach(page => {
+    [
+      `<title>${page.title}</title>`,
+      `<meta name="description" content="${page.description}">`,
+      `<link rel="canonical" href="${page.url}">`,
+      `<meta property="og:title" content="${page.title}">`,
+      `<meta property="og:description" content="${page.description}">`,
+      '<meta property="og:type" content="website">',
+      `<meta property="og:url" content="${page.url}">`,
+      '<meta property="og:site_name" content="Dust to Cosmos">',
+      '<meta property="og:image" content="https://dust2cosmos.com/assets/og-image.png">',
+      '<meta name="twitter:card" content="summary">',
+      `<meta name="twitter:title" content="${page.title}">`,
+      `<meta name="twitter:description" content="${page.description}">`,
+      '<meta name="twitter:image" content="https://dust2cosmos.com/assets/og-image.png">',
+      `<meta name="twitter:image:alt" content="Dust to Cosmos ${page.label} page">`,
+    ].forEach(tag => assertIncludes(page.path, tag));
+  });
+}
+
 function checkHomepageStructuredData() {
   const relativePath = 'index.html';
   const jsonLdObjects = extractJsonLdObjects(relativePath);
@@ -266,7 +302,7 @@ function checkHomepageStructuredData() {
 }
 
 const scope = process.argv[2] || 'all';
-const supportedScopes = new Set(['all', 'platform', 'homepage-share', 'structured-data']);
+const supportedScopes = new Set(['all', 'platform', 'homepage-share', 'structured-data', 'secondary-metadata']);
 
 if (!supportedScopes.has(scope)) {
   recordFailure(`Unsupported scope: ${scope}`);
@@ -282,6 +318,10 @@ if (scope === 'all' || scope === 'homepage-share') {
 
 if (scope === 'all' || scope === 'structured-data') {
   checkHomepageStructuredData();
+}
+
+if (scope === 'all' || scope === 'secondary-metadata') {
+  checkSecondaryPageMetadata();
 }
 
 if (failures.length > 0) {
