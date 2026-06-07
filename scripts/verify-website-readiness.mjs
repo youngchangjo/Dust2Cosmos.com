@@ -171,6 +171,7 @@ function checkPlatform() {
   [
     'manifest.webmanifest',
     '404.html',
+    'favicon.ico',
     'apple-touch-icon.png',
     'icon-192.png',
     'icon-512.png',
@@ -184,13 +185,17 @@ function checkPlatform() {
   assertIncludes('sitemap.xml', '<loc>https://dust2cosmos.com/support</loc>');
 
   assertIncludes('index.html', '<link rel="manifest" href="/manifest.webmanifest">');
+  assertIncludes('index.html', '<link rel="icon" href="/favicon.ico" sizes="any">');
   assertIncludes('index.html', '<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">');
   assertIncludes('privacy/index.html', '<link rel="manifest" href="/manifest.webmanifest">');
+  assertIncludes('privacy/index.html', '<link rel="icon" href="/favicon.ico" sizes="any">');
   assertIncludes('privacy/index.html', '<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">');
   assertIncludes('support/index.html', '<link rel="manifest" href="/manifest.webmanifest">');
+  assertIncludes('support/index.html', '<link rel="icon" href="/favicon.ico" sizes="any">');
   assertIncludes('support/index.html', '<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">');
 
   assertIncludes('404.html', '<meta name="robots" content="noindex">');
+  assertIncludes('404.html', '<link rel="icon" href="/favicon.ico" sizes="any">');
   assertIncludes('404.html', '<a class="chip chip-link" href="/">Home</a>');
   assertIncludes('404.html', '<a class="chip chip-link" href="/support/">Support</a>');
 

@@ -17,7 +17,7 @@ App Store: https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629
 - `/assets/og-image.png` — social card image
 - `/manifest.webmanifest`
 - `/404.html`
-- `/apple-touch-icon.png`, `/icon-192.png`, `/icon-512.png`
+- `/favicon.ico`, `/apple-touch-icon.png`, `/icon-192.png`, `/icon-512.png`
 - `/robots.txt`
 - `/sitemap.xml`
 - `/scripts/verify-website-readiness.mjs` — static readiness checker
@@ -51,5 +51,5 @@ The checker verifies:
 - `robots.txt` and `sitemap.xml`
 - `manifest.webmanifest`
 - branded `404.html`
-- root icon files: `/apple-touch-icon.png`, `/icon-192.png`, `/icon-512.png`
+- root icon files: `/favicon.ico`, `/apple-touch-icon.png`, `/icon-192.png`, `/icon-512.png`
 - PNG social card: `/assets/og-image.png`
