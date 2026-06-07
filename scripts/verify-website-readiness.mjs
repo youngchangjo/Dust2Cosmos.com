@@ -187,6 +187,7 @@ function checkPlatform() {
   assertIncludes('index.html', '<link rel="manifest" href="/manifest.webmanifest">');
   assertIncludes('index.html', '<link rel="icon" href="/favicon.ico" sizes="any">');
   assertIncludes('index.html', '<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">');
+  assertIncludes('index.html', '<meta name="naver-site-verification" content="bea87ecb946f38ee2e87f732e73171b8b51bb6e1">');
   assertIncludes('privacy/index.html', '<link rel="manifest" href="/manifest.webmanifest">');
   assertIncludes('privacy/index.html', '<link rel="icon" href="/favicon.ico" sizes="any">');
   assertIncludes('privacy/index.html', '<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">');
