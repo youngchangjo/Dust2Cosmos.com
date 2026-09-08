@@ -98,7 +98,7 @@ for route, doc in docs.items():
         for term in ['3.0', 'iPhone', 'iPad', 'Pro', '109', '18', 'Best New Apps and Updates']:
             check(term in text, route + ': meaningful static content ' + term)
         check(('Coming soon' if lang == 'en' else '출시 예정') in text, route + ': visible upcoming status')
-        if any(manifest['assets'][key]['generated'] for key in ['ipadMockup', 'iphoneMockup']):
+        if manifest['assets']['devicesMockup']['generated']:
             check(('AI-generated' if lang == 'en' else 'AI로 제작한') in text, route + ': generated screen disclosure')
         else:
             check(('Screens captured' if lang == 'en' else '실제 앱 화면') in text, route + ': captured screen caption')
@@ -119,7 +119,8 @@ for name, asset in manifest['assets'].items():
     for variant in asset['variants']:
         file = ROOT / 'assets/media' / variant['file']
         check(file.stat().st_size == variant['bytes'], name + ': image manifest byte count')
-        check(file.stat().st_size < 250_000, name + ': image budget under 250 KB')
+        budget = 800_000 if asset['kind'] == 'renderer-first-frame' and variant['width'] > 1024 else 250_000
+        check(file.stat().st_size < budget, name + ': responsive image budget')
 
 earth = json.loads((ROOT / 'assets/earth/credits.json').read_text())
 check(earth['license'] == 'CC BY 4.0' and bool(earth['source']), 'Earth maps retain source and license')

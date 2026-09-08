@@ -8,9 +8,9 @@ const require = createRequire(process.env.DTC_NODE_MODULES ? process.env.DTC_NOD
 const sharp = require('sharp');
 const root = fileURLToPath(new URL('../assets/media/', import.meta.url));
 const [key, source, kind = 'ui-concept'] = process.argv.slice(2);
-const names = { earthHero: 'earth-hero', ipadMockup: 'ipad-earth', iphoneMockup: 'iphone-saturn', voyageArt: 'voyage-saturn' };
+const names = { earthHero: 'earth-hero', ipadMockup: 'ipad-earth', iphoneMockup: 'iphone-saturn', devicesMockup: 'devices-studio', scienceArt: 'science-moon', voyageArt: 'voyage-saturn' };
 if (!names[key] || !source || !['ui-concept', 'concept-art', 'screenshot'].includes(kind)) {
-  throw new Error('Usage: node scripts/prepare-media.mjs <earthHero|ipadMockup|iphoneMockup|voyageArt> <source-image> <ui-concept|concept-art|screenshot>');
+  throw new Error('Usage: node scripts/prepare-media.mjs <earthHero|ipadMockup|iphoneMockup|devicesMockup|scienceArt|voyageArt> <source-image> <ui-concept|concept-art|screenshot>');
 }
 await mkdir(root, { recursive: true });
 let manifest;

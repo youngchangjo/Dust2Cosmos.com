@@ -93,7 +93,7 @@
           vec2 p=(gl_FragCoord.xy-uGlobe.xy)/uGlobe.z;
           float radius=length(p);
           vec3 sun=normalize(vec3(1.25,.65,1.15));
-          vec3 sky=linear(vec3(.025,.029,.034));
+          vec3 sky=linear(vec3(5.,6.,7.)/255.);
           // Light around the atmosphere is deliberately thin and sun-gated.
           if(radius>=1.) {
             vec3 edge=normalize(vec3(p,0.));
@@ -194,10 +194,13 @@
         canvas.width = Math.round(width * pixelRatio);
         canvas.height = Math.round(height * pixelRatio);
         gl.viewport(0, 0, canvas.width, canvas.height);
-        const phone = width < 701;
-        const x = width * (phone ? 1.05 : .845);
-        const y = height * (phone ? .91 : .64);
-        const radius = phone ? width * 1.06 : height * .60;
+        // The poster is this shader's first frame, including its 6.5% atmosphere
+        // margin. Share its actual CSS bounds so loading never moves the globe.
+        const poster = hero.querySelector('.hero-visual').getBoundingClientRect();
+        const bounds = hero.getBoundingClientRect();
+        const x = poster.left - bounds.left + poster.width / 2;
+        const y = poster.top - bounds.top + poster.height / 2;
+        const radius = poster.width / 2.13;
         gl.uniform3f(globe, x * pixelRatio, (height - y) * pixelRatio, radius * pixelRatio);
         draw(elapsed);
       };
@@ -213,7 +216,7 @@
       canvas.dataset.state = 'fallback';
       if (frame) cancelAnimationFrame(frame);
       frame = 0;
-      // Keep the generated poster and readable page if GPU or asset loading fails.
+      // Keep the matching first frame and readable page if GPU or loading fails.
       hero.classList.remove('earth-ready');
       button.hidden = true;
       gl?.getExtension('WEBGL_lose_context')?.loseContext();

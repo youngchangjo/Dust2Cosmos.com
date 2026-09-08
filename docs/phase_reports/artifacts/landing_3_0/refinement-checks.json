@@ -1,0 +1,121 @@
+{
+  "passed": 11,
+  "failed": 0,
+  "results": [
+    {
+      "name": "First Earth frame remains aligned after delayed texture loading at 390px",
+      "status": "pass",
+      "evidence": {
+        "meanDifference": 1.2635359913525395,
+        "changedFraction": 0.00004028319083154577,
+        "note": "Identical geometry and time-zero scene; WebP compression and texture resampling may differ slightly."
+      }
+    },
+    {
+      "name": "First Earth frame remains aligned after delayed texture loading at 1180px",
+      "status": "pass",
+      "evidence": {
+        "meanDifference": 2.555443704860802,
+        "changedFraction": 0.002975456761716931,
+        "note": "Identical geometry and time-zero scene; WebP compression and texture resampling may differ slightly."
+      }
+    },
+    {
+      "name": "First Earth frame remains aligned after delayed texture loading at 1440px",
+      "status": "pass",
+      "evidence": {
+        "meanDifference": 2.37886353399002,
+        "changedFraction": 0.0011285113234490757,
+        "note": "Identical geometry and time-zero scene; WebP compression and texture resampling may differ slightly."
+      }
+    },
+    {
+      "name": "en 320px: readable type, hero, recognition and real device mockup layout",
+      "status": "pass",
+      "evidence": {
+        "small": [],
+        "overflow": 0,
+        "heroGap": 186.390625,
+        "headerGap": 27.3203125,
+        "awardSize": "37px"
+      }
+    },
+    {
+      "name": "en 390px: readable type, hero, recognition and real device mockup layout",
+      "status": "pass",
+      "evidence": {
+        "small": [],
+        "overflow": 0,
+        "heroGap": 192.15625,
+        "headerGap": 66.59375,
+        "awardSize": "37.05px"
+      }
+    },
+    {
+      "name": "en 768px: readable type, hero, recognition and real device mockup layout",
+      "status": "pass",
+      "evidence": {
+        "small": [],
+        "overflow": 0,
+        "heroGap": 182.921875,
+        "headerGap": 426.1484375,
+        "awardSize": "42px"
+      }
+    },
+    {
+      "name": "en 1440px: readable type, hero, recognition and real device mockup layout",
+      "status": "pass",
+      "evidence": {
+        "small": [],
+        "overflow": 0,
+        "heroGap": 113.6796875,
+        "headerGap": 856.03125,
+        "awardSize": "73.44px"
+      }
+    },
+    {
+      "name": "ko 320px: readable type, hero, recognition and real device mockup layout",
+      "status": "pass",
+      "evidence": {
+        "small": [],
+        "overflow": 0,
+        "heroGap": 268.2265625,
+        "headerGap": 81.0625,
+        "awardSize": "37px"
+      }
+    },
+    {
+      "name": "ko 390px: readable type, hero, recognition and real device mockup layout",
+      "status": "pass",
+      "evidence": {
+        "small": [],
+        "overflow": 0,
+        "heroGap": 334.109375,
+        "headerGap": 122.65625,
+        "awardSize": "37.05px"
+      }
+    },
+    {
+      "name": "ko 768px: readable type, hero, recognition and real device mockup layout",
+      "status": "pass",
+      "evidence": {
+        "small": [],
+        "overflow": 0,
+        "heroGap": 237.8125,
+        "headerGap": 485.59375,
+        "awardSize": "42px"
+      }
+    },
+    {
+      "name": "ko 1440px: readable type, hero, recognition and real device mockup layout",
+      "status": "pass",
+      "evidence": {
+        "small": [],
+        "overflow": 0,
+        "heroGap": 183.859375,
+        "headerGap": 927.03125,
+        "awardSize": "73.44px"
+      }
+    }
+  ]
+}

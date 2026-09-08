@@ -6,12 +6,6 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const media = JSON.parse(await readFile(new URL('../assets/media/manifest.json', import.meta.url), 'utf8'));
 const escape = (value) => String(value).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const arrow = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>';
-const icons = [
-  '<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>',
-  '<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/>',
-  '<circle cx="12" cy="12" r="6"/><ellipse cx="12" cy="12" rx="12" ry="4" transform="rotate(-35 12 12)"/>',
-  '<path d="M12 5v15M3 4c4-1 7-1 9 1 2-2 5-2 9-1v15c-4-1-7-1-9 1-2-2-5-2-9-1Z"/>',
-];
 
 function image(key, alt, { eager = false, className = '', sizes = '100vw' } = {}) {
   const asset = media.assets[key];
@@ -22,7 +16,7 @@ function image(key, alt, { eager = false, className = '', sizes = '100vw' } = {}
 for (const [lang, t] of Object.entries(locales)) {
   const path = lang === 'en' ? '/' : '/ko/';
   const canonical = site.origin + path;
-  const screenCaption = [media.assets.ipadMockup, media.assets.iphoneMockup].some(asset => asset.generated)
+  const screenCaption = media.assets.devicesMockup.generated
     ? t.mockupNote : (lang === 'ko' ? '우주먼지의 실제 앱 화면입니다.' : 'Screens captured from the Dust to Cosmos app.');
   const schema = {
     '@context': 'https://schema.org',
@@ -83,24 +77,22 @@ for (const [lang, t] of Object.entries(locales)) {
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-visual">${image('earthHero', t.heroAlt, { eager: true })}</div>
+      <div class="hero-visual">${image('earthPoster', t.earthAlt, { eager: true, sizes: '(max-width: 700px) 226vw, 128vh' })}</div>
       <canvas class="earth-canvas" aria-hidden="true" data-state="loading"></canvas>
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="hero-content">
-        <p class="release-label"><span aria-hidden="true"></span>${t.release}</p>
         <h1 id="hero-title">${t.heroTitle}</h1>
         <p class="hero-lead">${t.heroLead}</p>
         <p class="hero-description">${t.heroText}</p>
         <div class="hero-actions">${storeLink(t.store)}<a class="text-link" href="#new">${t.discover}${arrow}</a></div>
         <p class="hero-note">${t.heroNote}</p>
       </div>
-      <div class="hero-bottom"><a href="#new" class="scroll-cue"><span aria-hidden="true">↓</span>${t.scroll}</a><div class="earth-controls"><button type="button" class="earth-pause" hidden aria-pressed="false" aria-label="${lang === 'ko' ? '지구 자전 멈추기' : 'Pause Earth rotation'}" data-pause="${lang === 'ko' ? '지구 자전 멈추기' : 'Pause Earth rotation'}" data-resume="${lang === 'ko' ? '지구 자전 재생' : 'Resume Earth rotation'}"><span aria-hidden="true">Ⅱ</span></button><span class="poster-note">${t.concept}</span><span class="earth-note">${lang === 'ko' ? '지구 자전 연출' : 'Earth in motion'}</span></div></div>
+      <div class="hero-bottom"><a href="#new" class="scroll-cue"><span aria-hidden="true">↓</span>${t.scroll}</a><div class="earth-controls"><button type="button" class="earth-pause" hidden aria-pressed="false" aria-label="${lang === 'ko' ? '지구 자전 멈추기' : 'Pause Earth rotation'}" data-pause="${lang === 'ko' ? '지구 자전 멈추기' : 'Pause Earth rotation'}" data-resume="${lang === 'ko' ? '지구 자전 재생' : 'Resume Earth rotation'}"><span aria-hidden="true">Ⅱ</span></button><span class="poster-note">${lang === 'ko' ? '지구 연출 이미지' : 'Illustrative Earth'}</span><span class="earth-note">${lang === 'ko' ? '지구 자전 연출' : 'Earth in motion'}</span></div></div>
     </section>
 
     <aside class="recognition" aria-label="${t.featuredIntro}">
-      <div class="recognition-mark" aria-hidden="true">✦</div>
-      <div><p class="eyebrow">${t.featuredIntro} · <time datetime="${site.featuring.month}">${t.featuredMonth}</time></p><p class="recognition-title" lang="en">${site.featuring.title}</p><a class="recognition-link" href="${site.featuring.us}">${t.featuredRegion} ↗</a></div>
-      <div class="recognition-detail"><p class="recognition-title" lang="en">${site.featuring.canadaTitle}</p><a class="recognition-link" href="${site.featuring.canada}">${t.featuredCanada} ↗</a></div>
+      <div class="recognition-main"><p class="recognition-meta"><span>${t.featuredIntro}</span><time datetime="${site.featuring.month}">${t.featuredMonth}</time></p><h2 class="recognition-title" lang="en">${site.featuring.title}</h2><a class="recognition-link" href="${site.featuring.us}">${t.featuredRegion} ↗</a></div>
+      <div class="recognition-detail"><p class="recognition-secondary" lang="en">${site.featuring.canadaTitle}</p><a class="recognition-link" href="${site.featuring.canada}">${t.featuredCanada} ↗</a></div>
     </aside>
 
     <section class="cinema section-pad" id="new" aria-labelledby="cinema-title">
@@ -112,7 +104,7 @@ for (const [lang, t] of Object.entries(locales)) {
     <section class="device-section section-pad" id="ipad" aria-labelledby="ipad-title">
       <div class="device-intro"><p class="eyebrow">${t.ipadLabel}</p><h2 id="ipad-title">${t.ipadTitle}</h2><p class="section-description">${t.ipadIntro}</p></div>
       <figure class="device-figure">
-        <div class="device-stage"><div class="ipad-frame">${image('ipadMockup', t.ipadAlt, { sizes: '(max-width: 700px) 85vw, 72vw' })}</div><div class="iphone-frame">${image('iphoneMockup', t.iphoneAlt, { sizes: '(max-width: 700px) 25vw, 20vw' })}</div></div>
+        <div class="device-stage">${image('devicesMockup', t.devicesAlt, { sizes: '(max-width: 700px) 100vw, 87vw' })}</div>
         <figcaption>${screenCaption}</figcaption>
       </figure>
       <div class="device-benefits">${t.devices.map(([title, text]) => `<article><h3>${title}</h3><p>${text}</p></article>`).join('')}</div>
@@ -128,14 +120,14 @@ for (const [lang, t] of Object.entries(locales)) {
     <section class="explore-section section-pad" id="explore" aria-labelledby="explore-title">
       <p class="eyebrow accent">${t.exploreLabel}</p><h2 id="explore-title">${t.exploreTitle}</h2>
       <div class="explorer">
-        <div class="explorer-tabs" aria-label="${t.tabsLabel}">${t.tabs.map((tab, i) => `<button type="button" id="explorer-tab-${i}" data-explorer-tab="${i}" aria-controls="explorer-panel-${i}"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.35" aria-hidden="true">${icons[i]}</svg><span>${tab.name}</span><span class="tab-number">${tab.number}</span></button>`).join('')}</div>
+        <div class="explorer-tabs" aria-label="${t.tabsLabel}">${t.tabs.map((tab, i) => `<button type="button" id="explorer-tab-${i}" data-explorer-tab="${i}" aria-controls="explorer-panel-${i}"><span>${tab.name}</span><span class="tab-number">${tab.number}</span></button>`).join('')}</div>
         <div class="explorer-content">${t.tabs.map((tab, i) => `<div class="explorer-panel" id="explorer-panel-${i}" aria-labelledby="explorer-heading-${i}"><div class="explorer-panel-intro"><span class="panel-number" aria-hidden="true">${tab.number}</span><h3 id="explorer-heading-${i}">${tab.title}</h3><p>${tab.text}</p></div><dl>${tab.items.map(([title, text]) => `<div><dt>${title}</dt><dd>${text}</dd></div>`).join('')}</dl></div>`).join('')}</div>
       </div>
     </section>
 
     <section class="pro-section section-pad" id="pro" aria-labelledby="pro-title"><div class="pro-intro"><p class="eyebrow accent">${t.proLabel}</p><h2 id="pro-title">${t.proTitle}</h2><p class="section-description">${t.proIntro}</p><p class="fine-print">${t.proNote}</p></div><div class="pro-details"><ul>${t.proList.map(item => `<li><span aria-hidden="true">↗</span>${item}</li>`).join('')}</ul><div class="free-note"><h3>${t.freeTitle}</h3><p>${t.freeText}</p></div></div></section>
 
-    <section class="truth-section section-pad" id="sources" aria-labelledby="truth-title"><div class="truth-symbol" aria-hidden="true"><span></span><span></span><span></span></div><div><h2 id="truth-title">${t.truthTitle}</h2><p>${t.truthText}</p><nav class="source-links" aria-label="${t.sourceLabel}"><a href="https://science.nasa.gov/">NASA Science ↗</a><a href="https://ssd.jpl.nasa.gov/horizons/">JPL Horizons ↗</a><a href="https://naif.jpl.nasa.gov/naif/">NAIF ↗</a><a href="https://exoplanetarchive.ipac.caltech.edu/">NASA Exoplanet Archive ↗</a></nav><p class="fine-print">${t.sourceNote}</p><p class="fine-print earth-credit">${lang === 'ko' ? '메인 지구 텍스처: ' : 'Hero Earth textures: '}<a href="https://www.solarsystemscope.com/textures/">Solar System Scope / INOVE</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. ${lang === 'ko' ? 'NASA 기반 자료를 축소·변환하고 조명·대기·빠르게 흐르는 자전 연출을 더했습니다. 현재 구름 관측이나 실제 앱 렌더 캡처는 아닙니다.' : 'NASA-based maps, resized and converted, with illustrative lighting, atmosphere and accelerated rotation. Not current cloud observations or a native app capture.'}</p></div></section>
+    <section class="truth-section section-pad" id="sources" aria-labelledby="truth-title"><figure class="science-figure">${image('scienceArt', t.scienceAlt, { sizes: '(max-width: 700px) 90vw, 35vw' })}<figcaption>${t.scienceNote}</figcaption></figure><div><h2 id="truth-title">${t.truthTitle}</h2><p>${t.truthText}</p><nav class="source-links" aria-label="${t.sourceLabel}"><a href="https://science.nasa.gov/">NASA Science ↗</a><a href="https://ssd.jpl.nasa.gov/horizons/">JPL Horizons ↗</a><a href="https://naif.jpl.nasa.gov/naif/">NAIF ↗</a><a href="https://exoplanetarchive.ipac.caltech.edu/">NASA Exoplanet Archive ↗</a></nav><p class="fine-print">${t.sourceNote}</p><p class="fine-print earth-credit">${lang === 'ko' ? '메인 지구 텍스처: ' : 'Hero Earth textures: '}<a href="https://www.solarsystemscope.com/textures/">Solar System Scope / INOVE</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. ${lang === 'ko' ? 'NASA 기반 자료를 축소·변환하고 조명·대기·빠르게 흐르는 자전 연출을 더했습니다. 현재 구름 관측이나 실제 앱 렌더 캡처는 아닙니다.' : 'NASA-based maps, resized and converted, with illustrative lighting, atmosphere and accelerated rotation. Not current cloud observations or a native app capture.'}</p></div></section>
 
     <section class="faq-section section-pad" id="faq" aria-labelledby="faq-title"><h2 id="faq-title">${t.faqTitle}</h2><div class="faq-list">${t.faq.map(([question, answer]) => `<details><summary>${question}<span aria-hidden="true">+</span></summary><p>${answer}</p></details>`).join('')}</div></section>
 

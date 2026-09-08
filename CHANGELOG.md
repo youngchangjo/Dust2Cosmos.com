@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-08 — first arrival and visual refinement
+
+Status: `verified_local`; no deployment, release or push.
+
+- Keep the same Earth at first entry: capture the production shader's first frame and share its CSS geometry with WebGL instead of replacing a different generated planet.
+- Remove the line above the hero title, raise small copy to 14px and body text to 16–17px, and make the July 2026 Best New Apps and Updates selection prominent.
+- Replace CSS device frames with a generated photographic iPad/iPhone composition; remove decorative exploration SVGs and replace the line-art globe with labeled generated lunar artwork.
+- Preserve replaceable media, prompts, source credits, both languages and upcoming release status.
+- Verify 248 static checks, 38 browser checks, 9 Earth behavior checks, and 11 arrival/type/layout checks; automated accessibility has no known violations.
+
 ## 2026-09-08 — featuring month recovered
 
 Status: local follow-up; no deployment or push.

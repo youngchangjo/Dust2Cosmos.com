@@ -34,18 +34,21 @@ WebGL 2 구면 렌더링으로 약 16분에 한 바퀴 돌도록 연출합니다
 
 자전 정지·재생 버튼, 화면 밖/숨겨진 탭에서 중지, 동작 줄이기, WebGL 실패 시 이미지 대체를 지원합니다. 초기 동작 줄이기 설정에서는 3D 텍스처 자체를 받지 않습니다. 이 웹 연출은 실시간 구름이나 네이티브 앱의 렌더 캡처가 아닙니다.
 
+첫 이미지도 같은 WebGL 장면의 시간 0 프레임입니다. 이미지의 실제 CSS 위치와 크기로 3D 구면을 배치하므로 준비가 끝나도 다른 지구로 바뀌지 않습니다. 셰이더나 텍스처를 수정한 경우 미리보기 서버를 실행한 뒤 `DTC_HEADFUL=1 node scripts/prepare-earth-poster.mjs`와 `npm run build`로 포스터도 다시 만드세요. 이 캡처는 생성형 이미지가 아니며 같은 지도 라이선스를 따릅니다.
+
 출처: [Solar System Scope / INOVE](https://www.solarsystemscope.com/textures/), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). 원본 해시·변환·라이선스는 `assets/earth/credits.json`에 보관하며 페이지에도 출처를 표시합니다. 앱 저장소의 기존 지구 텍스처를 웹용으로 변환했고 앱 원본은 변경하지 않았습니다.
 
 ## 예상 UI를 실제 화면으로 교체하기
 
 | 키 | 현재 대표 파일 | 용도 |
 | --- | --- | --- |
-| `earthHero` | `assets/media/earth-hero-1672.webp` | 첫 표시·동작 줄이기·WebGL 대체 이미지 |
-| `ipadMockup` | `assets/media/ipad-earth-1448.webp` | iPad 가로 예상 UI, 약 4:3 |
-| `iphoneMockup` | `assets/media/iphone-saturn-887.webp` | iPhone 세로 예상 UI, 약 1:2 |
+| `earthPoster` | `assets/media/earth-first-frame-2048.webp` | 동일한 3D 첫 프레임·동작 줄이기·WebGL 대체 |
+| `devicesMockup` | `assets/media/devices-studio-1672.webp` | 실물 기기 형태의 iPad·iPhone과 예상 UI를 담은 합성 목업 |
+| `scienceArt` | `assets/media/science-moon-1254.webp` | 선으로 그린 지구 기호를 대체한 달·지구 콘셉트 이미지 |
+| `earthHero` | `assets/media/earth-hero-1672.webp` | 공유 카드 제작용 생성 원본 |
 | `voyageArt` | `assets/media/voyage-saturn-1672.webp` | 가상 항해 콘셉트 이미지 |
 
-네 이미지는 내장 이미지 생성 도구로 제작했습니다. 요청한 Image Gen 2에 대응하는 모델 선택 필드는 도구에 제공되지 않아 정확한 모델명은 확인하지 못했습니다. 전체 생성 프롬프트는 [landing-3.0-image-prompts.json](docs/landing-3.0-image-prompts.json)에 있습니다.
+기기 목업과 우주 콘셉트는 내장 이미지 생성 도구로 제작했습니다. 도구에 모델 선택 필드는 없습니다. 첫 생성 프롬프트는 [landing-3.0-image-prompts.json](docs/landing-3.0-image-prompts.json), 이번 실물 기기 목업·달 이미지 프롬프트와 채택 내역은 [landing-3.0-refinement-prompts.json](docs/landing-3.0-refinement-prompts.json)에 있습니다. 기존 `ipadMockup`·`iphoneMockup` 화면 이미지는 목업 제작과 이후 실제 화면 교체의 참조 원본으로 남겼습니다.
 
 이미지 변환과 추가 QA에만 `sharp`, `playwright`, `axe-core`가 필요합니다. 선택적으로 격리된 폴더에 설치할 수 있습니다.
 
@@ -53,12 +56,11 @@ WebGL 2 구면 렌더링으로 약 16분에 한 바퀴 돌도록 연출합니다
 npm install --prefix .qa --no-save sharp playwright axe-core
 export DTC_NODE_MODULES="$PWD/.qa/node_modules"
 npx --prefix .qa playwright install chromium webkit
-node scripts/prepare-media.mjs ipadMockup /absolute/path/ipad.png screenshot
-node scripts/prepare-media.mjs iphoneMockup /absolute/path/iphone.png screenshot
+node scripts/prepare-media.mjs devicesMockup /absolute/path/devices-with-actual-screens.png screenshot
 npm run build
 ```
 
-스크립트가 WebP 크기별 파일, `srcset` 정보와 SHA-256을 갱신합니다. 실제 스크린샷은 **기기 프레임 없이 화면만** 사용하세요. 두 목업 모두 `screenshot`으로 교체하면 생성 UI 안내가 실제 앱 화면 안내로 바뀝니다. `content/site.mjs`의 한국어·영어 `ipadAlt`·`iphoneAlt`와 관련 FAQ도 실제 화면에 맞춰 갱신하세요. 한 장만 바꾸면 남은 예상 UI 안내를 구체적으로 조정하세요. 레이아웃 코드는 유지할 수 있습니다.
+스크립트가 WebP 크기별 파일, `srcset` 정보와 SHA-256을 갱신합니다. 현재 페이지는 CSS 기기 테두리 없이 **기기가 포함된 16:9 이미지 한 장**을 표시합니다. 실제 iPad·iPhone 화면을 기기에 합성한 결과로 교체하세요. 두 화면이 모두 실제 캡처일 때만 `screenshot`으로 지정하면 안내가 실제 앱 화면으로 바뀝니다. 하나라도 예상 UI이면 `ui-concept`를 유지하세요. `content/site.mjs`의 한·영 `devicesAlt`와 관련 FAQ도 함께 갱신합니다. 레이아웃 코드는 유지할 수 있습니다.
 
 공유 이미지 다시 생성: `node scripts/social-preview.mjs`. 지구 텍스처 다시 변환: `node scripts/prepare-earth.mjs /absolute/path/earth-textures`.
 
@@ -66,8 +68,9 @@ npm run build
 
 ```sh
 npm run check
-node scripts/qa-browser.mjs
+DTC_HEADFUL=1 node scripts/qa-browser.mjs
 DTC_HEADFUL=1 node scripts/qa-earth.mjs
+DTC_HEADFUL=1 node scripts/qa-landing-refinement.mjs
 ```
 
 브라우저 검사에는 실행 중인 미리보기 서버가 필요합니다. 선택 패키지 경로는 위의 `DTC_NODE_MODULES`, 서버 주소는 `DTC_PREVIEW_URL`로 지정합니다. `DTC_HEADFUL=1`은 새 테스트 브라우저에서 실제 데스크톱 GPU를 사용하며 검사가 끝나면 닫힙니다. 생략하면 headless로 실행합니다. GPU 검사는 서로 겹치지 않게 순서대로 실행하세요.

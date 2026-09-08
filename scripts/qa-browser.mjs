@@ -15,7 +15,7 @@ const test = async (name, fn) => {
   try { await fn(); results.checks.push({ name, status: 'pass' }); }
   catch (error) { results.checks.push({ name, status: 'fail', error: error.message }); }
 };
-const browser = await chromium.launch({ headless: true });
+const browser = await chromium.launch({ headless: process.env.DTC_HEADFUL !== '1' });
 try {
   for (const lang of ['en', 'ko']) {
     const route = lang === 'en' ? '/' : '/ko/';
@@ -107,7 +107,8 @@ try {
       assert.equal(await page.locator('html').getAttribute('lang'), lang === 'en' ? 'ko' : 'en');
     });
     await page.goto(baseURL + route, { waitUntil: 'load' });
-    for (const selector of ['#ipad', '.voyage-figure', '.final-cta']) await page.locator(selector).scrollIntoViewIfNeeded();
+    for (const selector of ['#ipad', '.voyage-figure', '.science-figure', '.final-cta']) await page.locator(selector).scrollIntoViewIfNeeded();
+    await page.waitForFunction(() => [...document.images].every(image => image.complete && image.naturalWidth > 0), null, { timeout: 15000 });
     await page.evaluate(() => Promise.all([...document.images].map(image => image.decode())));
     await test(`${lang}: every page image decodes`, async () => assert.equal(await page.evaluate(() => [...document.images].every(image => image.naturalWidth > 0)), true));
     await page.setViewportSize({ width: 1180, height: 820 });

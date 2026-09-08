@@ -112,6 +112,85 @@
           "bytes": 86504
         }
       ]
+    },
+    "earthPoster": {
+      "file": "earth-first-frame-2048.webp",
+      "width": 2048,
+      "height": 2048,
+      "kind": "renderer-first-frame",
+      "generated": false,
+      "source": "assets/earth.js at uTime = 0; Solar System Scope maps (assets/earth/credits.json)",
+      "sourceSHA256": "bab4961bfb4052c7a06d18093ff52dd46794fc7590d7e4ad268acc62b06d945e",
+      "variants": [
+        {
+          "file": "earth-first-frame-1024.webp",
+          "width": 1024,
+          "height": 1024,
+          "bytes": 243308
+        },
+        {
+          "file": "earth-first-frame-2048.webp",
+          "width": 2048,
+          "height": 2048,
+          "bytes": 760500
+        }
+      ]
+    },
+    "scienceArt": {
+      "file": "science-moon-1254.webp",
+      "width": 1254,
+      "height": 1254,
+      "kind": "concept-art",
+      "generated": true,
+      "sourceSHA256": "bc8b71dacacaddf23e1b6ac41618b87cd839dbf0ae1a97329aefaaaa83bca069",
+      "variants": [
+        {
+          "file": "science-moon-640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 52480
+        },
+        {
+          "file": "science-moon-1080.webp",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 138178
+        },
+        {
+          "file": "science-moon-1254.webp",
+          "width": 1254,
+          "height": 1254,
+          "bytes": 177344
+        }
+      ]
+    },
+    "devicesMockup": {
+      "file": "devices-studio-1672.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "ui-concept",
+      "generated": true,
+      "sourceSHA256": "f76762c4422c33e389fbf665b5e706b497e01cc1b4d8102b17b16c8f72a37545",
+      "variants": [
+        {
+          "file": "devices-studio-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 29822
+        },
+        {
+          "file": "devices-studio-1080.webp",
+          "width": 1080,
+          "height": 608,
+          "bytes": 73194
+        },
+        {
+          "file": "devices-studio-1672.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 142774
+        }
+      ]
     }
   }
 }

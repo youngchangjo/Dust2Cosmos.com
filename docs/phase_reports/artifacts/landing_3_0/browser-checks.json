@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-08T01:22:40.476Z",
+  "checkedAt": "2026-09-08T11:05:30.133Z",
   "baseURL": "http://127.0.0.1:8893",
   "checks": [
     {
@@ -172,7 +172,6 @@
       "violations": [],
       "passes": 48,
       "incomplete": [
-        "aria-prohibited-attr",
         "color-contrast"
       ]
     },
@@ -182,7 +181,6 @@
       "violations": [],
       "passes": 48,
       "incomplete": [
-        "aria-prohibited-attr",
         "color-contrast"
       ]
     },
@@ -192,7 +190,6 @@
       "violations": [],
       "passes": 48,
       "incomplete": [
-        "aria-prohibited-attr",
         "color-contrast"
       ]
     },
@@ -202,7 +199,6 @@
       "violations": [],
       "passes": 48,
       "incomplete": [
-        "aria-prohibited-attr",
         "color-contrast"
       ]
     }
@@ -211,109 +207,85 @@
     {
       "lang": "en",
       "viewport": "1440×960, unthrottled loopback",
-      "cls": 0.00009195511429398149,
-      "lcp": 5172,
+      "cls": 0.00016693889162667984,
+      "lcp": 276,
       "resources": [
         {
           "path": "/assets/styles.css",
-          "bytes": 26683
+          "bytes": 25569
         },
         {
           "path": "/assets/main.js",
           "bytes": 2836
         },
         {
+          "path": "/assets/earth.js",
+          "bytes": 11837
+        },
+        {
+          "path": "/assets/media/earth-first-frame-2048.webp",
+          "bytes": 760800
+        },
+        {
           "path": "/assets/icons/app-icon-3.0.png",
           "bytes": 88895
-        },
-        {
-          "path": "/assets/earth.js",
-          "bytes": 11562
-        },
-        {
-          "path": "/assets/media/earth-hero-1672.webp",
-          "bytes": 128506
-        },
-        {
-          "path": "/assets/media/ipad-earth-1080.webp",
-          "bytes": 75810
-        },
-        {
-          "path": "/assets/media/iphone-saturn-360.webp",
-          "bytes": 15696
-        },
-        {
-          "path": "/assets/media/voyage-saturn-1672.webp",
-          "bytes": 86804
         },
         {
           "path": "/assets/earth/day-4096.webp",
           "bytes": 723186
         },
         {
-          "path": "/assets/earth/clouds-4096.webp",
-          "bytes": 2749246
+          "path": "/assets/earth/night-2048.webp",
+          "bytes": 106252
         },
         {
-          "path": "/assets/earth/normal-2048.webp",
-          "bytes": 54002
+          "path": "/assets/earth/clouds-4096.webp",
+          "bytes": 2749246
         },
         {
           "path": "/assets/earth/ocean-2048.webp",
           "bytes": 137080
         },
         {
-          "path": "/assets/earth/night-2048.webp",
-          "bytes": 106252
+          "path": "/assets/earth/normal-2048.webp",
+          "bytes": 54002
+        },
+        {
+          "path": "/assets/icons/favicon-3.0.png",
+          "bytes": 2230
         }
       ],
-      "domBytes": 26777
+      "domBytes": 25949
     },
     {
       "lang": "ko",
       "viewport": "1440×960, unthrottled loopback",
-      "cls": 0.00010201417271492413,
-      "lcp": 6648,
+      "cls": 0.00013239865244170766,
+      "lcp": 144,
       "resources": [
         {
           "path": "/assets/styles.css",
-          "bytes": 26683
+          "bytes": 25569
         },
         {
           "path": "/assets/main.js",
           "bytes": 2836
         },
         {
-          "path": "/assets/earth.js",
-          "bytes": 11562
-        },
-        {
-          "path": "/assets/media/earth-hero-1672.webp",
-          "bytes": 128506
+          "path": "/assets/media/earth-first-frame-2048.webp",
+          "bytes": 760800
         },
         {
           "path": "/assets/icons/app-icon-3.0.png",
           "bytes": 88895
         },
         {
-          "path": "/assets/media/ipad-earth-1080.webp",
-          "bytes": 75810
+          "path": "/assets/earth.js",
+          "bytes": 11837
         },
         {
-          "path": "/assets/media/iphone-saturn-360.webp",
-          "bytes": 15696
-        },
-        {
-          "path": "/assets/media/voyage-saturn-1672.webp",
-          "bytes": 86804
-        },
-        {
-          "path": "/assets/earth/day-4096.webp",
-          "bytes": 723186
-        },
-        {
-          "path": "/assets/earth/clouds-4096.webp",
-          "bytes": 2749246
+          "path": "/assets/icons/favicon-3.0.png",
+          "bytes": 2230
         },
         {
           "path": "/assets/earth/night-2048.webp",
@@ -326,9 +298,17 @@
         {
           "path": "/assets/earth/normal-2048.webp",
           "bytes": 54002
+        },
+        {
+          "path": "/assets/earth/day-4096.webp",
+          "bytes": 723186
+        },
+        {
+          "path": "/assets/earth/clouds-4096.webp",
+          "bytes": 2749246
         }
       ],
-      "domBytes": 21539
+      "domBytes": 20693
     }
   ],
   "limitations": [],

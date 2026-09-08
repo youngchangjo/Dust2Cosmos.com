@@ -48,3 +48,6 @@ Follow-up: recovered the original July 4 report through Codex session metadata; 
 ## Boundaries
 
 3.0 remains upcoming. Generated screens are labeled previews, not captured app UI. No performance measurements, ratings, prices, first featuring date, current Voyager telemetry, live solar feed, or uninterrupted cloud availability are invented. This website work does not change native app source or complete app release gates.
+
+
+2026-09-08 visual follow-up: done locally. Matching shader first frame fixes the entry swap; body/caption sizes are increased; hero kicker is removed; July editorial selection is prominent; generated physical-device composition and lunar artwork replace CSS device frames and decorative globe/tab icons. Static 248/248, browser 38/38, Earth 9/9 and refinement 11/11 pass. Sources, prompts, replacement guide and captures updated. No native app edits, deployment or push.

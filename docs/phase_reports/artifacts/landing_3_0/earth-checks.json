@@ -10,9 +10,9 @@
       "name": "3D rotation changes the rendered globe pixels over five seconds",
       "status": "pass",
       "evidence": {
-        "changedGlobePixels": 309734,
+        "changedGlobePixels": 309520,
         "inspectedPixels": 455000,
-        "drawsDuringCapture": 146,
+        "drawsDuringCapture": 149,
         "note": "Five seconds of actual animation; screenshot readback is not a device performance benchmark."
       }
     },
@@ -38,7 +38,7 @@
       "status": "pass"
     },
     {
-      "name": "WebGL context loss restores the generated image",
+      "name": "WebGL context loss restores the matching first frame",
       "status": "pass"
     },
     {

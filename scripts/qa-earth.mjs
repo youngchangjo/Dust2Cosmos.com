@@ -100,7 +100,7 @@ try {
       await page.screenshot({ path: output + `earth-live-${name}.png`, animations: 'disabled' });
     }
   });
-  await test('WebGL context loss restores the generated image', async () => {
+  await test('WebGL context loss restores the matching first frame', async () => {
     await page.evaluate(() => document.querySelector('.earth-canvas').getContext('webgl2').getExtension('WEBGL_lose_context').loseContext());
     await page.waitForFunction(() => !document.querySelector('.hero').classList.contains('earth-ready'));
     assert.equal(await page.locator('.earth-pause').isVisible(), false);
