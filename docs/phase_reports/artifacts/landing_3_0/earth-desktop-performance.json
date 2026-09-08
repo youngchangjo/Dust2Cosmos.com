@@ -1,0 +1,9 @@
+{
+  "n": 183,
+  "t": 8313.5,
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Pro, Unspecified Version)",
+  "elapsedSeconds": 5.005200000047684,
+  "draws": 139,
+  "observedDrawsPerSecond": 27.7711180369767,
+  "scope": "Headful desktop Chromium, no screenshot readbacks during five-second sample; not iPhone/iPad hardware performance."
+}

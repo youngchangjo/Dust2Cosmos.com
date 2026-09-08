@@ -1,0 +1,12 @@
+{
+  "name": "dust-to-cosmos-site",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "python3 scripts/check_site.py",
+    "serve": "python3 scripts/serve.py",
+    "media": "node scripts/prepare-media.mjs"
+  }
+}

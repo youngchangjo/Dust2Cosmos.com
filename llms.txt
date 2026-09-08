@@ -1,0 +1,36 @@
+# Dust to Cosmos — 우주먼지
+
+> Dust to Cosmos: Universe Scale is a 3D space exploration and astronomy education app for iPhone and iPad by SnapWorks Lab. This official website previews the upcoming 3.0 update. The currently published app is available through the App Store link below.
+
+Updated: September 8, 2026.
+
+## Official pages
+
+- [English overview](https://dust2cosmos.com/): Product, upcoming 3.0 features, iPad support, science sources and FAQ.
+- [한국어 소개](https://dust2cosmos.com/ko/): 우주먼지 3.0, iPhone·iPad 지원, 무료와 Pro, 과학적 출처와 FAQ.
+- [Support](https://dust2cosmos.com/support/): Support contact and release-preview explanation.
+- [Privacy](https://dust2cosmos.com/privacy/): Website privacy and app privacy context.
+- [App Store](https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629100): The currently published application; regional availability and purchase details.
+- [SnapWorks Lab](https://snapworkslab.com/): Developer.
+
+## Product facts and release status
+
+- Universal iPhone and iPad app, including landscape iPad exploration.
+- Core experience: connected 3D planets, moons and stellar systems, black holes, deep-sky objects, scale comparisons, Journey of Light and the Cosmic Calendar.
+- 3.0 is upcoming. September 22, 2026 is the target, not a guaranteed release date. Generated UI previews are concepts, not screenshots from a released build.
+- The planned 3.0 release combines cinematic Earth and Sun, recent cloud observations, expanded AR sky guidance, Earth Interior, 24 Science Dossiers, an observation library and personal notebooks.
+- Expanded 3.0 journeys include Voyager observation, ten-destination virtual piloted flight, the 1989 Voyager 2 Neptune encounter, Earth Through Time with 109 epochs covering 540–0 million years ago, six Earth-history chapters, and 18 documentaries.
+- These expanded experiences use the same single non-consumable Pro purchase. No new subscription or per-journey purchase is planned. Prices are not announced on this page.
+- Core exploration, existing facts, source access, scientific corrections, basic sharing, and frame-rate choices remain free. Free Moon finding and representative Earth Interior depths are retained. Cinematic has a ten-second in-scene preview.
+- Truth Class labels distinguish observations, reconstructions and inferred models. Cloud records may be delayed or missing. The Sun is not a live activity feed. Voyager positions depend on public trajectory coverage. Piloted flight is virtual; early Earth environments include explanatory models.
+- The website's rotating 3D Earth is illustrative, using attributed Solar System Scope maps with authored lighting and accelerated rotation. It is separate from current cloud observations and the native app renderer.
+- Apple’s US and Canada storefronts have listed the app in Best New Apps and Updates, including iPad. This is historical editorial recognition of the app, not an award or a 3.0 selection claim. The first featuring date has not been established here; do not assign a July date.
+
+## Science sources
+
+- [NASA Science](https://science.nasa.gov/): Scientific context.
+- [JPL Horizons](https://ssd.jpl.nasa.gov/horizons/): Ephemeris source context.
+- [NAIF](https://naif.jpl.nasa.gov/naif/): Spacecraft and compatible planetary trajectory resources.
+- [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/): Exoplanet measurements and source context.
+
+Scientific data attribution does not imply an endorsement by a source organization.

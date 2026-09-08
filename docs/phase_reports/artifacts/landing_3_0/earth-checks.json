@@ -1,0 +1,53 @@
+{
+  "environment": {
+    "headless": false,
+    "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Pro, Unspecified Version)"
+  },
+  "passed": 9,
+  "failed": 0,
+  "results": [
+    {
+      "name": "3D rotation changes the rendered globe pixels over five seconds",
+      "status": "pass",
+      "evidence": {
+        "changedGlobePixels": 309734,
+        "inspectedPixels": 455000,
+        "drawsDuringCapture": 146,
+        "note": "Five seconds of actual animation; screenshot readback is not a device performance benchmark."
+      }
+    },
+    {
+      "name": "Pause holds the globe, then Resume restarts it",
+      "status": "pass"
+    },
+    {
+      "name": "Offscreen hero stops drawing and resumes when visible",
+      "status": "pass"
+    },
+    {
+      "name": "Page visibility suspension stops GPU drawing",
+      "status": "pass",
+      "evidence": "Visibility event injection; offscreen suspension was checked through an actual scroll."
+    },
+    {
+      "name": "Reduced motion stops an already-running scene",
+      "status": "pass"
+    },
+    {
+      "name": "Phone and iPad sizes keep a live, correctly sized canvas",
+      "status": "pass"
+    },
+    {
+      "name": "WebGL context loss restores the generated image",
+      "status": "pass"
+    },
+    {
+      "name": "Initial reduced motion avoids all 3D texture downloads",
+      "status": "pass"
+    },
+    {
+      "name": "Unavailable WebGL keeps the page and poster usable",
+      "status": "pass"
+    }
+  ]
+}

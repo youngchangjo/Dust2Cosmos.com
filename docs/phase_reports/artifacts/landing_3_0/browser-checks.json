@@ -1,0 +1,339 @@
+{
+  "checkedAt": "2026-09-08T01:22:40.476Z",
+  "baseURL": "http://127.0.0.1:8893",
+  "checks": [
+    {
+      "name": "en: loopback preview is noindex",
+      "status": "pass"
+    },
+    {
+      "name": "en: dark-only page with either OS theme",
+      "status": "pass"
+    },
+    {
+      "name": "en: all four exploration destinations and keyboard navigation",
+      "status": "pass"
+    },
+    {
+      "name": "en: FAQ opens and closes with keyboard",
+      "status": "pass"
+    },
+    {
+      "name": "en: layout fits 320×740",
+      "status": "pass"
+    },
+    {
+      "name": "en: layout fits 390×844",
+      "status": "pass"
+    },
+    {
+      "name": "en: layout fits 768×1024",
+      "status": "pass"
+    },
+    {
+      "name": "en: layout fits 1180×820",
+      "status": "pass"
+    },
+    {
+      "name": "en: layout fits 1440×960",
+      "status": "pass"
+    },
+    {
+      "name": "en: mobile menu opens, closes on Escape and navigates",
+      "status": "pass"
+    },
+    {
+      "name": "en: language links use dedicated static routes",
+      "status": "pass"
+    },
+    {
+      "name": "en: every page image decodes",
+      "status": "pass"
+    },
+    {
+      "name": "en: reduced motion removes CSS animations and smooth scrolling",
+      "status": "pass"
+    },
+    {
+      "name": "en: axe accessibility at 390px",
+      "status": "pass"
+    },
+    {
+      "name": "en: axe accessibility at 1440px",
+      "status": "pass"
+    },
+    {
+      "name": "en: no browser errors or broken local requests",
+      "status": "pass"
+    },
+    {
+      "name": "ko: loopback preview is noindex",
+      "status": "pass"
+    },
+    {
+      "name": "ko: dark-only page with either OS theme",
+      "status": "pass"
+    },
+    {
+      "name": "ko: all four exploration destinations and keyboard navigation",
+      "status": "pass"
+    },
+    {
+      "name": "ko: FAQ opens and closes with keyboard",
+      "status": "pass"
+    },
+    {
+      "name": "ko: layout fits 320×740",
+      "status": "pass"
+    },
+    {
+      "name": "ko: layout fits 390×844",
+      "status": "pass"
+    },
+    {
+      "name": "ko: layout fits 768×1024",
+      "status": "pass"
+    },
+    {
+      "name": "ko: layout fits 1180×820",
+      "status": "pass"
+    },
+    {
+      "name": "ko: layout fits 1440×960",
+      "status": "pass"
+    },
+    {
+      "name": "ko: mobile menu opens, closes on Escape and navigates",
+      "status": "pass"
+    },
+    {
+      "name": "ko: language links use dedicated static routes",
+      "status": "pass"
+    },
+    {
+      "name": "ko: every page image decodes",
+      "status": "pass"
+    },
+    {
+      "name": "ko: reduced motion removes CSS animations and smooth scrolling",
+      "status": "pass"
+    },
+    {
+      "name": "ko: axe accessibility at 390px",
+      "status": "pass"
+    },
+    {
+      "name": "ko: axe accessibility at 1440px",
+      "status": "pass"
+    },
+    {
+      "name": "ko: no browser errors or broken local requests",
+      "status": "pass"
+    },
+    {
+      "name": "en: no-JavaScript content and navigation",
+      "status": "pass"
+    },
+    {
+      "name": "ko: no-JavaScript content and navigation",
+      "status": "pass"
+    },
+    {
+      "name": "/privacy/: readable layout and accessibility",
+      "status": "pass"
+    },
+    {
+      "name": "/support/: readable layout and accessibility",
+      "status": "pass"
+    },
+    {
+      "name": "WebKit: live 3D Earth and pause control",
+      "status": "pass"
+    },
+    {
+      "name": "WebKit: iPad viewport, images and feature switching",
+      "status": "pass"
+    }
+  ],
+  "screenshots": [
+    "desktop-en.png",
+    "phone-en.png",
+    "ipad-section-en.png",
+    "desktop-ko.png",
+    "phone-ko.png",
+    "ipad-section-ko.png",
+    "webkit-earth.png",
+    "webkit-ipad.png"
+  ],
+  "accessibility": [
+    {
+      "lang": "en",
+      "width": 390,
+      "violations": [],
+      "passes": 48,
+      "incomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "violations": [],
+      "passes": 48,
+      "incomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "lang": "ko",
+      "width": 390,
+      "violations": [],
+      "passes": 48,
+      "incomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    },
+    {
+      "lang": "ko",
+      "width": 1440,
+      "violations": [],
+      "passes": 48,
+      "incomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ]
+    }
+  ],
+  "performance": [
+    {
+      "lang": "en",
+      "viewport": "1440×960, unthrottled loopback",
+      "cls": 0.00009195511429398149,
+      "lcp": 5172,
+      "resources": [
+        {
+          "path": "/assets/styles.css",
+          "bytes": 26683
+        },
+        {
+          "path": "/assets/main.js",
+          "bytes": 2836
+        },
+        {
+          "path": "/assets/icons/app-icon-3.0.png",
+          "bytes": 88895
+        },
+        {
+          "path": "/assets/earth.js",
+          "bytes": 11562
+        },
+        {
+          "path": "/assets/media/earth-hero-1672.webp",
+          "bytes": 128506
+        },
+        {
+          "path": "/assets/media/ipad-earth-1080.webp",
+          "bytes": 75810
+        },
+        {
+          "path": "/assets/media/iphone-saturn-360.webp",
+          "bytes": 15696
+        },
+        {
+          "path": "/assets/media/voyage-saturn-1672.webp",
+          "bytes": 86804
+        },
+        {
+          "path": "/assets/earth/day-4096.webp",
+          "bytes": 723186
+        },
+        {
+          "path": "/assets/earth/clouds-4096.webp",
+          "bytes": 2749246
+        },
+        {
+          "path": "/assets/earth/normal-2048.webp",
+          "bytes": 54002
+        },
+        {
+          "path": "/assets/earth/ocean-2048.webp",
+          "bytes": 137080
+        },
+        {
+          "path": "/assets/earth/night-2048.webp",
+          "bytes": 106252
+        }
+      ],
+      "domBytes": 26777
+    },
+    {
+      "lang": "ko",
+      "viewport": "1440×960, unthrottled loopback",
+      "cls": 0.00010201417271492413,
+      "lcp": 6648,
+      "resources": [
+        {
+          "path": "/assets/styles.css",
+          "bytes": 26683
+        },
+        {
+          "path": "/assets/main.js",
+          "bytes": 2836
+        },
+        {
+          "path": "/assets/earth.js",
+          "bytes": 11562
+        },
+        {
+          "path": "/assets/media/earth-hero-1672.webp",
+          "bytes": 128506
+        },
+        {
+          "path": "/assets/icons/app-icon-3.0.png",
+          "bytes": 88895
+        },
+        {
+          "path": "/assets/media/ipad-earth-1080.webp",
+          "bytes": 75810
+        },
+        {
+          "path": "/assets/media/iphone-saturn-360.webp",
+          "bytes": 15696
+        },
+        {
+          "path": "/assets/media/voyage-saturn-1672.webp",
+          "bytes": 86804
+        },
+        {
+          "path": "/assets/earth/day-4096.webp",
+          "bytes": 723186
+        },
+        {
+          "path": "/assets/earth/clouds-4096.webp",
+          "bytes": 2749246
+        },
+        {
+          "path": "/assets/earth/night-2048.webp",
+          "bytes": 106252
+        },
+        {
+          "path": "/assets/earth/ocean-2048.webp",
+          "bytes": 137080
+        },
+        {
+          "path": "/assets/earth/normal-2048.webp",
+          "bytes": 54002
+        }
+      ],
+      "domBytes": 21539
+    }
+  ],
+  "limitations": [],
+  "summary": {
+    "passed": 38,
+    "failed": 0
+  }
+}

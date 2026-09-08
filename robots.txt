@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /docs/
+Disallow: /scripts/
+Disallow: /content/
 
 Sitemap: https://dust2cosmos.com/sitemap.xml

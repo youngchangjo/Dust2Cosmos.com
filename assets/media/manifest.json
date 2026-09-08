@@ -1,0 +1,117 @@
+{
+  "updated": "2026-09-08",
+  "assets": {
+    "earthHero": {
+      "file": "earth-hero-1672.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "concept-art",
+      "generated": true,
+      "sourceSHA256": "1e94b2efe0724798407e9bf9af076982c7cf847297b67525318306524e435f42",
+      "variants": [
+        {
+          "file": "earth-hero-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 26970
+        },
+        {
+          "file": "earth-hero-1080.webp",
+          "width": 1080,
+          "height": 608,
+          "bytes": 66226
+        },
+        {
+          "file": "earth-hero-1672.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 128206
+        }
+      ]
+    },
+    "ipadMockup": {
+      "file": "ipad-earth-1448.webp",
+      "width": 1448,
+      "height": 1086,
+      "kind": "ui-concept",
+      "generated": true,
+      "sourceSHA256": "5fa868967b2381d3f03113d25b490f9a1dfc7d116e47d7f4f1b059bb94ac79f5",
+      "variants": [
+        {
+          "file": "ipad-earth-640.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 30666
+        },
+        {
+          "file": "ipad-earth-1080.webp",
+          "width": 1080,
+          "height": 810,
+          "bytes": 75510
+        },
+        {
+          "file": "ipad-earth-1448.webp",
+          "width": 1448,
+          "height": 1086,
+          "bytes": 115916
+        }
+      ]
+    },
+    "iphoneMockup": {
+      "file": "iphone-saturn-887.webp",
+      "width": 887,
+      "height": 1774,
+      "kind": "ui-concept",
+      "generated": true,
+      "sourceSHA256": "958b9080a901ff50301461f02388847716956f8cbdf0fb0102762d9bc5694802",
+      "variants": [
+        {
+          "file": "iphone-saturn-360.webp",
+          "width": 360,
+          "height": 720,
+          "bytes": 15396
+        },
+        {
+          "file": "iphone-saturn-600.webp",
+          "width": 600,
+          "height": 1200,
+          "bytes": 33334
+        },
+        {
+          "file": "iphone-saturn-887.webp",
+          "width": 887,
+          "height": 1774,
+          "bytes": 59082
+        }
+      ]
+    },
+    "voyageArt": {
+      "file": "voyage-saturn-1672.webp",
+      "width": 1672,
+      "height": 941,
+      "kind": "concept-art",
+      "generated": true,
+      "sourceSHA256": "987df161444fab7839ed517d8e9086abc53d47100a1d592d3556bf440e1d3a42",
+      "variants": [
+        {
+          "file": "voyage-saturn-640.webp",
+          "width": 640,
+          "height": 360,
+          "bytes": 17148
+        },
+        {
+          "file": "voyage-saturn-1080.webp",
+          "width": 1080,
+          "height": 608,
+          "bytes": 42236
+        },
+        {
+          "file": "voyage-saturn-1672.webp",
+          "width": 1672,
+          "height": 941,
+          "bytes": 86504
+        }
+      ]
+    }
+  }
+}

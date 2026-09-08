@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://dust2cosmos.com/</loc>
-  </url>
-  <url>
-    <loc>https://dust2cosmos.com/privacy</loc>
-  </url>
-  <url>
-    <loc>https://dust2cosmos.com/support</loc>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://dust2cosmos.com/</loc><lastmod>2026-09-08</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://dust2cosmos.com/"/><xhtml:link rel="alternate" hreflang="ko" href="https://dust2cosmos.com/ko/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://dust2cosmos.com/"/></url>
+  <url><loc>https://dust2cosmos.com/ko/</loc><lastmod>2026-09-08</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://dust2cosmos.com/"/><xhtml:link rel="alternate" hreflang="ko" href="https://dust2cosmos.com/ko/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://dust2cosmos.com/"/></url>
+  <url><loc>https://dust2cosmos.com/privacy/</loc><lastmod>2026-09-08</lastmod></url>
+  <url><loc>https://dust2cosmos.com/support/</loc><lastmod>2026-09-08</lastmod></url>
 </urlset>

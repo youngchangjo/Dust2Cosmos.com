@@ -1,0 +1,72 @@
+{
+  "credit": "Solar System Scope / INOVE, based on NASA data",
+  "source": "https://www.solarsystemscope.com/textures/",
+  "license": "CC BY 4.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+  "modifications": "Resized and encoded as WebP. Used with authored illustrative lighting, cloud shading, atmosphere and accelerated rotation. Not current cloud observations or a native app rendering capture.",
+  "textures": [
+    {
+      "channel": "day",
+      "file": "day-2048.webp",
+      "sourceFile": "albedo_8k.jpg",
+      "sourceSHA256": "88ab060b6e7d241cfc590c69f528fab2b3247b738d40124cb590999a6fe44abc",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 216942
+    },
+    {
+      "channel": "day",
+      "file": "day-4096.webp",
+      "sourceFile": "albedo_8k.jpg",
+      "sourceSHA256": "88ab060b6e7d241cfc590c69f528fab2b3247b738d40124cb590999a6fe44abc",
+      "width": 4096,
+      "height": 2048,
+      "bytes": 722886
+    },
+    {
+      "channel": "clouds",
+      "file": "clouds-2048.webp",
+      "sourceFile": "clouds_8k.jpg",
+      "sourceSHA256": "c792eca228989d36ebb45d3ea6ff1198be5e21a25d70d2fbcb2124ffd14ba7f5",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 682980
+    },
+    {
+      "channel": "clouds",
+      "file": "clouds-4096.webp",
+      "sourceFile": "clouds_8k.jpg",
+      "sourceSHA256": "c792eca228989d36ebb45d3ea6ff1198be5e21a25d70d2fbcb2124ffd14ba7f5",
+      "width": 4096,
+      "height": 2048,
+      "bytes": 2748946
+    },
+    {
+      "channel": "night",
+      "file": "night-2048.webp",
+      "sourceFile": "nightlights_8k.jpg",
+      "sourceSHA256": "9894e83a585a22c1c425e7ca4f987a9ba625bf08ecee45d3c9dcacae3c2ad5f7",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 105952
+    },
+    {
+      "channel": "ocean",
+      "file": "ocean-2048.webp",
+      "sourceFile": "specular_8k.tif",
+      "sourceSHA256": "194e67ef7f14dd50b402a1a6f8c7ed55810e16515b95f7736091951efe8dc3fb",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 136780
+    },
+    {
+      "channel": "normal",
+      "file": "normal-2048.webp",
+      "sourceFile": "normal_8k.tif",
+      "sourceSHA256": "79d6dbbde340c653f435f5a012c026a9bed94bdcfd9714e77885f4cba046635a",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 53702
+    }
+  ]
+}
