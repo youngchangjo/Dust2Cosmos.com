@@ -99,8 +99,8 @@ for (const [lang, t] of Object.entries(locales)) {
 
     <aside class="recognition" aria-label="${t.featuredIntro}">
       <div class="recognition-mark" aria-hidden="true">✦</div>
-      <div><p class="eyebrow">${t.featuredIntro}</p><p class="recognition-title" lang="en">${site.featuring.title}</p></div>
-      <div class="recognition-detail"><p>${t.featuredRegion}</p><div aria-label="${t.featuredSources}"><a href="${site.featuring.us}">${lang === 'ko' ? '미국 iPad' : 'US · iPad'} ↗</a><a href="${site.featuring.canada}">${lang === 'ko' ? '캐나다' : 'Canada'} ↗</a></div></div>
+      <div><p class="eyebrow">${t.featuredIntro} · <time datetime="${site.featuring.month}">${t.featuredMonth}</time></p><p class="recognition-title" lang="en">${site.featuring.title}</p><a class="recognition-link" href="${site.featuring.us}">${t.featuredRegion} ↗</a></div>
+      <div class="recognition-detail"><p class="recognition-title" lang="en">${site.featuring.canadaTitle}</p><a class="recognition-link" href="${site.featuring.canada}">${t.featuredCanada} ↗</a></div>
     </aside>
 
     <section class="cinema section-pad" id="new" aria-labelledby="cinema-title">

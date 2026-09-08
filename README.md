@@ -77,4 +77,4 @@ DTC_HEADFUL=1 node scripts/qa-earth.mjs
 - [SEO·GEO 검토](docs/SEO_GEO_REVIEW.md)
 - [제품·Apple 선정 근거](docs/landing-3.0-sources.md)
 
-3.0은 출시 예정이며 2026년 9월 22일은 목표일입니다. Apple 선정은 앱의 과거 편집 선정 이력으로 표기하고 확인되지 않은 7월, 현재 선정, 3.0 선정 주장은 넣지 않았습니다. 배포·App Store 변경·검색 색인 요청·원격 푸시는 수행하지 않습니다.
+3.0은 출시 예정이며 2026년 9월 22일은 목표일입니다. 2026년 7월의 Apple 편집 선정 이력은 당시 7월 4일 조사 보고서로 확인했습니다. 미국은 Best New Apps and Updates, 캐나다는 Hot This Week이며 두 지역 모두 iPhone·iPad에 해당합니다. 7월 4일을 최초 선정일로 주장하지 않습니다. 배포·App Store 변경·검색 색인 요청·원격 푸시는 수행하지 않습니다.

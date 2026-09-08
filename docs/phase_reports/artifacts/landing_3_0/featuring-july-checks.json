@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-09-08T01:56:27.782Z",
+  "scope": "July recognition and FAQ follow-up only; prior renderer and full-site checks remain separate.",
+  "passed": 6,
+  "failed": 0,
+  "checks": [
+    {
+      "lang": "en",
+      "width": 320,
+      "status": "pass",
+      "axeViolations": 0
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "status": "pass",
+      "axeViolations": 0
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "status": "pass",
+      "axeViolations": 0
+    },
+    {
+      "lang": "ko",
+      "width": 320,
+      "status": "pass",
+      "axeViolations": 0
+    },
+    {
+      "lang": "ko",
+      "width": 390,
+      "status": "pass",
+      "axeViolations": 0
+    },
+    {
+      "lang": "ko",
+      "width": 1440,
+      "status": "pass",
+      "axeViolations": 0
+    }
+  ]
+}

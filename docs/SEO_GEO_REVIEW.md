@@ -27,7 +27,7 @@ Google의 [다국어 문서](https://developers.google.com/search/docs/specialty
 
 [Google의 AI 검색 안내](https://developers.google.com/search/docs/appearance/ai-features)는 읽을 수 있는 본문, 일반 SEO와 검색 자격을 강조하며 특별한 AI 파일이나 전용 스키마를 요구하지 않습니다. `llms.txt`는 사실 확인에 편리한 선택형 제품 요약으로만 추가했습니다. AI 인용, 검색 순위 또는 크롤러 사용을 보장하는 장치로 취급하지 않습니다.
 
-과거 Apple 편집 선정의 제목과 지역을 본문에 넣고 공식 컬렉션으로 연결했습니다. 특정 월, 현재 선정 또는 3.0 선정으로 확대하지 않았습니다. 근거와 컬렉션 변경 한계는 [출처 기록](landing-3.0-sources.md)에 있습니다.
+과거 Apple 편집 선정의 제목과 지역을 본문에 넣고 공식 컬렉션으로 연결했습니다. 후속 세션 조사에서 당시 작성된 2026년 7월 4일 보고서를 복구해 ‘2026년 7월’을 반영했습니다. 미국 Best New Apps and Updates와 캐나다 Hot This Week를 구분합니다. 확인일을 최초 선정일이나 현재·3.0 선정으로 확대하지 않았습니다. 근거와 컬렉션 변경 한계는 [출처 기록](landing-3.0-sources.md)에 있습니다.
 
 ## 성능과 시각 품질의 균형
 

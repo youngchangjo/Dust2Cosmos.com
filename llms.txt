@@ -24,7 +24,7 @@ Updated: September 8, 2026.
 - Core exploration, existing facts, source access, scientific corrections, basic sharing, and frame-rate choices remain free. Free Moon finding and representative Earth Interior depths are retained. Cinematic has a ten-second in-scene preview.
 - Truth Class labels distinguish observations, reconstructions and inferred models. Cloud records may be delayed or missing. The Sun is not a live activity feed. Voyager positions depend on public trajectory coverage. Piloted flight is virtual; early Earth environments include explanatory models.
 - The website's rotating 3D Earth is illustrative, using attributed Solar System Scope maps with authored lighting and accelerated rotation. It is separate from current cloud observations and the native app renderer.
-- Apple’s US and Canada storefronts have listed the app in Best New Apps and Updates, including iPad. This is historical editorial recognition of the app, not an award or a 3.0 selection claim. The first featuring date has not been established here; do not assign a July date.
+- In July 2026, Apple featured the app in Best New Apps and Updates in the United States and Hot This Week in Canada, on both iPhone and iPad. A contemporaneous July 4, 2026 research report documents these placements. July 4 is the verification date, not a confirmed first day of featuring. This is historical editorial recognition of the app, not an award or a 3.0 selection claim.
 
 ## Science sources
 

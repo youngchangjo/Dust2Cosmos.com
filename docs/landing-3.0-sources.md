@@ -17,7 +17,17 @@ The site never labels all new experiences as already available. Price, ratings, 
 
 ## Historical App Store recognition
 
-Apple's official pages returned through indexed search contain the app under **Best New Apps and Updates**, with the editorial context “Selected by App Store Editors.” The evidence supports a historical editorial feature in the US and Canada, including iPad. These are curated collections, not an award or proof that 3.0 has been selected.
+**July 2026 is now supported by a contemporaneous July 4 investigation report recovered from a prior Codex session.** The original report lists the United States under **Best New Apps and Updates / Selected by App Store Editors** and Canada under **Hot This Week / New apps and notable updates**, on both iPhone and iPad. The website now preserves those region-specific names. July 4 is the recorded observation date, not a proven first day of featuring.
+
+- Codex session: `019f2bd4-9d01-7180-a4ff-62a766a84405`, title `미국 다운로드 유입 경로 확인`.
+- Related research sessions: `019f2bd8-12e6-7a62-8b2d-2e506c749c9b` (Research App Store featuring), `019f2bdb-7c56-7a32-a676-c791d4d25f01` (Investigate AppFollow featuring). Local session metadata connects both to the parent above.
+- Original output: `/Users/youngchangjo/Documents/Codex/2026-07-04/dust-to-cosmos-insane-search/outputs/dust-to-cosmos-spike-investigation.md`, with a matching HTML report. Original creation and modification timestamps both read `2026-07-04 15:46:11 KST`; the report itself states `조사일: 2026-07-04`.
+- [Byte-identical preserved report](evidence/2026-07-04-dust-to-cosmos-spike-investigation.md), SHA-256 `99c3d7720266c7f89b190afd8d4a63195b92ce800dcdcbfbdf39ffd2f4c84a67`.
+- The old session JSONL paths recorded in the local index are no longer present. This finding uses the retained session metadata and its original dated output, not a claimed re-read of the missing transcript.
+
+The first September review had only undated historical search snapshots and omitted the month. The recovered July report supersedes that uncertainty and prevents applying a later Canadian section name to the July placement. These are curated editorial collections, not an award or proof that 3.0 has been selected.
+
+The following official search-indexed pages were also observed during the September review. Their rotating content supports the broader editorial history; their crawl ages are not used to establish July or a first-feature date.
 
 | Storefront | Official URL | Evidence observed September 8 |
 | --- | --- | --- |
@@ -27,7 +37,7 @@ Apple's official pages returned through indexed search contain the app under **B
 | Canada iPhone | [Apps for iPhone](https://apps.apple.com/ca/iphone/apps) | Indexed page reported a crawl last month; the app appears within the named section. |
 | Canada iPad | [Apps for iPad](https://apps.apple.com/ca/ipad/apps) | Indexed page reported a crawl last month; the app appears within the same editorial section. |
 
-The collection URLs rotate. A fresh open of the current default-language US room and Canada overview did not retain the app during this review. The website therefore uses **previously featured / 소개한 앱**, not a current placement claim. Crawl age is not a first-feature date. The exact month is unresolved; no July date, laurel award, numerical ranking or 3.0 recognition is asserted. An original dated Apple email or capture would be needed to add a month.
+The collection URLs rotate. A fresh open of the current default-language US room and Canada overview did not retain the app during this review. The website uses **July 2026**, based on the contemporaneous report above, without claiming that the collections still show the app. The exact first and last days remain unestablished. No laurel award, numerical ranking, 3.0 recognition or uninterrupted featuring interval is asserted. The July report's download-cause inference is not needed for the landing claim and is not promoted into verified acquisition attribution.
 
 ## Web Earth provenance and image generation
 

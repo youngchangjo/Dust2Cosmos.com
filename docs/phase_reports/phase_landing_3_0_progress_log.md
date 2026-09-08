@@ -25,7 +25,7 @@ Rebuild the existing dust2cosmos.com landing page around the latest 3.0 release 
 - Existing unrelated work: modified tracked `.DS_Store`, untracked `assets/.DS_Store` and `docs/superpowers/plans/2026-05-08-website-readiness.md`. These are excluded from this commit.
 - Public website still describes 2.0 and no in-app purchase. The current app contract combines former 3.1 experiences into upcoming 3.0; target September 22, 2026 is a goal, not a guaranteed launch.
 - App contract: `../DustToCosmos/docs/business/pro/PRO_3_0_COMBINED_RELEASE_SCOPE.md`; UI reference: `../DustToCosmos/docs/design/navigation_3_0/index.html#native-implementation`.
-- Indexed official Apple US and Canada pages list Dust to Cosmos under Best New Apps and Updates, including iPad. Current collections rotate; this supports historical recognition. The exact first featuring month is not established, so no July claim is made.
+- The initial September review found indexed official editorial collections without a confirmed month. Follow-up recovered the original July 4 Codex report: July 2026 US Best New Apps and Updates and Canada Hot This Week, both on iPhone/iPad. The site now uses those names and month; first day remains unknown.
 - No SEO cache found. Gathered current official guidance and local baseline instead.
 
 ## Work status
@@ -34,7 +34,7 @@ Rebuild the existing dust2cosmos.com landing page around the latest 3.0 release 
 
 | Work | Status |
 | --- | --- |
-| Source and editorial verification | done; first featuring month unknown |
+| Source and editorial verification | done; July 2026 confirmed in the July 4 report, first day unknown |
 | Generated hero and UI assets | done; four generated assets, preserved prompts, replaceable manifest |
 | Website implementation and localization | done; 3D Earth and dark-only follow-up included |
 | SEO/GEO and browser verification | done; static 234/234, browser 38/38, hardware-rendered Earth 9/9 |
@@ -42,6 +42,8 @@ Rebuild the existing dust2cosmos.com landing page around the latest 3.0 release 
 | Local commit | final scoped diff review; recorded by this local change set |
 
 The final dark-only follow-up replaces the earlier light iPad treatment. Both OS color preferences retain dark content. Chromium and WebKit checks pass; local iPad/mobile captures and generated sharing cards are inspected. Earth motion checks use the actual M5 Pro Metal renderer, with software-renderer timing distinguished from the separate headful performance sample. Native app code, release gates and production publishing remain unchanged.
+
+Follow-up: recovered the original July 4 report through Codex session metadata; preserved its bytes and SHA-256. Updated July 2026 and the two region-specific editorial titles. Static 234/234 and six EN/KO recognition layout/FAQ/accessibility checks pass. Full-page and recognition captures are current; original renderer checks are not represented as a new rerun.
 
 ## Boundaries
 
