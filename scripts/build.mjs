@@ -23,7 +23,7 @@ for (const [lang, t] of Object.entries(locales)) {
     '@graph': [
       { '@type': 'Organization', '@id': `${site.origin}/#organization`, name: 'SnapWorks Lab', url: 'https://snapworkslab.com', contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: 'sunset@snapworkslab.com' } },
       { '@type': 'WebSite', '@id': `${site.origin}/#website`, name: 'Dust to Cosmos', url: site.origin + '/', inLanguage: ['en', 'ko'], publisher: { '@id': `${site.origin}/#organization` } },
-      { '@type': 'SoftwareApplication', '@id': `${site.origin}/#app`, name: 'Dust to Cosmos: Universe Scale', alternateName: '우주먼지', applicationCategory: 'EducationalApplication', operatingSystem: 'iOS, iPadOS', availableOnDevice: ['iPhone', 'iPad'], url: site.origin + '/', downloadUrl: site.appStore, sameAs: [site.appStore], description: t.truthText, publisher: { '@id': `${site.origin}/#organization` } },
+      { '@type': 'SoftwareApplication', '@id': `${site.origin}/#app`, name: 'Dust to Cosmos', alternateName: '우주먼지', applicationCategory: 'EducationalApplication', operatingSystem: 'iOS, iPadOS', availableOnDevice: ['iPhone', 'iPad'], url: site.origin + '/', downloadUrl: site.appStore, sameAs: [site.appStore], description: t.truthText, publisher: { '@id': `${site.origin}/#organization` } },
       { '@type': 'WebPage', '@id': `${canonical}#webpage`, url: canonical, name: t.title, description: t.description, inLanguage: lang, dateModified: site.updated, isPartOf: { '@id': `${site.origin}/#website` }, about: { '@id': `${site.origin}/#app` }, primaryImageOfPage: { '@type': 'ImageObject', url: `${site.origin}/assets/media/social-${lang}.jpg`, caption: t.concept } },
     ],
   };
@@ -91,8 +91,8 @@ for (const [lang, t] of Object.entries(locales)) {
     </section>
 
     <aside class="recognition" aria-label="${t.featuredIntro}">
-      <div class="recognition-main"><p class="recognition-meta"><span>${t.featuredIntro}</span><time datetime="${site.featuring.month}">${t.featuredMonth}</time></p><h2 class="recognition-title" lang="en">${site.featuring.title}</h2><a class="recognition-link" href="${site.featuring.us}">${t.featuredRegion} ↗</a></div>
-      <div class="recognition-detail"><p class="recognition-secondary" lang="en">${site.featuring.canadaTitle}</p><a class="recognition-link" href="${site.featuring.canada}">${t.featuredCanada} ↗</a></div>
+      <div class="recognition-main"><img class="recognition-laurel" src="/assets/laurel.svg" width="640" height="165" alt=""><p class="recognition-meta"><span>${t.featuredIntro}</span><time datetime="${site.featuring.month}">${t.featuredMonth}</time></p><h2 class="recognition-title" lang="en">${site.featuring.title}</h2><a class="recognition-link" href="${site.featuring.us}">${t.featuredRegion} ↗</a></div>
+      <div class="recognition-detail"><img class="recognition-laurel" src="/assets/laurel.svg" width="640" height="165" alt=""><p class="recognition-secondary" lang="en">${site.featuring.canadaTitle}</p><a class="recognition-link" href="${site.featuring.canada}">${t.featuredCanada} ↗</a></div>
     </aside>
 
     <section class="cinema section-pad" id="new" aria-labelledby="cinema-title">
@@ -104,15 +104,15 @@ for (const [lang, t] of Object.entries(locales)) {
     <section class="device-section section-pad" id="ipad" aria-labelledby="ipad-title">
       <div class="device-intro"><p class="eyebrow">${t.ipadLabel}</p><h2 id="ipad-title">${t.ipadTitle}</h2><p class="section-description">${t.ipadIntro}</p></div>
       <figure class="device-figure">
-        <div class="device-stage">${image('devicesMockup', t.devicesAlt, { sizes: '(max-width: 700px) 100vw, 87vw' })}</div>
-        <figcaption>${screenCaption}</figcaption>
+        <div class="device-stage"><div class="actual-devices"><img class="actual-ipad" src="/assets/screens/${lang}-ipad.webp" width="2752" height="2064" alt="${escape(t.devicesAlt)}" loading="lazy"><img class="actual-iphone" src="/assets/screens/${lang}-iphone.webp" width="1206" height="2622" alt="${escape(t.devicesAlt)}" loading="lazy"></div></div>
+        <figcaption>${t.mockupNote}</figcaption>
       </figure>
       <div class="device-benefits">${t.devices.map(([title, text]) => `<article><h3>${title}</h3><p>${text}</p></article>`).join('')}</div>
     </section>
 
     <section class="voyage" aria-labelledby="voyage-title">
       <div class="voyage-head section-pad"><p class="eyebrow accent">${t.voyageLabel}</p><h2 id="voyage-title">${t.voyageTitle}</h2><p class="section-description">${t.voyageIntro}</p></div>
-      <figure class="voyage-figure">${image('voyageArt', t.voyageAlt)}<figcaption>${t.voyageNote}</figcaption></figure>
+      <figure class="voyage-figure"><img src="/assets/screens/${lang}-voyage.webp" width="2752" height="2064" alt="${escape(t.voyageAlt)}" loading="lazy"><figcaption>${t.voyageNote}</figcaption></figure>
       <div class="voyage-statistics section-pad">${t.voyageFacts.map(([number, label]) => `<div><span>${number}</span><p>${label}</p></div>`).join('')}</div>
       <div class="journey-details section-pad">${t.journeys.map(([title, text]) => `<article><h3>${title}</h3><p>${text}</p></article>`).join('')}</div>
     </section>
@@ -144,3 +144,7 @@ for (const [lang, t] of Object.entries(locales)) {
 const alternates = Object.keys(locales).map(lang => `<xhtml:link rel="alternate" hreflang="${lang}" href="${site.origin}${lang === 'en' ? '/' : '/ko/'}"/>`).join('');
 await writeFile(root + 'sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${['/', '/ko/', '/privacy/', '/support/'].map(path => `  <url><loc>${site.origin}${path}</loc><lastmod>${site.updated}</lastmod>${path === '/' || path === '/ko/' ? alternates + `<xhtml:link rel="alternate" hreflang="x-default" href="${site.origin}/"/>` : ''}</url>`).join('\n')}\n</urlset>\n`);
 console.log('Built English and Korean static landing pages and sitemap.');
+
+// Keep the optional machine-readable summary aligned with visible copy. It is
+// a convenience for readers, not a special requirement for AI search inclusion.
+await writeFile(root + 'llms.txt', `# Dust to Cosmos — 우주먼지\n\n> ${locales.en.truthText}\n\nUpdated: ${site.updated}. Version 3.0 is upcoming; the App Store link opens the currently published version.\n\n## Official pages\n- [English](${site.origin}/)\n- [한국어](${site.origin}/ko/)\n- [App Store](${site.appStore})\n- [Support](${site.origin}/support/)\n- [Privacy](${site.origin}/privacy/)\n\n## Product facts\n${locales.en.faq.map(([q,a])=>`### ${q}\n${a}`).join('\n\n')}\n\n## Pro experiences\n${locales.en.proList.map(s=>'- '+s).join('\n')}\n\n## Scientific context\nRecent cloud observations may be delayed or missing. Data timestamps remain visible. Flight obstacles, early Earth environments and black hole effects are explanatory models. The website globe is illustrative, not the native app renderer or a live weather feed.\n\n- [NASA Science](https://science.nasa.gov/)\n- [JPL Horizons](https://ssd.jpl.nasa.gov/horizons/)\n- [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/)\n`);

@@ -1,36 +1,49 @@
 # Dust to Cosmos — 우주먼지
 
-> Dust to Cosmos: Universe Scale is a 3D space exploration and astronomy education app for iPhone and iPad by SnapWorks Lab. This official website previews the upcoming 3.0 update. The currently published app is available through the App Store link below.
+> Dust to Cosmos is a 3D space exploration app by SnapWorks Lab for iPhone and iPad. Explore connected worlds, compare their sizes, and read the evidence behind real discoveries. Source labels distinguish observations, reconstructions and modeled imagery.
 
-Updated: September 8, 2026.
+Updated: 2026-09-24. Version 3.0 is upcoming; the App Store link opens the currently published version.
 
 ## Official pages
+- [English](https://dust2cosmos.com/)
+- [한국어](https://dust2cosmos.com/ko/)
+- [App Store](https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629100)
+- [Support](https://dust2cosmos.com/support/)
+- [Privacy](https://dust2cosmos.com/privacy/)
 
-- [English overview](https://dust2cosmos.com/): Product, upcoming 3.0 features, iPad support, science sources and FAQ.
-- [한국어 소개](https://dust2cosmos.com/ko/): 우주먼지 3.0, iPhone·iPad 지원, 무료와 Pro, 과학적 출처와 FAQ.
-- [Support](https://dust2cosmos.com/support/): Support contact and release-preview explanation.
-- [Privacy](https://dust2cosmos.com/privacy/): Website privacy and app privacy context.
-- [App Store](https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629100): The currently published application; regional availability and purchase details.
-- [SnapWorks Lab](https://snapworkslab.com/): Developer.
+## Product facts
+### What is Dust to Cosmos?
+Dust to Cosmos: Universe Scale is a 3D space exploration app for iPhone and iPad, made by SnapWorks Lab. Explore connected planets, moons, stars, black holes and deep-sky objects, compare their sizes, and discover cosmic time with visible scientific sources.
 
-## Product facts and release status
+### Is Dust to Cosmos 3.0 available now?
+3.0 is being prepared for release. App Store links open the currently published version. Screens on this page were captured from the 3.0 development build; check the store for update availability.
 
-- Universal iPhone and iPad app, including landscape iPad exploration.
-- Core experience: connected 3D planets, moons and stellar systems, black holes, deep-sky objects, scale comparisons, Journey of Light and the Cosmic Calendar.
-- 3.0 is upcoming. September 22, 2026 is the target, not a guaranteed release date. Generated UI previews are concepts, not screenshots from a released build.
-- The planned 3.0 release combines cinematic Earth and Sun, recent cloud observations, expanded AR sky guidance, Earth Interior, 24 Science Dossiers, an observation library and personal notebooks.
-- Expanded 3.0 journeys include Voyager observation, ten-destination virtual piloted flight, the 1989 Voyager 2 Neptune encounter, Earth Through Time with 109 epochs covering 540–0 million years ago, six Earth-history chapters, and 18 documentaries.
-- These expanded experiences use the same single non-consumable Pro purchase. No new subscription or per-journey purchase is planned. Prices are not announced on this page.
-- Core exploration, existing facts, source access, scientific corrections, basic sharing, and frame-rate choices remain free. Free Moon finding and representative Earth Interior depths are retained. Cinematic has a ten-second in-scene preview.
-- Truth Class labels distinguish observations, reconstructions and inferred models. Cloud records may be delayed or missing. The Sun is not a live activity feed. Voyager positions depend on public trajectory coverage. Piloted flight is virtual; early Earth environments include explanatory models.
-- The website's rotating 3D Earth is illustrative, using attributed Solar System Scope maps with authored lighting and accelerated rotation. It is separate from current cloud observations and the native app renderer.
-- In July 2026, Apple featured the app in Best New Apps and Updates in the United States and Hot This Week in Canada, on both iPhone and iPad. A contemporaneous July 4, 2026 research report documents these placements. July 4 is the verification date, not a confirmed first day of featuring. This is historical editorial recognition of the app, not an award or a 3.0 selection claim.
+### Does it support iPad as well as iPhone?
+Yes. iPhone defaults to portrait and also supports landscape. iPad uses a broad landscape workspace for exploration and detail.
 
-## Science sources
+### What stays free, and what is included in Pro?
+Core exploration, Voyager 1 and 2, the Neptune encounter, Moon finding, sources, basic sharing and 30/60 FPS stay free. Try Cinematic in the actual scene for ten seconds. Advanced experiences share one non-consumable Pro purchase, with no subscription. High-refresh Pro Motion requires Pro; actual frame rates depend on the scene, hardware, temperature and power state. Check the app for regional pricing.
 
-- [NASA Science](https://science.nasa.gov/): Scientific context.
-- [JPL Horizons](https://ssd.jpl.nasa.gov/horizons/): Ephemeris source context.
-- [NAIF](https://naif.jpl.nasa.gov/naif/): Spacecraft and compatible planetary trajectory resources.
-- [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/): Exoplanet measurements and source context.
+### Is the imagery live, observed or simulated?
+It depends on the feature. Cloud observations show capture times and can have gaps. The cinematic Sun uses archival data and modeled effects. Voyager uses public trajectory coverage, while piloted flight is virtual. Deep-time geography is reconstructed; early environments are modeled. Source and Truth Class information distinguish these cases.
 
-Scientific data attribution does not imply an endorsement by a source organization.
+### Can I use it offline?
+Bundled celestial content and offline science materials can be explored without a continuous connection. Fresh cloud observations and other network data need internet access. Cloud replay depends on the validated records actually available on the device.
+
+### Was Dust to Cosmos featured on the App Store?
+Yes. In July 2026, Dust to Cosmos appeared in “Best New Apps and Updates” in the United States and “Hot This Week” in Canada, on both iPhone and iPad. These placements were documented on July 4, 2026; that is the verification date, not a confirmed first day of featuring. Apple’s collections change over time. This recognition of the app is separate from the upcoming 3.0 release.
+
+## Pro experiences
+- Cinematic Earth, Sun & planets
+- Recent observed clouds & available replay
+- Black Hole Studio & piloted flight
+- Earth Through Time & 3D Earth Interior
+- Additional observatories, science dossiers & notebooks
+- Pro Motion · up to 120 FPS on supported devices
+
+## Scientific context
+Recent cloud observations may be delayed or missing. Data timestamps remain visible. Flight obstacles, early Earth environments and black hole effects are explanatory models. The website globe is illustrative, not the native app renderer or a live weather feed.
+
+- [NASA Science](https://science.nasa.gov/)
+- [JPL Horizons](https://ssd.jpl.nasa.gov/horizons/)
+- [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/)

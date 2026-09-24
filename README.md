@@ -1,6 +1,6 @@
 # Dust to Cosmos 3.0 — landing site
 
-우주먼지의 출시 예정 3.0 소개 페이지. 영문 `/`, 한국어 `/ko/`, 기존 `/privacy/`·`/support/`를 제공하는 정적 사이트입니다. 시스템 설정과 무관하게 **다크 테마만** 제공합니다. 이번 작업은 **로컬 검토와 커밋만** 진행합니다.
+우주먼지의 출시 예정 3.0 소개 페이지. 영문 `/`, 한국어 `/ko/`, 기존 `/privacy/`·`/support/`를 제공하는 정적 사이트입니다. 시스템 설정과 무관하게 **다크 테마만** 제공합니다. 2026-09-24 갱신: 실제 3.0 캡처, 편집 선정 월계관, 현행 무료/Pro 사양과 SEO/GEO 정보를 반영합니다. 운영 도메인 배포와 App Store 적용은 별도이며 검토본은 기존 비공개 Sites 문서함에 게시합니다.
 
 ## 로컬에서 보기
 
@@ -80,4 +80,8 @@ DTC_HEADFUL=1 node scripts/qa-landing-refinement.mjs
 - [SEO·GEO 검토](docs/SEO_GEO_REVIEW.md)
 - [제품·Apple 선정 근거](docs/landing-3.0-sources.md)
 
-3.0은 출시 예정이며 2026년 9월 22일은 목표일입니다. 2026년 7월의 Apple 편집 선정 이력은 당시 7월 4일 조사 보고서로 확인했습니다. 미국은 Best New Apps and Updates, 캐나다는 Hot This Week이며 두 지역 모두 iPhone·iPad에 해당합니다. 7월 4일을 최초 선정일로 주장하지 않습니다. 배포·App Store 변경·검색 색인 요청·원격 푸시는 수행하지 않습니다.
+3.0은 출시 준비 중이며 지난 목표일을 확정 일정으로 재사용하지 않습니다. 2026년 7월의 Apple 편집 선정 이력은 당시 7월 4일 조사 보고서로 확인했습니다. 미국은 Best New Apps and Updates, 캐나다는 Hot This Week이며 두 지역 모두 iPhone·iPad에 해당합니다. 7월 4일을 최초 선정일로 주장하지 않습니다. 배포·App Store 변경·검색 색인 요청·원격 푸시는 수행하지 않습니다.
+
+## 2026-09-24 실제 화면 캠페인
+
+기기 섹션과 직접 비행 이미지는 `assets/screens/`의 실제 한·영 앱 캡처를 사용합니다. 이전 생성 목업 파일은 기록으로 보존하지만 해당 섹션에 노출하지 않습니다. 한·영 원문은 `content/site.mjs`, 선택 이력은 `docs/landing-3.0-sources.md`, 선택 월계관은 `assets/laurel.svg`입니다. `llms.txt`는 이제 빌드 시 본문 FAQ와 Pro 목록에서 생성합니다. 새 스토어 캠페인은 앱 저장소 `app-store-screenshots/campaign-3.0.json` 및 촬영 provenance를 사용합니다.

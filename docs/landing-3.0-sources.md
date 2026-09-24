@@ -1,3 +1,11 @@
+# 2026-09-24 현행 캠페인 판정
+
+이 절이 아래 9월 8일의 기능 범위를 대체합니다. 시네마관 18편은 광고에서 제외합니다. 보이저 1·2호와 1989년 해왕성 조우는 무료, 추가 완성 관측실은 Pro입니다. 30/60 FPS는 무료, Pro Motion 최대 120 FPS는 지원 기기·장면·온도·전원 상태에 따르는 Pro 기능입니다. 출시 예정 상태는 유지하며 지난 9월 22일을 새 출시 약속으로 반복하지 않습니다. 기기와 직접 비행 섹션은 실제 3.0 개발 빌드 캡처로 교체합니다.
+
+월계관은 편집 선정의 장식 프레임이며 Apple 수상 로고가 아닙니다. 미국 Best New Apps and Updates · 2026년 7월, 캐나다 Hot This Week · 2026년 7월을 구분합니다. 아래 보존 보고서와 사용자 제공 2026-07-04 iPad 스크린샷을 근거로 하며, 현시점 선정 또는 3.0 선정이라는 주장은 하지 않습니다.
+
+---
+
 # Landing 3.0 — claim sources
 
 Reviewed September 8, 2026. This is a local copy review, separate from publication.
@@ -51,3 +59,8 @@ The four generated promotional assets use the prompts in `landing-3.0-image-prom
 - [Google Search Central: localized versions](https://developers.google.com/search/docs/specialty/international/localized-versions), retrieved September 8, 2026.
 
 These sources inform the implementation choices recorded in `SEO_GEO_REVIEW.md`. No external search console, production metadata, nomination or release was modified.
+
+
+## 2026-09-24 screenshot and social-card provenance
+
+The six `assets/screens/{ko,en}-{iphone,ipad,voyage}.webp` images are delivery-sized derivatives of the actual 3.0(86) Simulator captures in the app screenshot campaign. No generated UI is used in these device/flight placements. English fallback inside untranslated advanced app views is preserved. `assets/media/social-{ko,en}.jpg` now uses the actual archived Metal Earth renderer output, bundled Gmarket Sans and original decorative laurel; the old generated social artwork is superseded. The first-frame/WebGL Earth and labelled lunar concept artwork retain their existing attributions.

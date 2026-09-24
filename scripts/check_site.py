@@ -95,13 +95,12 @@ for route, doc in docs.items():
         check(not any(key in app for key in ['aggregateRating', 'offers', 'softwareVersion', 'award']), route + ': no fabricated price, rating, release or award')
         check('FAQPage' not in types, route + ': no commercial FAQ rich-result claim')
         text = ' '.join(doc.text)
-        for term in ['3.0', 'iPhone', 'iPad', 'Pro', '109', '18', 'Best New Apps and Updates']:
+        for term in ['3.0', 'iPhone', 'iPad', 'Pro', '109', '24', 'Best New Apps and Updates']:
             check(term in text, route + ': meaningful static content ' + term)
         check(('Coming soon' if lang == 'en' else '출시 예정') in text, route + ': visible upcoming status')
-        if manifest['assets']['devicesMockup']['generated']:
-            check(('AI-generated' if lang == 'en' else 'AI로 제작한') in text, route + ': generated screen disclosure')
-        else:
-            check(('Screens captured' if lang == 'en' else '실제 앱 화면') in text, route + ': captured screen caption')
+        check(('Actual' if lang == 'en' else '실제 앱 화면') in text, route + ': actual native capture disclosure')
+        check('18 documentaries' not in text and '18편' not in text, route + ': withdrawn Cinema absent')
+        check('120 FPS' in text and '30/60' in text if lang == 'en' else '120 FPS' in text and '30·60' in text, route + ': current Pro Motion boundary')
         check(len(doc.select('details')) >= 6, route + ': native readable FAQ')
         panels = [attrs for _, attrs in doc.tags if 'explorer-panel' in attrs.get('class', '').split()]
         check(len(panels) == 4 and not any('hidden' in attrs for attrs in panels), route + ': all exploration panels in unenhanced HTML')
