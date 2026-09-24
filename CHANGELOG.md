@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-24 — Gmarket Sans and balanced editorial laurels
+
+- Self-host Gmarket Sans Medium and Bold across both homepages and shared support/privacy styles.
+- Give US and Canada editorial placements equal columns, readable links and a consistent bold title; remove inherited narrow/flex wrapping.
+- Verified six language/viewport combinations at 390, 768 and 1440px, font loading, no horizontal overflow and representative native browser captures.
+- User authorized production website and App Store 3.0 metadata/screenshot updates; publishing verification is in progress.
+
 ## 2026-09-08 — first arrival and visual refinement
 
 Status: `verified_local`; no deployment, release or push.

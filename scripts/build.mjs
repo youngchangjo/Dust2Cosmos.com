@@ -61,6 +61,8 @@ for (const [lang, t] of Object.entries(locales)) {
   <meta name="twitter:image:alt" content="${escape(t.heroAlt)}">
   <link rel="icon" href="/assets/icons/favicon-3.0.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-3.0.png" sizes="180x180">
+  <link rel="preload" href="/assets/fonts/GmarketSansMedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/GmarketSansBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
   <script type="application/ld+json">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>
   <script defer src="/assets/main.js"></script>

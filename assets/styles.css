@@ -1,3 +1,5 @@
+@font-face { font-family: 'Gmarket Sans'; src: url('/assets/fonts/GmarketSansMedium.woff2') format('woff2'); font-weight: 100 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Gmarket Sans'; src: url('/assets/fonts/GmarketSansBold.woff2') format('woff2'); font-weight: 601 900; font-style: normal; font-display: swap; }
 :root {
   color-scheme: dark;
   --bg: #050607;
@@ -8,7 +10,7 @@
   --line: #2a2e32;
   --gutter: clamp(24px, 6.5vw, 112px);
   --ease: cubic-bezier(.2,.75,.25,1);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  font-family: 'Gmarket Sans', 'Apple SD Gothic Neo', sans-serif;
   font-synthesis: none;
   background: var(--bg);
   color: var(--text);
@@ -18,7 +20,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 100px; }
 body { margin: 0; font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
 body, h1, h2, h3, p, figure, dl, dd { margin: 0; }
 a { color: inherit; text-decoration: none; }
-button { font: inherit; color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
 button, a, summary { -webkit-tap-highlight-color: transparent; }
 button, summary { cursor: pointer; }
 button { border-radius: 0; }
@@ -367,3 +369,17 @@ p { text-wrap: pretty; }
 
 /* 3.0: editorial laurels and real native screens, September 24. */
 .recognition{gap:60px;max-width:1180px;margin:auto;padding:70px 24px;align-items:center;justify-content:space-around}.recognition-main,.recognition-detail{position:relative;text-align:center;padding:45px 75px;flex:1}.recognition-laurel{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.8}.recognition-main>*:not(img),.recognition-detail>*:not(img){position:relative}.recognition-meta{justify-content:center;flex-direction:column;gap:6px}.recognition-title{font-size:clamp(22px,2.5vw,34px);max-width:360px;margin:10px auto 12px}.recognition-secondary{font-size:26px}.recognition-link{font-size:13px}.actual-devices{position:relative;min-height:650px;width:100%;padding:70px 10% 60px 2%;isolation:isolate}.actual-ipad{width:88%;height:auto;border-radius:25px;border:6px solid #233138;box-shadow:0 0 0 1px #90aab360,0 30px 100px #000;transform:rotate(-3deg)}.actual-iphone{position:absolute;right:3%;top:4%;width:25%;height:auto;border:5px solid #26363c;border-radius:35px;box-shadow:0 0 0 1px #afc9d060,0 25px 90px #000;transform:rotate(5deg)}.voyage-figure{max-width:1200px;margin:auto}.voyage-figure>img{object-fit:contain;max-height:800px;width:100%;border-radius:26px;background:#000}.device-stage{background:radial-gradient(ellipse at 50% 50%,#142a3866,transparent 68%)}@media(max-width:700px){.recognition{display:block;padding:25px 20px}.recognition-main,.recognition-detail{padding:38px 58px;margin:14px 0}.recognition-title{font-size:25px}.actual-devices{min-height:300px;padding-top:40px}.actual-ipad{border-width:3px;border-radius:12px}.actual-iphone{border-width:3px;border-radius:18px}.device-stage{min-height:0}}
+
+/* Equal editorial treatments; the secondary label must not inherit the old
+   narrow column or mobile flex wrapping around its laurel. */
+.recognition { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+.recognition-main, .recognition-detail { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 280px; padding: 40px 68px; border: 0; gap: 0; }
+.recognition-title, .recognition-secondary { font-size: clamp(23px, 2.2vw, 30px); font-weight: 700; line-height: 1.35; letter-spacing: -.025em; margin: 10px 0; }
+.recognition-link { font-size: 15px; line-height: 1.6; margin-top: 12px; }
+.recognition-meta { font-size: 15px; line-height: 1.5; margin-bottom: 8px; }
+@media (max-width: 700px) {
+  .recognition { display: grid; grid-template-columns: 1fr; padding: 24px 20px; gap: 12px; }
+  .recognition-main, .recognition-detail { min-height: 245px; padding: 28px 48px; margin: 0; }
+  .recognition-title, .recognition-secondary { font-size: 23px; }
+  .recognition-link { font-size: 14px; }
+}
