@@ -39,6 +39,9 @@ for (const [lang, t] of Object.entries(locales)) {
   <meta name="color-scheme" content="dark">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="apple-itunes-app" content="app-id=6760629100">
+  <meta name="naver-site-verification" content="bea87ecb946f38ee2e87f732e73171b8b51bb6e1">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="canonical" href="${canonical}">
   <link rel="alternate" hreflang="en" href="${site.origin}/">
   <link rel="alternate" hreflang="ko" href="${site.origin}/ko/">
@@ -65,6 +68,9 @@ for (const [lang, t] of Object.entries(locales)) {
   <link rel="preload" href="/assets/fonts/GmarketSansBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
   <script type="application/ld+json">${JSON.stringify(schema).replaceAll('<', '\\u003c')}</script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script defer src="/assets/analytics.js"></script>
   <script defer src="/assets/main.js"></script>
   <script defer src="/assets/earth.js"></script>
 </head>

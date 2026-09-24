@@ -1,6 +1,11 @@
 {
-  "passed": 262,
-  "total": 262,
-  "failures": [],
+  "passed": 276,
+  "total": 280,
+  "failures": [
+    "/: local resource /_vercel/insights/script.js",
+    "/ko/: local resource /_vercel/insights/script.js",
+    "/privacy/: local resource /_vercel/insights/script.js",
+    "/support/: local resource /_vercel/insights/script.js"
+  ],
   "scope": "Static local HTML, resources, release copy, language URLs, schema and image budgets. No search ranking or live deployment claim."
 }

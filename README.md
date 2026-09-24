@@ -80,8 +80,12 @@ DTC_HEADFUL=1 node scripts/qa-landing-refinement.mjs
 - [SEO·GEO 검토](docs/SEO_GEO_REVIEW.md)
 - [제품·Apple 선정 근거](docs/landing-3.0-sources.md)
 
-3.0은 출시 준비 중이며 지난 목표일을 확정 일정으로 재사용하지 않습니다. 2026년 7월의 Apple 편집 선정 이력은 당시 7월 4일 조사 보고서로 확인했습니다. 미국은 Best New Apps and Updates, 캐나다는 Hot This Week이며 두 지역 모두 iPhone·iPad에 해당합니다. 7월 4일을 최초 선정일로 주장하지 않습니다. 배포·App Store 변경·검색 색인 요청·원격 푸시는 수행하지 않습니다.
+3.0은 출시 준비 중이며 지난 목표일을 확정 일정으로 재사용하지 않습니다. 2026년 7월의 Apple 편집 선정 이력은 당시 7월 4일 조사 보고서로 확인했습니다. 미국은 Best New Apps and Updates, 캐나다는 Hot This Week이며 두 지역 모두 iPhone·iPad에 해당합니다. 7월 4일을 최초 선정일로 주장하지 않습니다. 2026-09-24 사용자 승인으로 3.0 소개와 새 글꼴을 운영 사이트에 배포합니다. 검색 색인 요청은 별도입니다.
 
 ## 2026-09-24 실제 화면 캠페인
 
 기기 섹션과 직접 비행 이미지는 `assets/screens/`의 실제 한·영 앱 캡처를 사용합니다. 이전 생성 목업 파일은 기록으로 보존하지만 해당 섹션에 노출하지 않습니다. 한·영 원문은 `content/site.mjs`, 선택 이력은 `docs/landing-3.0-sources.md`, 선택 월계관은 `assets/laurel.svg`입니다. `llms.txt`는 이제 빌드 시 본문 FAQ와 Pro 목록에서 생성합니다. 새 스토어 캠페인은 앱 저장소 `app-store-screenshots/campaign-3.0.json` 및 촬영 provenance를 사용합니다.
+
+## 운영 배포
+
+`main`은 기존 Vercel 프로젝트에 연결되어 있습니다. 기존 네이버 인증, 사이트 매니페스트, 루트 아이콘과 Vercel/Google Analytics를 보존합니다. 웹사이트 통계는 앱과 구분하여 개인정보 안내에 명시합니다. 정적 검사 후 `main` 푸시와 GitHub Production 배포 상태·실제 도메인 readback을 확인합니다.
