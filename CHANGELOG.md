@@ -1,3 +1,10 @@
+## 2026-09-24 · 운영 홈페이지 글꼴 및 선정 영역
+
+- 모든 페이지에 Gmarket Sans Medium/Bold 자체 호스팅. 본문·제목·버튼·캐나다 Hot This Week 선정 영역을 통일하고 두 월계관 크기와 정렬 개선.
+- 한·영 390/768/1440px 6개 조합 글꼴·넘침 검사, 정적 276/276 통과. 실제 도메인 모바일 한글/데스크톱 영어 시각 확인 및 HTML/CSS/폰트 8개 파일 대조.
+- 기존 main 배포 이력을 병합하여 네이버 인증·웹 통계·매니페스트·404 유지. Vercel public 출력 경로 오류를 dist 명시와 공개 파일 allowlist로 수정. Production 배포 6634678546 성공.
+- 홈페이지는 예정된 3.0 소개이며 앱 심사 제출/공개 출시는 별도.
+
 # Changelog
 
 ## 2026-09-24 — Gmarket Sans and balanced editorial laurels
