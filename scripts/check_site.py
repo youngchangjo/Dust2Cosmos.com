@@ -75,6 +75,9 @@ for route, doc in docs.items():
             parsed = urlsplit(urljoin(ORIGIN + route, url))
             if parsed.netloc != 'dust2cosmos.com' or parsed.scheme not in ('https', 'http'):
                 continue
+            # Vercel serves this existing analytics endpoint at deployment time.
+            if parsed.path == '/_vercel/insights/script.js':
+                continue
             target = ROOT / parsed.path.lstrip('/')
             if target.is_dir():
                 target /= 'index.html'
