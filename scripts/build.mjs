@@ -99,8 +99,8 @@ for (const [lang, t] of Object.entries(locales)) {
     </section>
 
     <aside class="recognition" aria-label="${t.featuredIntro}">
-      <div class="recognition-main"><img class="recognition-laurel" src="/assets/laurel.svg" width="640" height="165" alt=""><p class="recognition-meta"><span>${t.featuredIntro}</span><time datetime="${site.featuring.month}">${t.featuredMonth}</time></p><h2 class="recognition-title" lang="en">${site.featuring.title}</h2><a class="recognition-link" href="${site.featuring.us}">${t.featuredRegion} ↗</a></div>
-      <div class="recognition-detail"><img class="recognition-laurel" src="/assets/laurel.svg" width="640" height="165" alt=""><p class="recognition-secondary" lang="en">${site.featuring.canadaTitle}</p><a class="recognition-link" href="${site.featuring.canada}">${t.featuredCanada} ↗</a></div>
+      <div class="recognition-main"><span class="recognition-laurel left" aria-hidden="true"><img src="/assets/laurel-0925.png" width="1536" height="1024" alt=""></span><span class="recognition-laurel right" aria-hidden="true"><img src="/assets/laurel-0925.png" width="1536" height="1024" alt=""></span><p class="recognition-meta"><span>${t.featuredIntro}</span><time datetime="${site.featuring.month}">${t.featuredMonth}</time></p><h2 class="recognition-title" lang="en">${site.featuring.title}</h2><a class="recognition-link" href="${site.featuring.us}">${t.featuredRegion} ↗</a></div>
+      <div class="recognition-detail"><span class="recognition-laurel left" aria-hidden="true"><img src="/assets/laurel-0925.png" width="1536" height="1024" alt=""></span><span class="recognition-laurel right" aria-hidden="true"><img src="/assets/laurel-0925.png" width="1536" height="1024" alt=""></span><p class="recognition-secondary" lang="en">${site.featuring.canadaTitle}</p><a class="recognition-link" href="${site.featuring.canada}">${t.featuredCanada} ↗</a></div>
     </aside>
 
     <section class="cinema section-pad" id="new" aria-labelledby="cinema-title">

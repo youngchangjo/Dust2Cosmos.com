@@ -383,3 +383,12 @@ p { text-wrap: pretty; }
   .recognition-title, .recognition-secondary { font-size: 23px; }
   .recognition-link { font-size: 14px; }
 }
+
+/* Keep generated leaf shapes proportional at every viewport. */
+.recognition-main>.recognition-laurel,.recognition-detail>.recognition-laurel{position:absolute;top:0;bottom:0;width:23%;height:100%;overflow:hidden;opacity:.92;pointer-events:none}.recognition-laurel.left{left:0;right:auto}.recognition-laurel.right{right:0;left:auto}.recognition-laurel img{position:absolute;top:0;height:100%;width:auto;max-width:none;filter:invert(1)}.recognition-laurel.left img{left:0}.recognition-laurel.right img{right:0}
+.recognition-main,.recognition-detail{padding-left:100px;padding-right:100px}.recognition-main>*:not(.recognition-laurel),.recognition-detail>*:not(.recognition-laurel){position:relative}
+@media(max-width:700px){.recognition-main,.recognition-detail{padding:34px 78px;min-height:240px}.recognition-title,.recognition-secondary{font-size:21px}.recognition-meta{font-size:14px}.recognition-laurel img{opacity:.9}}
+/* Reserve each complete branch, including the inward stem tip. */
+.recognition-main,.recognition-detail{--laurel-height:240px}
+.recognition-main>.recognition-laurel,.recognition-detail>.recognition-laurel{top:50%;bottom:auto;height:var(--laurel-height);width:calc(var(--laurel-height)*.55);transform:translateY(-50%)}
+@media(max-width:700px){.recognition-main,.recognition-detail{--laurel-height:180px}}

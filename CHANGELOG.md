@@ -1,3 +1,8 @@
+## 2026-09-25 — Editorial laurel artwork
+
+- Replace the stretched laurel drawing with an ImageGen botanical silhouette, reused by the nine-language App Store first screenshot. Preserve Gmarket Sans and the existing editorial-selection wording.
+- Keep branch proportions and full stem tips on mobile and desktop. Korean/English at 375/768/1440px verified; static checks 288/288. Production verification pending.
+
 ## 2026-09-24 · 운영 홈페이지 글꼴 및 선정 영역
 
 - 모든 페이지에 Gmarket Sans Medium/Bold 자체 호스팅. 본문·제목·버튼·캐나다 Hot This Week 선정 영역을 통일하고 두 월계관 크기와 정렬 개선.
