@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "campaignID": "pro-3-0-launch",
+  "enabled": false,
+  "productID": "com.dusttocosmos.app.pro",
+  "minimumAppVersion": "3.0",
+  "startsAt": null,
+  "endsAt": null,
+  "markets": []
+}

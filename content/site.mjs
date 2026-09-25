@@ -209,7 +209,7 @@ export const locales = {
     "proTitle": "Go deeper, with one purchase.",
     "proIntro": "3.0 brings the expanded experiences together in the same non-consumable Pro purchase. No new subscription. No separate ticket for each journey.",
     "freeTitle": "Curiosity comes first",
-    "freeText": "Core exploration, Voyager 1 and 2, the Neptune encounter, Moon finding, sources, basic sharing and 30/60 FPS stay free. Try Cinematic in the actual scene for ten seconds.",
+    "freeText": "Core exploration, Voyager 1 and 2, the Neptune encounter, Moon finding, sources, basic sharing and 30/60 FPS stay free. Try Cinematic on Earth or the Sun for one minute.",
     "proList": [
       "Cinematic Earth, Sun & planets",
       "Recent observed clouds & available replay",
@@ -239,7 +239,7 @@ export const locales = {
       ],
       [
         "What stays free, and what is included in Pro?",
-        "Core exploration, Voyager 1 and 2, the Neptune encounter, Moon finding, sources, basic sharing and 30/60 FPS stay free. Try Cinematic in the actual scene for ten seconds. Advanced experiences share one non-consumable Pro purchase, with no subscription. High-refresh Pro Motion requires Pro; actual frame rates depend on the scene, hardware, temperature and power state. Check the app for regional pricing."
+        "Core exploration, Voyager 1 and 2, the Neptune encounter, Moon finding, sources, basic sharing and 30/60 FPS stay free. Try Cinematic on Earth or the Sun for one minute. Advanced experiences share one non-consumable Pro purchase, with no subscription. High-refresh Pro Motion requires Pro; actual frame rates depend on the scene, hardware, temperature and power state. Check the app for regional pricing."
       ],
       [
         "Is the imagery live, observed or simulated?",
@@ -454,7 +454,7 @@ export const locales = {
     "proTitle": "한 번의 구매로 더 깊은 우주.",
     "proIntro": "3.0의 확장 경험을 기존의 단일 Pro에 함께 담아요. 새로운 구독이나 여정마다 따로 사는 이용권은 없어요.",
     "freeTitle": "호기심에는 문턱 없이",
-    "freeText": "기본 탐험, 보이저 1·2호와 해왕성 조우, 달 찾기, 출처, 기본 공유, 30·60 FPS는 무료입니다. 시네마틱은 실제 장면에서 10초 미리 볼 수 있어요.",
+    "freeText": "기본 탐험, 보이저 1·2호와 해왕성 조우, 달 찾기, 출처, 기본 공유, 30·60 FPS는 무료입니다. 지구와 태양의 시네마틱을 실제 장면에서 1분간 미리 볼 수 있어요.",
     "proList": [
       "지구·태양·행성의 시네마틱 연출",
       "최근 관측 구름과 확보된 기록 재생",
@@ -484,7 +484,7 @@ export const locales = {
       ],
       [
         "무료 기능과 Pro는 어떻게 다른가요?",
-        "기본 탐험, 보이저 1·2호와 해왕성 조우, 달 찾기, 출처, 기본 공유, 30·60 FPS는 무료입니다. 시네마틱은 실제 장면에서 10초 미리 볼 수 있어요. 심화 체험은 구독 없는 단일 Pro 구매에 포함됩니다. 고주사율 Pro Motion은 Pro 기능이며 실제 속도는 장면·기기·온도·전원 상태에 따라 달라집니다. 가격은 앱에서 확인하세요."
+        "기본 탐험, 보이저 1·2호와 해왕성 조우, 달 찾기, 출처, 기본 공유, 30·60 FPS는 무료입니다. 지구와 태양의 시네마틱을 실제 장면에서 1분간 미리 볼 수 있어요. 심화 체험은 구독 없는 단일 Pro 구매에 포함됩니다. 고주사율 Pro Motion은 Pro 기능이며 실제 속도는 장면·기기·온도·전원 상태에 따라 달라집니다. 가격은 앱에서 확인하세요."
       ],
       [
         "실시간 관측인가요, 시뮬레이션인가요?",

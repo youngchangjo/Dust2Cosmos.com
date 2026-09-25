@@ -50,3 +50,10 @@ Status: `verified_local`; user visual review pending. No deployment, release, Ap
 - Local validation: 234 static checks, 38 browser checks and 9 hardware-rendered 3D behavior checks pass. Automated accessibility reports contain no known violations; full physical-device/VoiceOver and field search/performance results are separate.
 
 Evidence: `docs/phase_reports/phase_landing_3_0_validation_report.md` and `phase_landing_3_0_visual_report.html`. Existing unrelated files are outside the website change set.
+
+## 2026-09-25 — Pro launch campaign preparation
+
+- Added a shared, initially disabled JSON campaign endpoint and server-time-bound offer display in the existing Pro section. The site names the applicable storefront and directs customers to the app for actual StoreKit pricing.
+- No launch dates, active discount or App Store price changes are published. The configuration disables caching; expiry, unavailable data and background return are covered.
+- Preserved Gmarket Sans and neutral page styling; updated the existing Earth/Sun preview copy to one minute.
+- Validation: campaign/DOM tests 4/4 and static page/resource checks 290/290. Uses the existing GitHub to Vercel deployment; no new project, account or credentials.

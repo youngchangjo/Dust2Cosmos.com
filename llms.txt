@@ -22,7 +22,7 @@ Dust to Cosmos: Universe Scale is a 3D space exploration app for iPhone and iPad
 Yes. iPhone defaults to portrait and also supports landscape. iPad uses a broad landscape workspace for exploration and detail.
 
 ### What stays free, and what is included in Pro?
-Core exploration, Voyager 1 and 2, the Neptune encounter, Moon finding, sources, basic sharing and 30/60 FPS stay free. Try Cinematic in the actual scene for ten seconds. Advanced experiences share one non-consumable Pro purchase, with no subscription. High-refresh Pro Motion requires Pro; actual frame rates depend on the scene, hardware, temperature and power state. Check the app for regional pricing.
+Core exploration, Voyager 1 and 2, the Neptune encounter, Moon finding, sources, basic sharing and 30/60 FPS stay free. Try Cinematic on Earth or the Sun for one minute. Advanced experiences share one non-consumable Pro purchase, with no subscription. High-refresh Pro Motion requires Pro; actual frame rates depend on the scene, hardware, temperature and power state. Check the app for regional pricing.
 
 ### Is the imagery live, observed or simulated?
 It depends on the feature. Cloud observations show capture times and can have gaps. The cinematic Sun uses archival data and modeled effects. Voyager uses public trajectory coverage, while piloted flight is virtual. Deep-time geography is reconstructed; early environments are modeled. Source and Truth Class information distinguish these cases.

@@ -72,6 +72,7 @@ for (const [lang, t] of Object.entries(locales)) {
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="/assets/analytics.js"></script>
   <script defer src="/assets/main.js"></script>
+  <script type="module" src="/assets/pro-campaign.js"></script>
   <script defer src="/assets/earth.js"></script>
 </head>
 <body class="page-home">
@@ -133,7 +134,8 @@ for (const [lang, t] of Object.entries(locales)) {
       </div>
     </section>
 
-    <section class="pro-section section-pad" id="pro" aria-labelledby="pro-title"><div class="pro-intro"><p class="eyebrow accent">${t.proLabel}</p><h2 id="pro-title">${t.proTitle}</h2><p class="section-description">${t.proIntro}</p><p class="fine-print">${t.proNote}</p></div><div class="pro-details"><ul>${t.proList.map(item => `<li><span aria-hidden="true">↗</span>${item}</li>`).join('')}</ul><div class="free-note"><h3>${t.freeTitle}</h3><p>${t.freeText}</p></div></div></section>
+    <section class="pro-section section-pad" id="pro" aria-labelledby="pro-title">
+      <aside class="launch-offer" data-pro-campaign hidden aria-label="${lang === 'ko' ? 'Pro 출시 행사' : 'Pro launch offer'}"><span aria-hidden="true">✦</span><div><strong data-campaign-title></strong><p data-campaign-end></p><p data-campaign-note></p><a class="text-link" href="${site.appStore}">${lang === 'ko' ? '앱에서 Pro 살펴보기' : 'Explore Pro in the app'}${arrow}</a></div></aside><div class="pro-intro"><p class="eyebrow accent">${t.proLabel}</p><h2 id="pro-title">${t.proTitle}</h2><p class="section-description">${t.proIntro}</p><p class="fine-print">${t.proNote}</p></div><div class="pro-details"><ul>${t.proList.map(item => `<li><span aria-hidden="true">↗</span>${item}</li>`).join('')}</ul><div class="free-note"><h3>${t.freeTitle}</h3><p>${t.freeText}</p></div></div></section>
 
     <section class="truth-section section-pad" id="sources" aria-labelledby="truth-title"><figure class="science-figure">${image('scienceArt', t.scienceAlt, { sizes: '(max-width: 700px) 90vw, 35vw' })}<figcaption>${t.scienceNote}</figcaption></figure><div><h2 id="truth-title">${t.truthTitle}</h2><p>${t.truthText}</p><nav class="source-links" aria-label="${t.sourceLabel}"><a href="https://science.nasa.gov/">NASA Science ↗</a><a href="https://ssd.jpl.nasa.gov/horizons/">JPL Horizons ↗</a><a href="https://naif.jpl.nasa.gov/naif/">NAIF ↗</a><a href="https://exoplanetarchive.ipac.caltech.edu/">NASA Exoplanet Archive ↗</a></nav><p class="fine-print">${t.sourceNote}</p><p class="fine-print earth-credit">${lang === 'ko' ? '메인 지구 텍스처: ' : 'Hero Earth textures: '}<a href="https://www.solarsystemscope.com/textures/">Solar System Scope / INOVE</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. ${lang === 'ko' ? 'NASA 기반 자료를 축소·변환하고 조명·대기·빠르게 흐르는 자전 연출을 더했습니다. 현재 구름 관측이나 실제 앱 렌더 캡처는 아닙니다.' : 'NASA-based maps, resized and converted, with illustrative lighting, atmosphere and accelerated rotation. Not current cloud observations or a native app capture.'}</p></div></section>
 

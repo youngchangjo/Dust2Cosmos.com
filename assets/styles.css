@@ -392,3 +392,10 @@ p { text-wrap: pretty; }
 .recognition-main,.recognition-detail{--laurel-height:240px}
 .recognition-main>.recognition-laurel,.recognition-detail>.recognition-laurel{top:50%;bottom:auto;height:var(--laurel-height);width:calc(var(--laurel-height)*.55);transform:translateY(-50%)}
 @media(max-width:700px){.recognition-main,.recognition-detail{--laurel-height:180px}}
+
+/* Event visibility is data driven; no price is hardcoded into public HTML. */
+.launch-offer[hidden]{display:none!important}
+.launch-offer{grid-column:1 / -1;display:flex;align-items:flex-start;gap:18px;padding:24px 0;border-block:1px solid #3b4246;background:transparent;margin:0;color:#f6f7f8}
+.launch-offer>span{font-size:28px;color:#c5e8ed}.launch-offer strong{font-size:clamp(19px,2.4vw,26px)}.launch-offer p{font-size:16px;line-height:1.6;margin:8px 0;color:#d0d5d9}.launch-offer .text-link{margin-top:12px}
+
+.pro-section:has(.launch-offer:not([hidden])){row-gap:32px}.launch-offer>div{flex:1}.launch-offer .text-link{color:#fff}
