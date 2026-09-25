@@ -1,7 +1,7 @@
 ## 2026-09-25 — Editorial laurel artwork
 
 - Replace the stretched laurel drawing with an ImageGen botanical silhouette, reused by the nine-language App Store first screenshot. Preserve Gmarket Sans and the existing editorial-selection wording.
-- Keep branch proportions and full stem tips on mobile and desktop. Korean/English at 375/768/1440px verified; static checks 288/288. Production verification pending.
+- Keep branch proportions and full stem tips on mobile and desktop. Korean/English at 375/768/1440px verified; static checks 288/288. Production deployment 6651066126 succeeded; English/Korean HTML, CSS and artwork hashes match the deployed files.
 
 ## 2026-09-24 · 운영 홈페이지 글꼴 및 선정 영역
 
