@@ -1,3 +1,9 @@
+## 2026-09-25 — 3.0 출시 혜택 종료일 확정
+
+- 2026-10-12 00:00 UTC (한국 09:00) 종료를 공개 캠페인 설정에 반영. 기간 한정 문구와 출시 준비 중 안내를 유지합니다.
+- ASC 175개 지역, 현재/예정 가격 350개 구간 조회값과 일치하는 금액을 사용합니다. 한국 9,900→14,900원 / 미국 $6.99→$9.99. Apple 지역별 전환 때문에 실제 정상가 적용은 홍보 종료 이후 가장 가까운 일정입니다.
+- 네이티브 결제가는 StoreKit 기준이며 이 JSON은 마케팅 표시용입니다. 4개 캠페인 검사 및 정적 검사 290/290 통과.
+
 ## 2026-09-25 — Editorial laurel artwork
 
 - Replace the stretched laurel drawing with an ImageGen botanical silhouette, reused by the nine-language App Store first screenshot. Preserve Gmarket Sans and the existing editorial-selection wording.

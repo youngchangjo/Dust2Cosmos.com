@@ -3,7 +3,7 @@ export function campaignMarket(c, storefront, now) {
   if (!c || c.schemaVersion !== 1 || c.campaignID !== 'pro-3-0-launch' || c.enabled !== true ||
       c.productID !== 'com.dusttocosmos.app.pro' || c.minimumAppVersion !== '3.0') return null;
   const start = Date.parse(c.startsAt), end = Date.parse(c.endsAt);
-  if (!Number.isFinite(start) || !Number.isFinite(end) || end - start !== 14 * 86400000 || now < start || now >= end) return null;
+  if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start || now < start || now >= end) return null;
   const matches = c.markets?.filter(m => m.storefront === storefront) ?? [];
   if (matches.length !== 1) return null;
   const market = matches[0];
@@ -42,9 +42,9 @@ export function startCampaignBanner(element, {endpoint = '/assets/pro-launch-cam
     const c = receipt.campaign, market = campaignMarket(c, region, receipt.date + elapsed);
     if (!market) return;
     const date = new Intl.DateTimeFormat(korean ? 'ko-KR' : 'en-US', {month:'long',day:'numeric',hour:'2-digit',minute:'2-digit',hourCycle:'h23',timeZone:market.timeZone}).format(Date.parse(c.endsAt));
-    element.querySelector('[data-campaign-title]').textContent = korean ? '3.0 출시 기념 · 2주 한정' : '3.0 launch · 2 weeks only';
+    element.querySelector('[data-campaign-title]').textContent = korean ? '3.0 출시 기념 혜택' : '3.0 launch offer';
     element.querySelector('[data-campaign-end]').textContent = (korean ? '종료 ' : 'Ends ') + date + ' · ' + (korean && market.timeZone === 'Asia/Seoul' ? '한국시간' : market.timeZone);
-    element.querySelector('[data-campaign-note]').textContent = korean ? '한국 App Store 대상 · 앱에서 현재 행사 가격을 확인하세요. 한 번 구매 · 구독 없음.' : 'US App Store offer · Check the current offer price in the app. One purchase, no subscription.';
+    element.querySelector('[data-campaign-note]').textContent = korean ? '한국 App Store 대상 · 3.0 출시 후 앱에서 행사 가격을 확인하세요. 한 번 구매 · 구독 없음.' : 'US App Store offer · Check the offer price in the app after 3.0 launches. One purchase, no subscription.';
     element.hidden = false;
   };
   const timer = setInterval(render, 1000);
