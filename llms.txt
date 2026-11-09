@@ -2,47 +2,61 @@
 
 > Dust to Cosmos is a 3D space exploration app by SnapWorks Lab for iPhone and iPad. Explore connected worlds, compare their sizes, and read the evidence behind real discoveries. Source labels distinguish observations, reconstructions and modeled imagery.
 
-Updated: 2026-09-24. Version 3.0 is upcoming; the App Store link opens the currently published version.
+Updated: 2026-11-09. Version 3.2 is upcoming; the App Store link opens the currently published version (3.1.1).
 
 ## Official pages
 - [English](https://dust2cosmos.com/)
 - [한국어](https://dust2cosmos.com/ko/)
-- [App Store](https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629100)
+- [App Store](https://apps.apple.com/us/app/dust-to-cosmos-space-explorer/id6760629100)
 - [Support](https://dust2cosmos.com/support/)
 - [Privacy](https://dust2cosmos.com/privacy/)
 
 ## Product facts
 ### What is Dust to Cosmos?
-Dust to Cosmos: Universe Scale is a 3D space exploration app for iPhone and iPad, made by SnapWorks Lab. Explore connected planets, moons, stars, black holes and deep-sky objects, compare their sizes, and discover cosmic time with visible scientific sources.
+Dust to Cosmos: Space Explorer is a 3D space exploration app for iPhone and iPad, made by SnapWorks Lab. Explore connected planets, moons, stars, black holes and deep-sky objects, relive real missions from Apollo 11 to Mars, and read the scientific sources behind them.
 
-### Is Dust to Cosmos 3.0 available now?
-3.0 is being prepared for release. App Store links open the currently published version. Screens on this page were captured from the 3.0 development build; check the store for update availability.
+### Is Dust to Cosmos 3.2 available now?
+3.2 is being prepared for the App Store. The App Store link opens the currently published version, and the space experiences arrive when 3.2 is released. Images in the 3.2 section were rendered by the 3.2 build.
+
+### Is the Apollo 11 landing really free?
+Yes. The Apollo 11 landing is free from undocking to “The Eagle has landed,” and leads into a free preview of the walk at Tranquility Base. The other 19 experiences open as free previews up to their first big moment, and Pro continues them.
 
 ### Does it support iPad as well as iPhone?
 Yes. iPhone defaults to portrait and also supports landscape. iPad uses a broad landscape workspace for exploration and detail.
 
 ### What stays free, and what is included in Pro?
-Core exploration, Voyager 1 and 2, the Neptune encounter, Moon finding, sources, basic sharing and 30/60 FPS stay free. Try Cinematic on Earth or the Sun for one minute. Advanced experiences share one non-consumable Pro purchase, with no subscription. High-refresh Pro Motion requires Pro; actual frame rates depend on the scene, hardware, temperature and power state. Check the app for regional pricing.
+Core exploration, Voyager 1 and 2, the Neptune encounter, the Apollo 11 landing, Moon finding, the first documentary, Earthrise and the Pale Blue Dot, sources, basic sharing and 30/60 FPS stay free, and every Pro experience opens with a free preview. Advanced experiences share one non-consumable Pro purchase with no subscription and Family Sharing for up to six people. High-refresh Pro Motion requires Pro; actual frame rates depend on the scene, hardware, temperature and power state. Check the app for regional pricing.
 
 ### Is the imagery live, observed or simulated?
-It depends on the feature. Cloud observations show capture times and can have gaps. The cinematic Sun uses archival data and modeled effects. Voyager uses public trajectory coverage, while piloted flight is virtual. Deep-time geography is reconstructed; early environments are modeled. Source and Truth Class information distinguish these cases.
+It depends on the feature. Cloud observations show capture times and can have gaps. The cinematic Sun uses archival data and modeled effects. Voyager uses public trajectory coverage, while piloted flight is virtual. Deep-time geography is reconstructed; early environments are modeled. Source and Truth Class information distinguish these cases. Space experiences reconstruct missions from published records, voices and terrain; approximate or reconstructed values are labeled, and the Mars city is a concept.
 
 ### Can I use it offline?
 Bundled celestial content and offline science materials can be explored without a continuous connection. Fresh cloud observations and other network data need internet access. Cloud replay depends on the validated records actually available on the device.
 
 ### Was Dust to Cosmos featured on the App Store?
-Yes. In July 2026, Dust to Cosmos appeared in “Best New Apps and Updates” in the United States and “Hot This Week” in Canada, on both iPhone and iPad. These placements were documented on July 4, 2026; that is the verification date, not a confirmed first day of featuring. Apple’s collections change over time. This recognition of the app is separate from the upcoming 3.0 release.
+Yes. In July 2026, Dust to Cosmos appeared in “Best New Apps and Updates” in the United States and “Hot This Week” in Canada, on both iPhone and iPad. These placements were documented on July 4, 2026; that is the verification date, not a confirmed first day of featuring. Apple’s collections change over time.
+
+## New in 3.2
+Relive Apollo 11 from undocking to touchdown with the real voices and LRO terrain. Then keep going: walk at Tranquility Base, ride the Saturn V, dock with the ISS and watch the first base rise on Mars.
+
+- **Apollo 11 and the Moon:** Land Eagle with the real voices and LRO terrain, walk at Tranquility Base, drive the rover and drop the hammer and feather. The Apollo 11 landing is free.
+- **Saturn V to orbit:** Ride the launch with Jack King’s real countdown, through staging and the escape tower, then swing around the Moon with Artemis II.
+- **The ISS, Hubble and Crew Dragon:** Float in the Cupola, see when the station passes your city, step out on a spacewalk, repair Hubble and dock Crew Dragon.
+- **Mars, from landing to a city:** Land Perseverance, fly Ingenuity, spend a day on Mars and watch the first base and a concept city take shape, piece by piece.
+
+Pro experiences open as a free preview up to their first big moment, with a short trailer of what comes next. Buy Pro there and you carry on from the same scene. The landing challenge gives one free attempt a day.
 
 ## Pro experiences
+- 19 space experiences beyond the free preview
 - Cinematic Earth, Sun & planets
-- Recent observed clouds & available replay
-- Black Hole Studio & piloted flight
+- Documentaries 2–6 and every photo moment
+- Black Hole Studio & the full Solar System flight
 - Earth Through Time & 3D Earth Interior
-- Additional observatories, science dossiers & notebooks
+- Observed clouds, observatories, dossiers & notebooks
 - Pro Motion · up to 120 FPS on supported devices
 
 ## Scientific context
-Recent cloud observations may be delayed or missing. Data timestamps remain visible. Flight obstacles, early Earth environments and black hole effects are explanatory models. The website globe is illustrative, not the native app renderer or a live weather feed.
+Recent cloud observations may be delayed or missing. Data timestamps remain visible. Flight obstacles, early Earth environments and black hole effects are explanatory models. Space experiences reconstruct missions from published records, voices and terrain; the Mars city is a concept. The website globe is illustrative, not the native app renderer or a live weather feed.
 
 - [NASA Science](https://science.nasa.gov/)
 - [JPL Horizons](https://ssd.jpl.nasa.gov/horizons/)

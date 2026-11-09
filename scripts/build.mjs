@@ -23,7 +23,7 @@ for (const [lang, t] of Object.entries(locales)) {
     '@graph': [
       { '@type': 'Organization', '@id': `${site.origin}/#organization`, name: 'SnapWorks Lab', url: 'https://snapworkslab.com', contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', email: 'sunset@snapworkslab.com' } },
       { '@type': 'WebSite', '@id': `${site.origin}/#website`, name: 'Dust to Cosmos', url: site.origin + '/', inLanguage: ['en', 'ko'], publisher: { '@id': `${site.origin}/#organization` } },
-      { '@type': 'SoftwareApplication', '@id': `${site.origin}/#app`, name: 'Dust to Cosmos', alternateName: '우주먼지', applicationCategory: 'EducationalApplication', operatingSystem: 'iOS, iPadOS', availableOnDevice: ['iPhone', 'iPad'], url: site.origin + '/', downloadUrl: site.appStore, sameAs: [site.appStore], description: t.truthText, publisher: { '@id': `${site.origin}/#organization` } },
+      { '@type': 'SoftwareApplication', '@id': `${site.origin}/#app`, name: 'Dust to Cosmos', alternateName: ['Dust to Cosmos: Space Explorer', '우주먼지'], applicationCategory: 'EducationalApplication', operatingSystem: 'iOS, iPadOS', availableOnDevice: ['iPhone', 'iPad'], featureList: t.flightCards.map(([, title]) => title), screenshot: t.flightCards.map(([key]) => `${site.origin}/assets/screens/flight-${key}-1280.webp`), url: site.origin + '/', downloadUrl: site.appStore, sameAs: [site.appStore], description: t.truthText, publisher: { '@id': `${site.origin}/#organization` } },
       { '@type': 'WebPage', '@id': `${canonical}#webpage`, url: canonical, name: t.title, description: t.description, inLanguage: lang, dateModified: site.updated, isPartOf: { '@id': `${site.origin}/#website` }, about: { '@id': `${site.origin}/#app` }, primaryImageOfPage: { '@type': 'ImageObject', url: `${site.origin}/assets/media/social-${lang}.jpg`, caption: t.concept } },
     ],
   };
@@ -78,7 +78,7 @@ for (const [lang, t] of Object.entries(locales)) {
 <body class="page-home">
   <a href="#main" class="skip-link">${t.skip}</a>
   <header class="site-header">
-    <a class="brand" href="${path}" aria-label="${escape(t.brand + ' · ' + t.home)}"><img src="/assets/icons/app-icon-3.0.png" width="32" height="32" alt="">${t.brand}<span class="brand-version">3.0</span></a>
+    <a class="brand" href="${path}" aria-label="${escape(t.brand + ' · ' + t.home)}"><img src="/assets/icons/app-icon-3.0.png" width="32" height="32" alt="">${t.brand}<span class="brand-version">${site.release.version}</span></a>
     <nav class="primary-nav" id="navigation" aria-label="${lang === 'ko' ? '주요 메뉴' : 'Main navigation'}">
       ${['new', 'ipad', 'explore', 'faq'].map((id, i) => `<a href="#${id}">${t.nav[i]}</a>`).join('')}
     </nav>
@@ -104,7 +104,14 @@ for (const [lang, t] of Object.entries(locales)) {
       <div class="recognition-detail"><span class="recognition-laurel left" aria-hidden="true"><img src="/assets/laurel-0925.png" width="1536" height="1024" alt=""></span><span class="recognition-laurel right" aria-hidden="true"><img src="/assets/laurel-0925.png" width="1536" height="1024" alt=""></span><p class="recognition-secondary" lang="en">${site.featuring.canadaTitle}</p><a class="recognition-link" href="${site.featuring.canada}">${t.featuredCanada} ↗</a></div>
     </aside>
 
-    <section class="cinema section-pad" id="new" aria-labelledby="cinema-title">
+    <section class="spaceflight section-pad" id="new" aria-labelledby="spaceflight-title">
+      <div class="spaceflight-head"><p class="eyebrow accent">${t.flightLabel}</p><h2 id="spaceflight-title">${t.flightTitle}</h2><p class="section-description">${t.flightIntro}</p></div>
+      <div class="spaceflight-grid">${t.flightCards.map(([key, title, text, alt]) => `<figure class="spaceflight-card"><img src="/assets/screens/flight-${key}-1280.webp" srcset="/assets/screens/flight-${key}-640.webp 640w, /assets/screens/flight-${key}-1280.webp 1280w" sizes="(max-width: 700px) 92vw, 44vw" width="1280" height="720" alt="${escape(alt)}" loading="lazy" decoding="async"><figcaption><h3>${title}</h3><p>${text}</p></figcaption></figure>`).join('')}</div>
+      <div class="spaceflight-free"><h3>${t.flightFreeTitle}</h3><p>${t.flightFree}</p></div>
+      <p class="fine-print spaceflight-note">${t.flightNote}</p>
+    </section>
+
+    <section class="cinema section-pad" id="cinematic" aria-labelledby="cinema-title">
       <div class="section-intro"><p class="eyebrow accent">${t.cinemaLabel}</p><h2 id="cinema-title">${t.cinemaTitle}</h2><p class="section-description">${t.cinemaIntro}</p></div>
       <div class="cinema-details">${t.cinemaDetails.map(([title, text], i) => `<article class="feature-line"><span class="index">0${i + 1}</span><div><h3>${title}</h3><p>${text}</p></div></article>`).join('')}</div>
       <a class="text-link" href="#pro">${t.cinemaLink}${arrow}</a>
@@ -157,4 +164,4 @@ console.log('Built English and Korean static landing pages and sitemap.');
 
 // Keep the optional machine-readable summary aligned with visible copy. It is
 // a convenience for readers, not a special requirement for AI search inclusion.
-await writeFile(root + 'llms.txt', `# Dust to Cosmos — 우주먼지\n\n> ${locales.en.truthText}\n\nUpdated: ${site.updated}. Version 3.0 is upcoming; the App Store link opens the currently published version.\n\n## Official pages\n- [English](${site.origin}/)\n- [한국어](${site.origin}/ko/)\n- [App Store](${site.appStore})\n- [Support](${site.origin}/support/)\n- [Privacy](${site.origin}/privacy/)\n\n## Product facts\n${locales.en.faq.map(([q,a])=>`### ${q}\n${a}`).join('\n\n')}\n\n## Pro experiences\n${locales.en.proList.map(s=>'- '+s).join('\n')}\n\n## Scientific context\nRecent cloud observations may be delayed or missing. Data timestamps remain visible. Flight obstacles, early Earth environments and black hole effects are explanatory models. The website globe is illustrative, not the native app renderer or a live weather feed.\n\n- [NASA Science](https://science.nasa.gov/)\n- [JPL Horizons](https://ssd.jpl.nasa.gov/horizons/)\n- [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/)\n`);
+await writeFile(root + 'llms.txt', `# Dust to Cosmos — 우주먼지\n\n> ${locales.en.truthText}\n\nUpdated: ${site.updated}. Version ${site.release.version} is upcoming; the App Store link opens the currently published version (${site.release.current}).\n\n## Official pages\n- [English](${site.origin}/)\n- [한국어](${site.origin}/ko/)\n- [App Store](${site.appStore})\n- [Support](${site.origin}/support/)\n- [Privacy](${site.origin}/privacy/)\n\n## Product facts\n${locales.en.faq.map(([q,a])=>`### ${q}\n${a}`).join('\n\n')}\n\n## New in ${site.release.version}\n${locales.en.flightIntro}\n\n${locales.en.flightCards.map(([, title, text]) => `- **${title}:** ${text}`).join('\n')}\n\n${locales.en.flightFree}\n\n## Pro experiences\n${locales.en.proList.map(s=>'- '+s).join('\n')}\n\n## Scientific context\nRecent cloud observations may be delayed or missing. Data timestamps remain visible. Flight obstacles, early Earth environments and black hole effects are explanatory models. Space experiences reconstruct missions from published records, voices and terrain; the Mars city is a concept. The website globe is illustrative, not the native app renderer or a live weather feed.\n\n- [NASA Science](https://science.nasa.gov/)\n- [JPL Horizons](https://ssd.jpl.nasa.gov/horizons/)\n- [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/)\n`);

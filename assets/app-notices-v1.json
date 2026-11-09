@@ -1,0 +1,145 @@
+{
+ "schemaVersion": 1,
+ "notices": [
+  {
+   "id": "intl-pro-apology-2026-11",
+   "group": "pro-sale-2026-11",
+   "startsAt": "2026-11-08T15:00:00Z",
+   "endsAt": "2026-11-22T15:00:00Z",
+   "minimumAppVersion": "3.2",
+   "storefronts": {
+    "exclude": [
+     "KOR"
+    ]
+   },
+   "firstLaunchBefore": "2026-11-01T00:00:00Z",
+   "audience": "all",
+   "art": "earthrise",
+   "label": {
+    "ko": "공지",
+    "en": "Notice",
+    "ja": "お知らせ",
+    "zh-Hans": "公告",
+    "zh-Hant": "公告",
+    "es-MX": "Aviso",
+    "de": "Hinweis",
+    "fr": "Annonce",
+    "pt-BR": "Aviso"
+   },
+   "title": {
+    "ko": "기다려 주셔서 고맙습니다",
+    "en": "Thank you for your patience",
+    "ja": "ご不便をおかけしました",
+    "zh-Hans": "感谢您的耐心等待",
+    "zh-Hant": "感謝您的耐心等候",
+    "es-MX": "Gracias por tu paciencia",
+    "de": "Danke für deine Geduld",
+    "fr": "Merci pour votre patience",
+    "pt-BR": "Obrigado pela paciência"
+   },
+   "body": {
+    "ko": "9월 26일 3.0 출시부터 10월 31일까지, 저희 설정 실수로 한국 밖에서는 우주먼지 Pro를 구매할 수 없었습니다. 결제 화면에서 “The product is currently unavailable”이라는 안내를 보셨다면 이 때문입니다. 지금은 모든 나라에서 구매할 수 있습니다. 불편을 드려 죄송합니다.",
+    "en": "From the 3.0 launch on September 26 until October 31, a store setting mistake on our side meant Dust to Cosmos Pro couldn’t be bought outside Korea. If you saw “The product is currently unavailable,” that was why. Pro is now available in every country. We’re sorry for the trouble.",
+    "ja": "9月26日の3.0公開から10月31日まで、私たちの設定ミスにより、韓国以外ではDust to Cosmos Proを購入できませんでした。購入画面に「The product is currently unavailable」と表示されたのはそのためです。現在はすべての国と地域で購入できます。ご不便をおかけしました。",
+    "zh-Hans": "从9月26日3.0发布到10月31日，由于我们的设置失误，韩国以外的地区无法购买 Dust to Cosmos Pro。如果您在购买页面看到“The product is currently unavailable”，原因就在这里。现在所有国家和地区都可以购买。给您带来不便，非常抱歉。",
+    "zh-Hant": "從9月26日3.0推出到10月31日，由於我們的設定失誤，韓國以外的地區無法購買 Dust to Cosmos Pro。若您在購買頁面看到「The product is currently unavailable」，原因就在這裡。現在所有國家和地區都能購買。造成不便，非常抱歉。",
+    "es-MX": "Desde el lanzamiento de la versión 3.0, el 26 de septiembre, hasta el 31 de octubre, un error de configuración de nuestra parte impidió comprar Dust to Cosmos Pro fuera de Corea. Si viste «The product is currently unavailable», esa era la razón. Ahora Pro está disponible en todos los países. Lamentamos las molestias.",
+    "de": "Vom Start von Version 3.0 am 26. September bis zum 31. Oktober konnte Dust to Cosmos Pro wegen eines Einstellungsfehlers auf unserer Seite außerhalb Koreas nicht gekauft werden. Falls du „The product is currently unavailable“ gesehen hast, lag es daran. Pro ist jetzt in allen Ländern erhältlich. Entschuldige die Unannehmlichkeiten.",
+    "fr": "Du lancement de la version 3.0, le 26 septembre, jusqu’au 31 octobre, une erreur de configuration de notre part empêchait d’acheter Dust to Cosmos Pro en dehors de la Corée. Si vous avez vu « The product is currently unavailable », c’était pour cette raison. Pro est désormais disponible dans tous les pays. Toutes nos excuses pour ce désagrément.",
+    "pt-BR": "Do lançamento da versão 3.0, em 26 de setembro, até 31 de outubro, um erro de configuração nosso impediu a compra do Dust to Cosmos Pro fora da Coreia. Se você viu “The product is currently unavailable”, o motivo foi esse. Agora o Pro está disponível em todos os países. Pedimos desculpas pelo transtorno."
+   },
+   "proBody": {
+    "ko": "9월 26일 3.0 출시부터 10월 31일까지, 저희 설정 실수로 한국 밖에서는 우주먼지 Pro를 구매할 수 없었습니다. 결제 화면에서 “The product is currently unavailable”이라는 안내를 보셨다면 이 때문입니다. 지금은 모든 나라에서 구매할 수 있습니다. 불편을 드려 죄송합니다. Pro를 선택해 주셔서 고맙습니다.",
+    "en": "From the 3.0 launch on September 26 until October 31, a store setting mistake on our side meant Dust to Cosmos Pro couldn’t be bought outside Korea. If you saw “The product is currently unavailable,” that was why. Pro is now available in every country. We’re sorry for the trouble. Thank you for choosing Pro.",
+    "ja": "9月26日の3.0公開から10月31日まで、私たちの設定ミスにより、韓国以外ではDust to Cosmos Proを購入できませんでした。購入画面に「The product is currently unavailable」と表示されたのはそのためです。現在はすべての国と地域で購入できます。ご不便をおかけしました。 Proをお選びいただき、ありがとうございます。",
+    "zh-Hans": "从9月26日3.0发布到10月31日，由于我们的设置失误，韩国以外的地区无法购买 Dust to Cosmos Pro。如果您在购买页面看到“The product is currently unavailable”，原因就在这里。现在所有国家和地区都可以购买。给您带来不便，非常抱歉。 感谢您选择 Pro。",
+    "zh-Hant": "從9月26日3.0推出到10月31日，由於我們的設定失誤，韓國以外的地區無法購買 Dust to Cosmos Pro。若您在購買頁面看到「The product is currently unavailable」，原因就在這裡。現在所有國家和地區都能購買。造成不便，非常抱歉。 感謝您選擇 Pro。",
+    "es-MX": "Desde el lanzamiento de la versión 3.0, el 26 de septiembre, hasta el 31 de octubre, un error de configuración de nuestra parte impidió comprar Dust to Cosmos Pro fuera de Corea. Si viste «The product is currently unavailable», esa era la razón. Ahora Pro está disponible en todos los países. Lamentamos las molestias. Gracias por elegir Pro.",
+    "de": "Vom Start von Version 3.0 am 26. September bis zum 31. Oktober konnte Dust to Cosmos Pro wegen eines Einstellungsfehlers auf unserer Seite außerhalb Koreas nicht gekauft werden. Falls du „The product is currently unavailable“ gesehen hast, lag es daran. Pro ist jetzt in allen Ländern erhältlich. Entschuldige die Unannehmlichkeiten. Danke, dass du dich für Pro entschieden hast.",
+    "fr": "Du lancement de la version 3.0, le 26 septembre, jusqu’au 31 octobre, une erreur de configuration de notre part empêchait d’acheter Dust to Cosmos Pro en dehors de la Corée. Si vous avez vu « The product is currently unavailable », c’était pour cette raison. Pro est désormais disponible dans tous les pays. Toutes nos excuses pour ce désagrément. Merci d’avoir choisi Pro.",
+    "pt-BR": "Do lançamento da versão 3.0, em 26 de setembro, até 31 de outubro, um erro de configuração nosso impediu a compra do Dust to Cosmos Pro fora da Coreia. Se você viu “The product is currently unavailable”, o motivo foi esse. Agora o Pro está disponível em todos os países. Pedimos desculpas pelo transtorno. Obrigado por escolher o Pro."
+   },
+   "cta": {
+    "action": "openPro",
+    "label": {
+     "ko": "Pro 보기",
+     "en": "See Pro",
+     "ja": "Proを見る",
+     "zh-Hans": "查看 Pro",
+     "zh-Hant": "查看 Pro",
+     "es-MX": "Ver Pro",
+     "de": "Pro ansehen",
+     "fr": "Voir Pro",
+     "pt-BR": "Ver o Pro"
+    }
+   }
+  },
+  {
+   "id": "pro-thanks-32-2026-11",
+   "group": "pro-sale-2026-11",
+   "startsAt": "2026-11-08T15:00:00Z",
+   "endsAt": "2026-11-22T15:00:00Z",
+   "minimumAppVersion": "3.2",
+   "audience": "all",
+   "art": "earthrise",
+   "label": {
+    "ko": "공지",
+    "en": "Notice",
+    "ja": "お知らせ",
+    "zh-Hans": "公告",
+    "zh-Hant": "公告",
+    "es-MX": "Aviso",
+    "de": "Hinweis",
+    "fr": "Annonce",
+    "pt-BR": "Aviso"
+   },
+   "title": {
+    "ko": "우주먼지와 함께해 주셔서 고맙습니다",
+    "en": "Thank you for exploring with Dust to Cosmos",
+    "ja": "Dust to Cosmosで探検していただき、ありがとうございます",
+    "zh-Hans": "感谢您与 Dust to Cosmos 一起探索",
+    "zh-Hant": "感謝您與 Dust to Cosmos 一起探索",
+    "es-MX": "Gracias por explorar con Dust to Cosmos",
+    "de": "Danke, dass du mit Dust to Cosmos auf Entdeckungsreise gehst",
+    "fr": "Merci d’explorer avec Dust to Cosmos",
+    "pt-BR": "Obrigado por explorar com o Dust to Cosmos"
+   },
+   "body": {
+    "ko": "3.2에서는 1969년 달 착륙을 직접 해 보고, ISS와 화성을 걸어 볼 수 있습니다. 새 체험은 첫 장면을 무료로 해 볼 수 있고, 이어지는 장면은 짧은 예고편으로 미리 볼 수 있습니다. 화면 아래 체험 카드에서 바로 시작하세요.",
+    "en": "In 3.2 you can fly the 1969 Moon landing yourself and walk through the ISS and on Mars. New experiences now let you try the opening scene for free, with a short trailer of what comes next. Start from the experience cards at the bottom of the screen.",
+    "ja": "3.2では1969年の月面着陸を自分で操縦し、ISSや火星を歩くことができます。新しい体験は最初の場面を無料で試せて、その先は短い予告編で見ることができます。画面下の体験カードからすぐに始められます。",
+    "zh-Hans": "在 3.2 中，您可以亲自驾驶 1969 年的登月，并在国际空间站和火星上漫步。新体验现在可以免费试玩开场，后续内容可以通过简短预告片抢先一看。从屏幕下方的体验卡片即可开始。",
+    "zh-Hant": "在 3.2 中，您可以親自駕駛 1969 年的登月，並在國際太空站和火星上漫步。新體驗現在可以免費試玩開場，後續內容可以透過簡短預告片搶先一看。從螢幕下方的體驗卡片即可開始。",
+    "es-MX": "En la 3.2 puedes pilotar tú mismo el alunizaje de 1969 y recorrer la ISS y Marte. Ahora puedes probar gratis la primera escena de las nuevas experiencias y ver en un breve avance lo que sigue. Empieza desde las tarjetas de experiencias en la parte inferior de la pantalla.",
+    "de": "In 3.2 steuerst du die Mondlandung von 1969 selbst und bewegst dich durch die ISS und über den Mars. Die neuen Erlebnisse kannst du jetzt mit der ersten Szene kostenlos ausprobieren, und ein kurzer Trailer zeigt, was danach kommt. Starte direkt über die Erlebniskarten unten auf dem Bildschirm.",
+    "fr": "Dans la 3.2, pilotez vous-même l’alunissage de 1969 et parcourez l’ISS et Mars. Les nouvelles expériences se découvrent désormais gratuitement par leur première scène, et une courte bande-annonce montre la suite. Commencez depuis les cartes d’expérience en bas de l’écran.",
+    "pt-BR": "Na 3.2, você pilota o pouso na Lua de 1969 e anda pela ISS e por Marte. Agora você pode experimentar de graça a primeira cena das novas experiências e ver num trailer curto o que vem depois. Comece pelos cartões de experiência na parte de baixo da tela."
+   },
+   "proBody": {
+    "ko": "Pro와 함께해 주셔서 고맙습니다. 3.2에서는 1969년 달 착륙을 직접 해 보고, ISS와 화성을 걸어 볼 수 있습니다. 화면 아래 체험 카드에서 바로 시작하세요.",
+    "en": "Thank you for being with Pro. In 3.2 you can fly the 1969 Moon landing yourself and walk through the ISS and on Mars. Start from the experience cards at the bottom of the screen.",
+    "ja": "Proをご利用いただき、ありがとうございます。3.2では1969年の月面着陸を自分で操縦し、ISSや火星を歩くことができます。画面下の体験カードからすぐに始められます。",
+    "zh-Hans": "感谢您使用 Pro。在 3.2 中，您可以亲自驾驶 1969 年的登月，并在国际空间站和火星上漫步。从屏幕下方的体验卡片即可开始。",
+    "zh-Hant": "感謝您使用 Pro。在 3.2 中，您可以親自駕駛 1969 年的登月，並在國際太空站和火星上漫步。從螢幕下方的體驗卡片即可開始。",
+    "es-MX": "Gracias por usar Pro. En la 3.2 puedes pilotar tú mismo el alunizaje de 1969 y recorrer la ISS y Marte. Empieza desde las tarjetas de experiencias en la parte inferior de la pantalla.",
+    "de": "Danke, dass du Pro nutzt. In 3.2 steuerst du die Mondlandung von 1969 selbst und bewegst dich durch die ISS und über den Mars. Starte direkt über die Erlebniskarten unten auf dem Bildschirm.",
+    "fr": "Merci d’utiliser Pro. Dans la 3.2, pilotez vous-même l’alunissage de 1969 et parcourez l’ISS et Mars. Commencez depuis les cartes d’expérience en bas de l’écran.",
+    "pt-BR": "Obrigado por usar o Pro. Na 3.2, você pilota o pouso na Lua de 1969 e anda pela ISS e por Marte. Comece pelos cartões de experiência na parte de baixo da tela."
+   },
+   "cta": {
+    "action": "openPro",
+    "label": {
+     "ko": "Pro 보기",
+     "en": "See Pro",
+     "ja": "Proを見る",
+     "zh-Hans": "查看 Pro",
+     "zh-Hant": "查看 Pro",
+     "es-MX": "Ver Pro",
+     "de": "Pro ansehen",
+     "fr": "Voir Pro",
+     "pt-BR": "Ver o Pro"
+    }
+   }
+  }
+ ]
+}

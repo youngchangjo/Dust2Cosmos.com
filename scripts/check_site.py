@@ -98,7 +98,7 @@ for route, doc in docs.items():
         check(not any(key in app for key in ['aggregateRating', 'offers', 'softwareVersion', 'award']), route + ': no fabricated price, rating, release or award')
         check('FAQPage' not in types, route + ': no commercial FAQ rich-result claim')
         text = ' '.join(doc.text)
-        for term in ['3.0', 'iPhone', 'iPad', 'Pro', '109', '24', 'Best New Apps and Updates']:
+        for term in ['3.2', 'iPhone', 'iPad', 'Pro', '109', '24', 'Best New Apps and Updates']:
             check(term in text, route + ': meaningful static content ' + term)
         check(('Coming soon' if lang == 'en' else '출시 예정') in text, route + ': visible upcoming status')
         check(('Actual' if lang == 'en' else '실제 앱 화면') in text, route + ': actual native capture disclosure')

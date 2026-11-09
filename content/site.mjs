@@ -1,11 +1,12 @@
 // Canonical marketing copy. Generated HTML must be rebuilt, never edited separately.
 export const site = {
   "origin": "https://dust2cosmos.com",
-  "appStore": "https://apps.apple.com/us/app/dust-to-cosmos-universe-scale/id6760629100",
-  "updated": "2026-09-24",
+  "appStore": "https://apps.apple.com/us/app/dust-to-cosmos-space-explorer/id6760629100",
+  "updated": "2026-11-09",
   "release": {
-    "version": "3.0",
-    "status": "upcoming"
+    "version": "3.2",
+    "status": "upcoming",
+    "current": "3.1.1"
   },
   "featuring": {
     "title": "Best New Apps and Updates",
@@ -18,8 +19,8 @@ export const site = {
 
 export const locales = {
   "en": {
-    "title": "Dust to Cosmos 3.0 — Space Exploration for iPhone & iPad",
-    "description": "Explore 3D Earth, the Solar System and black holes on iPhone and iPad. Discover cinematic clouds, free Voyager journeys and one-time Pro experiences in Dust to Cosmos 3.0.",
+    "title": "Dust to Cosmos: 3D Space App — Moon Landing, ISS & Mars",
+    "description": "Land Apollo 11 yourself, float through the ISS and walk on Mars. Explore a 3D Solar System on iPhone and iPad, free to start with one-time Pro.",
     "brand": "Dust to Cosmos",
     "home": "Home",
     "skip": "Skip to content",
@@ -34,24 +35,24 @@ export const locales = {
     "store": "View on the App Store",
     "storeShort": "Get the app",
     "download": "Download the current version",
-    "release": "3.0 · Coming soon",
-    "heroTitle": "Dust to Cosmos 3.0",
-    "heroLead": "An extraordinary universe. Yours to explore.",
-    "heroText": "Turn a sunlit Earth in your hands. Fly past Saturn’s rings. Follow Voyager beyond the planets. A deeper universe begins here.",
-    "discover": "Discover 3.0",
-    "heroNote": "Preview the upcoming update. Start exploring with the current app today.",
+    "release": "3.2 · Coming soon",
+    "heroTitle": "Dust to Cosmos",
+    "heroLead": "Land on the Moon. Float above Earth. Walk on Mars.",
+    "heroText": "A 3D universe for iPhone and iPad, with space experiences built from real missions, voices and terrain. Start with the Apollo 11 landing, free.",
+    "discover": "See what’s new in 3.2",
+    "heroNote": "3.2 is coming to the App Store. Start exploring with the current version today.",
     "heroAlt": "Cinematic concept artwork of Earth, with the Pacific Ocean and a thin blue atmosphere against deep black space",
     "earthAlt": "Earth with detailed clouds and a thin blue atmosphere, rendered from the same scene as the rotating globe",
-    "devicesAlt": "Actual Dust to Cosmos 3.0 app screens on iPhone and iPad",
+    "devicesAlt": "Actual Dust to Cosmos app screens on iPhone and iPad",
     "scienceAlt": "Promotional concept artwork of detailed lunar terrain and a small distant Earth",
     "scienceNote": "Generated space artwork. Scientific sources are listed separately.",
-    "concept": "3.0 concept artwork",
+    "concept": "Illustrative Earth",
     "scroll": "Keep exploring",
     "featuredIntro": "Featured by App Store editors",
     "featuredMonth": "July 2026",
     "featuredRegion": "United States · iPhone & iPad",
     "featuredCanada": "Canada · iPhone & iPad",
-    "cinemaLabel": "New in 3.0",
+    "cinemaLabel": "Cinematic Earth",
     "cinemaTitle": "Come closer to our home planet.",
     "cinemaIntro": "Sunlight over an ocean. Clouds casting shadows. A blue atmosphere fading into the dark. Meet a more cinematic Earth—and keep exploring beyond it.",
     "cinemaDetails": [
@@ -72,7 +73,7 @@ export const locales = {
     "ipadLabel": "iPhone & iPad",
     "ipadTitle": "Your own window into the cosmos.",
     "ipadIntro": "A pocket universe on iPhone. An expansive observatory on iPad. Rotate a planet, explore a system, and give every discovery room to breathe.",
-    "mockupNote": "Actual 3.0 development-build captures. iPhone portrait and iPad landscape.",
+    "mockupNote": "Actual app captures. iPhone portrait and iPad landscape.",
     "devices": [
       [
         "A proper iPad experience",
@@ -87,10 +88,10 @@ export const locales = {
         "Turn worlds with a drag. Move closer with a pinch. Follow your curiosity through connected celestial systems."
       ]
     ],
-    "voyageLabel": "The next chapter in 3.0",
+    "voyageLabel": "Fly the Solar System",
     "voyageTitle": "Take the controls. Follow the wonder.",
-    "voyageIntro": "Take a spacecraft to the Moon and beyond. Steer with touch controls, accelerate through fictional obstacles, and collect points and exploration stamps.",
-    "voyageAlt": "Actual piloted-flight screen from Dust to Cosmos 3.0",
+    "voyageIntro": "Take a spacecraft to the Moon and beyond. Steer with touch controls, accelerate through fictional obstacles, and collect points and exploration stamps. The flight to the Moon is free.",
+    "voyageAlt": "Actual piloted-flight screen from Dust to Cosmos",
     "voyageNote": "Actual app capture. Piloted flight and its obstacles are fictional experiences.",
     "voyageFacts": [
       [
@@ -113,7 +114,7 @@ export const locales = {
       ],
       [
         "Earth Through Time · Pro",
-        "Move from modeled early environments to reconstructed continents and modern Earth. Explore 109 geography epochs spanning 540 million years."
+        "Move from modeled early environments to reconstructed continents and modern Earth. Explore 109 geography epochs spanning 540 million years; two eras are free to try."
       ],
       [
         "Black Hole Studio · Pro",
@@ -135,7 +136,7 @@ export const locales = {
             "Earth and Moon, the Solar System, Jupiter, Saturn and beyond."
           ],
           [
-            "Science Dossiers · Pro in 3.0",
+            "Science Dossiers · Pro",
             "24 curated dossiers with measurements, uncertainty and compatible comparisons."
           ],
           [
@@ -175,12 +176,16 @@ export const locales = {
             "Size comparison, Journey of Light and the Cosmic Calendar."
           ],
           [
-            "Earth Interior · Pro in 3.0",
+            "Earth Interior · Pro",
             "Rotate a 3D cutaway and explore physical depths. Representative depths remain free."
           ],
           [
             "Your own expedition · Pro",
             "Piloted flight, exploration stamps and 109 reconstructed Earth epochs."
+          ],
+          [
+            "Documentaries & photo moments",
+            "Six space documentaries with subtitles in nine languages, and the chance to photograph Earthrise and the Pale Blue Dot yourself. The first documentary and both photographs are free."
           ]
         ]
       },
@@ -207,18 +212,19 @@ export const locales = {
     ],
     "proLabel": "Dust to Cosmos Pro",
     "proTitle": "Go deeper, with one purchase.",
-    "proIntro": "3.0 brings the expanded experiences together in the same non-consumable Pro purchase. No new subscription. No separate ticket for each journey.",
+    "proIntro": "Every advanced experience shares one non-consumable Pro purchase. No subscription, and Family Sharing for up to six people.",
     "freeTitle": "Curiosity comes first",
-    "freeText": "Core exploration, Voyager 1 and 2, the Neptune encounter, Moon finding, sources, basic sharing and 30/60 FPS stay free. Try Cinematic on Earth or the Sun for one minute.",
+    "freeText": "Core exploration, Voyager 1 and 2, the Neptune encounter, the Apollo 11 landing, Moon finding, the first documentary, Earthrise and the Pale Blue Dot, sources, basic sharing and 30/60 FPS stay free. Every Pro experience opens with a free preview, and Cinematic Earth or Sun can be tried for one minute.",
     "proList": [
+      "19 space experiences beyond the free preview",
       "Cinematic Earth, Sun & planets",
-      "Recent observed clouds & available replay",
-      "Black Hole Studio & piloted flight",
+      "Documentaries 2–6 and every photo moment",
+      "Black Hole Studio & the full Solar System flight",
       "Earth Through Time & 3D Earth Interior",
-      "Additional observatories, science dossiers & notebooks",
+      "Observed clouds, observatories, dossiers & notebooks",
       "Pro Motion · up to 120 FPS on supported devices"
     ],
-    "proNote": "3.0 is in preparation. Availability and regional pricing will be shown in the app at release.",
+    "proNote": "Regional pricing is shown in the app. Pro is a single purchase with Family Sharing.",
     "truthTitle": "Beautiful. And honest about what you see.",
     "truthText": "Dust to Cosmos is a 3D space exploration app by SnapWorks Lab for iPhone and iPad. Explore connected worlds, compare their sizes, and read the evidence behind real discoveries. Source labels distinguish observations, reconstructions and modeled imagery.",
     "sourceLabel": "Explore the underlying science",
@@ -227,11 +233,15 @@ export const locales = {
     "faq": [
       [
         "What is Dust to Cosmos?",
-        "Dust to Cosmos: Universe Scale is a 3D space exploration app for iPhone and iPad, made by SnapWorks Lab. Explore connected planets, moons, stars, black holes and deep-sky objects, compare their sizes, and discover cosmic time with visible scientific sources."
+        "Dust to Cosmos: Space Explorer is a 3D space exploration app for iPhone and iPad, made by SnapWorks Lab. Explore connected planets, moons, stars, black holes and deep-sky objects, relive real missions from Apollo 11 to Mars, and read the scientific sources behind them."
       ],
       [
-        "Is Dust to Cosmos 3.0 available now?",
-        "3.0 is being prepared for release. App Store links open the currently published version. Screens on this page were captured from the 3.0 development build; check the store for update availability."
+        "Is Dust to Cosmos 3.2 available now?",
+        "3.2 is being prepared for the App Store. The App Store link opens the currently published version, and the space experiences arrive when 3.2 is released. Images in the 3.2 section were rendered by the 3.2 build."
+      ],
+      [
+        "Is the Apollo 11 landing really free?",
+        "Yes. The Apollo 11 landing is free from undocking to “The Eagle has landed,” and leads into a free preview of the walk at Tranquility Base. The other 19 experiences open as free previews up to their first big moment, and Pro continues them."
       ],
       [
         "Does it support iPad as well as iPhone?",
@@ -239,11 +249,11 @@ export const locales = {
       ],
       [
         "What stays free, and what is included in Pro?",
-        "Core exploration, Voyager 1 and 2, the Neptune encounter, Moon finding, sources, basic sharing and 30/60 FPS stay free. Try Cinematic on Earth or the Sun for one minute. Advanced experiences share one non-consumable Pro purchase, with no subscription. High-refresh Pro Motion requires Pro; actual frame rates depend on the scene, hardware, temperature and power state. Check the app for regional pricing."
+        "Core exploration, Voyager 1 and 2, the Neptune encounter, the Apollo 11 landing, Moon finding, the first documentary, Earthrise and the Pale Blue Dot, sources, basic sharing and 30/60 FPS stay free, and every Pro experience opens with a free preview. Advanced experiences share one non-consumable Pro purchase with no subscription and Family Sharing for up to six people. High-refresh Pro Motion requires Pro; actual frame rates depend on the scene, hardware, temperature and power state. Check the app for regional pricing."
       ],
       [
         "Is the imagery live, observed or simulated?",
-        "It depends on the feature. Cloud observations show capture times and can have gaps. The cinematic Sun uses archival data and modeled effects. Voyager uses public trajectory coverage, while piloted flight is virtual. Deep-time geography is reconstructed; early environments are modeled. Source and Truth Class information distinguish these cases."
+        "It depends on the feature. Cloud observations show capture times and can have gaps. The cinematic Sun uses archival data and modeled effects. Voyager uses public trajectory coverage, while piloted flight is virtual. Deep-time geography is reconstructed; early environments are modeled. Source and Truth Class information distinguish these cases. Space experiences reconstruct missions from published records, voices and terrain; approximate or reconstructed values are labeled, and the Mars city is a concept."
       ],
       [
         "Can I use it offline?",
@@ -251,27 +261,59 @@ export const locales = {
       ],
       [
         "Was Dust to Cosmos featured on the App Store?",
-        "Yes. In July 2026, Dust to Cosmos appeared in “Best New Apps and Updates” in the United States and “Hot This Week” in Canada, on both iPhone and iPad. These placements were documented on July 4, 2026; that is the verification date, not a confirmed first day of featuring. Apple’s collections change over time. This recognition of the app is separate from the upcoming 3.0 release."
+        "Yes. In July 2026, Dust to Cosmos appeared in “Best New Apps and Updates” in the United States and “Hot This Week” in Canada, on both iPhone and iPad. These placements were documented on July 4, 2026; that is the verification date, not a confirmed first day of featuring. Apple’s collections change over time."
       ]
     ],
     "finalTitle": "The universe is already in your hands.",
-    "finalText": "Start exploring today. A whole new depth arrives with 3.0.",
+    "finalText": "Start exploring today. Twenty space experiences arrive with 3.2.",
     "footerText": "Made with curiosity by SnapWorks Lab.",
     "privacy": "Privacy",
     "support": "Support",
     "sources": "Science & sources",
-    "updated": "Page updated September 24, 2026"
+    "updated": "Page updated November 9, 2026",
+    "flightLabel": "New in 3.2 · Be there",
+    "flightTitle": "Twenty space experiences, built from real missions.",
+    "flightIntro": "Relive Apollo 11 from undocking to touchdown with the real voices and LRO terrain. Then keep going: walk at Tranquility Base, ride the Saturn V, dock with the ISS and watch the first base rise on Mars.",
+    "flightCards": [
+      [
+        "moon",
+        "Apollo 11 and the Moon",
+        "Land Eagle with the real voices and LRO terrain, walk at Tranquility Base, drive the rover and drop the hammer and feather. The Apollo 11 landing is free.",
+        "Actual Dust to Cosmos capture of the Apollo lunar module and flag on the Moon"
+      ],
+      [
+        "launch",
+        "Saturn V to orbit",
+        "Ride the launch with Jack King’s real countdown, through staging and the escape tower, then swing around the Moon with Artemis II.",
+        "Actual Dust to Cosmos capture of the Saturn V climbing above Earth’s curve"
+      ],
+      [
+        "iss",
+        "The ISS, Hubble and Crew Dragon",
+        "Float in the Cupola, see when the station passes your city, step out on a spacewalk, repair Hubble and dock Crew Dragon.",
+        "Actual Dust to Cosmos capture of the International Space Station above Earth’s clouds"
+      ],
+      [
+        "mars",
+        "Mars, from landing to a city",
+        "Land Perseverance, fly Ingenuity, spend a day on Mars and watch the first base and a concept city take shape, piece by piece.",
+        "Actual Dust to Cosmos capture of the first Mars base with habitats and a greenhouse"
+      ]
+    ],
+    "flightFreeTitle": "Try every one first",
+    "flightFree": "Pro experiences open as a free preview up to their first big moment, with a short trailer of what comes next. Buy Pro there and you carry on from the same scene. The landing challenge gives one free attempt a day.",
+    "flightNote": "Rendered by the app in the 3.2 build. Reconstructions follow published mission records; the Mars city is a concept."
   },
   "ko": {
-    "title": "우주먼지 3.0 — iPhone·iPad로 만나는 3D 우주 탐험",
-    "description": "iPhone·iPad에서 지구, 태양계, 블랙홀을 탐험하세요. 시네마틱 구름과 빛, 무료 보이저 1·2호, 한 번 구매하는 Pro 체험을 우주먼지 3.0에서 만나보세요.",
+    "title": "우주먼지 — 달 착륙·ISS·화성을 직접 체험하는 3D 우주 앱",
+    "description": "아폴로 11호를 직접 착륙시키고, ISS를 떠다니고, 화성을 걸어 보세요. iPhone·iPad용 3D 태양계 탐험 앱. 무료로 시작하고 Pro는 구독 없이 한 번 구매해요.",
     "brand": "우주먼지",
     "home": "처음으로",
     "skip": "본문으로 건너뛰기",
     "menu": "메뉴 열기",
     "closeMenu": "메뉴 닫기",
     "nav": [
-      "새로운 3.0",
+      "새로운 3.2",
       "iPad에서",
       "탐험하기",
       "자주 묻는 질문"
@@ -279,24 +321,24 @@ export const locales = {
     "store": "App Store에서 보기",
     "storeShort": "앱 다운로드",
     "download": "현재 버전 다운로드",
-    "release": "3.0 · 출시 예정",
-    "heroTitle": "우주먼지 3.0",
-    "heroLead": "손끝에서 만나는 경이로운 우주.",
-    "heroText": "햇빛을 머금은 지구를 돌려보고, 토성의 고리 곁으로 다가가세요. 보이저의 발자취 너머, 더 깊어진 우주가 기다립니다.",
-    "discover": "3.0 미리 보기",
-    "heroNote": "새로운 업데이트를 미리 만나보세요. 지금은 현재 출시된 앱으로 탐험을 시작할 수 있어요.",
+    "release": "3.2 · 출시 예정",
+    "heroTitle": "우주먼지",
+    "heroLead": "달에 내리고, 지구 위를 떠다니고, 화성을 걸어 보세요.",
+    "heroText": "실제 임무의 교신과 지형으로 만든 우주 체험이 손끝의 3D 우주에서 펼쳐집니다. 아폴로 11호 착륙부터 무료로 시작하세요.",
+    "discover": "3.2 새 기능 보기",
+    "heroNote": "3.2는 곧 App Store에 나와요. 지금은 현재 버전으로 탐험을 시작할 수 있어요.",
     "heroAlt": "검은 우주를 배경으로 태평양과 얇은 푸른 대기가 드러나는 지구의 시네마틱 콘셉트 이미지",
     "earthAlt": "자전하는 3D 장면과 같은 구름과 푸른 대기를 담은 지구의 첫 프레임",
-    "devicesAlt": "우주먼지 3.0의 실제 iPhone 세로 화면과 iPad 가로 화면",
+    "devicesAlt": "우주먼지의 실제 iPhone 세로 화면과 iPad 가로 화면",
     "scienceAlt": "달의 상세한 지형과 멀리 있는 지구를 표현한 홍보용 콘셉트 이미지",
     "scienceNote": "AI로 생성한 우주 이미지입니다. 과학 자료의 출처는 별도로 안내해요.",
-    "concept": "3.0 콘셉트 이미지",
+    "concept": "지구 연출 이미지",
     "scroll": "아래로 탐험하기",
     "featuredIntro": "App Store 에디터가 소개한 앱",
     "featuredMonth": "2026년 7월",
     "featuredRegion": "미국 · iPhone·iPad",
     "featuredCanada": "캐나다 · iPhone·iPad",
-    "cinemaLabel": "3.0의 새로운 모습",
+    "cinemaLabel": "시네마틱 지구",
     "cinemaTitle": "우리가 사는 행성에 한 걸음 더 가까이.",
     "cinemaIntro": "바다 위로 번지는 햇빛. 그림자를 드리우는 구름. 어둠 속으로 스며드는 푸른 대기. 새로워진 지구를 만나고, 그 너머로 탐험을 이어가세요.",
     "cinemaDetails": [
@@ -317,7 +359,7 @@ export const locales = {
     "ipadLabel": "iPhone과 iPad",
     "ipadTitle": "손안의 우주, 더 넓은 관측실.",
     "ipadIntro": "iPhone에서는 언제 어디서나. iPad에서는 한층 넓고 여유롭게. 행성을 돌리고, 천체계를 오가며, 발견하는 순간에 푹 빠져보세요.",
-    "mockupNote": "3.0 개발 빌드에서 촬영한 실제 앱 화면입니다.",
+    "mockupNote": "실제 앱 화면입니다. iPhone 세로, iPad 가로.",
     "devices": [
       [
         "iPad를 위한 넓은 화면",
@@ -332,10 +374,10 @@ export const locales = {
         "드래그로 천체를 돌리고, 핀치로 가까이 다가가세요. 연결된 천체계를 따라 호기심도 자연스럽게 이어져요."
       ]
     ],
-    "voyageLabel": "3.0에서 넓어지는 여정",
+    "voyageLabel": "태양계 직접 비행",
     "voyageTitle": "직접 조종해 만나는 다음 세계.",
-    "voyageIntro": "이번에는 직접 조종하세요. 터치로 방향을 잡고, 가상의 장애물을 피하고, 부스트와 포인트, 탐험 스탬프로 나만의 항해를 이어가세요.",
-    "voyageAlt": "우주먼지 3.0에서 촬영한 실제 우주선 직접 비행 화면",
+    "voyageIntro": "이번에는 직접 조종하세요. 터치로 방향을 잡고, 가상의 장애물을 피하고, 부스트와 포인트, 탐험 스탬프로 나만의 항해를 이어가세요. 달까지의 비행은 무료예요.",
+    "voyageAlt": "우주먼지에서 촬영한 실제 우주선 직접 비행 화면",
     "voyageNote": "실제 앱 화면입니다. 직접 비행과 장애물은 가상의 체험입니다.",
     "voyageFacts": [
       [
@@ -358,7 +400,7 @@ export const locales = {
       ],
       [
         "지구의 시간 · Pro",
-        "모델로 표현한 초기 환경에서 재구성한 대륙과 현재 지구까지. 5억4천만 년에 걸친 109개 지리 시점을 탐험하세요."
+        "모델로 표현한 초기 환경에서 재구성한 대륙과 현재 지구까지. 5억4천만 년에 걸친 109개 지리 시점을 탐험하세요. 두 시대는 무료로 둘러볼 수 있어요."
       ],
       [
         "블랙홀 스튜디오 · Pro",
@@ -380,7 +422,7 @@ export const locales = {
             "지구와 달, 태양계, 목성계와 토성계, 그리고 그 너머까지."
           ],
           [
-            "과학 자료 · 3.0 Pro",
+            "과학 자료 · Pro",
             "24개 자료의 측정값과 오차를 읽고, 비교할 수 있는 수치를 함께 살펴봐요."
           ],
           [
@@ -420,12 +462,16 @@ export const locales = {
             "크기 비교, 빛의 여정, 우주 달력으로 숫자를 경험으로 바꿔요."
           ],
           [
-            "지구 내부 · 3.0 Pro",
+            "지구 내부 · Pro",
             "3D 단면을 돌려 물리적인 깊이를 탐색해요. 대표 깊이는 무료로 만날 수 있어요."
           ],
           [
             "나만의 탐험 · Pro",
             "우주선 조종과 탐험 스탬프, 109개 시점의 지구 지리 재구성."
+          ],
+          [
+            "다큐멘터리와 사진 체험",
+            "9개 언어 자막의 우주 다큐 6편, 그리고 지구돋이와 창백한 푸른 점을 직접 찍어 보는 체험. 다큐 1편과 두 사진은 무료예요."
           ]
         ]
       },
@@ -452,18 +498,19 @@ export const locales = {
     ],
     "proLabel": "우주먼지 Pro",
     "proTitle": "한 번의 구매로 더 깊은 우주.",
-    "proIntro": "3.0의 확장 경험을 기존의 단일 Pro에 함께 담아요. 새로운 구독이나 여정마다 따로 사는 이용권은 없어요.",
+    "proIntro": "모든 심화 체험을 하나의 Pro 구매에 담았어요. 구독은 없고, 가족 공유로 최대 6명이 함께 쓸 수 있어요.",
     "freeTitle": "호기심에는 문턱 없이",
-    "freeText": "기본 탐험, 보이저 1·2호와 해왕성 조우, 달 찾기, 출처, 기본 공유, 30·60 FPS는 무료입니다. 지구와 태양의 시네마틱을 실제 장면에서 1분간 미리 볼 수 있어요.",
+    "freeText": "기본 탐험, 보이저 1·2호와 해왕성 조우, 아폴로 11호 달 착륙, 달 찾기, 다큐 1편, 지구돋이와 창백한 푸른 점, 출처, 기본 공유, 30·60 FPS는 무료입니다. Pro 체험은 모두 무료 미리보기로 시작하고, 지구와 태양의 시네마틱은 1분간 미리 볼 수 있어요.",
     "proList": [
+      "무료 미리보기 다음까지 이어지는 우주 체험 19가지",
       "지구·태양·행성의 시네마틱 연출",
-      "최근 관측 구름과 확보된 기록 재생",
-      "블랙홀 스튜디오와 우주선 직접 비행",
+      "다큐 2–6편과 모든 사진 체험",
+      "블랙홀 스튜디오와 태양계 전체 비행",
       "지구의 시간과 3D 지구 내부",
-      "추가 탐사 관측실·과학 상세·나의 관측",
+      "관측 구름·추가 관측실·과학 자료·관측 노트",
       "Pro Motion · 지원 기기에서 최대 120 FPS"
     ],
-    "proNote": "3.0은 출시 준비 중이에요. 출시 시 이용 가능한 기능과 지역별 가격은 앱에서 안내해요.",
+    "proNote": "지역별 가격은 앱에서 안내해요. Pro는 가족 공유가 되는 한 번 구매예요.",
     "truthTitle": "아름답게 보여주고, 정직하게 설명해요.",
     "truthText": "우주먼지는 SnapWorks Lab이 만드는 iPhone·iPad용 3D 우주 탐험 앱입니다. 연결된 천체를 탐색하고 크기를 비교하며, 실제 발견의 근거를 읽어보세요. 관측, 재구성, 모델 표현을 구분하고 출처를 함께 제공합니다.",
     "sourceLabel": "바탕이 되는 과학 자료",
@@ -472,11 +519,15 @@ export const locales = {
     "faq": [
       [
         "우주먼지는 어떤 앱인가요?",
-        "우주먼지(Dust to Cosmos: Universe Scale)는 SnapWorks Lab의 iPhone·iPad용 3D 우주 탐험 앱입니다. 연결된 행성과 위성, 항성, 블랙홀과 심우주를 둘러보고, 천체의 크기와 우주의 시간을 과학적 출처와 함께 탐험할 수 있어요."
+        "우주먼지(Dust to Cosmos: Space Explorer)는 SnapWorks Lab의 iPhone·iPad용 3D 우주 탐험 앱입니다. 연결된 행성과 위성, 항성, 블랙홀과 심우주를 둘러보고, 아폴로 11호부터 화성까지 실제 임무를 직접 체험하며, 그 뒤의 과학적 출처를 함께 읽을 수 있어요."
       ],
       [
-        "3.0은 지금 사용할 수 있나요?",
-        "3.0은 출시 준비 중입니다. 이 페이지의 App Store 링크는 현재 공개된 버전을 엽니다. 소개 화면은 3.0 개발 빌드에서 촬영했으며, 실제 업데이트 제공 여부는 App Store에서 확인할 수 있습니다."
+        "3.2는 지금 사용할 수 있나요?",
+        "3.2는 App Store 출시를 준비하고 있어요. 이 페이지의 App Store 링크는 현재 공개된 버전을 열고, 우주 체험은 3.2가 나오면 함께 제공됩니다. 3.2 소개의 이미지는 3.2 빌드에서 앱이 직접 렌더한 화면이에요."
+      ],
+      [
+        "아폴로 11호 달 착륙은 정말 무료인가요?",
+        "네. 아폴로 11호 달 착륙은 분리부터 '이글이 착륙했다'까지 무료이고, 고요의 기지 걷기 무료 미리보기로 이어집니다. 나머지 19가지 체험은 첫 하이라이트 직전까지 무료 미리보기로 열리고, Pro로 끝까지 이어져요."
       ],
       [
         "iPhone뿐 아니라 iPad도 지원하나요?",
@@ -484,11 +535,11 @@ export const locales = {
       ],
       [
         "무료 기능과 Pro는 어떻게 다른가요?",
-        "기본 탐험, 보이저 1·2호와 해왕성 조우, 달 찾기, 출처, 기본 공유, 30·60 FPS는 무료입니다. 지구와 태양의 시네마틱을 실제 장면에서 1분간 미리 볼 수 있어요. 심화 체험은 구독 없는 단일 Pro 구매에 포함됩니다. 고주사율 Pro Motion은 Pro 기능이며 실제 속도는 장면·기기·온도·전원 상태에 따라 달라집니다. 가격은 앱에서 확인하세요."
+        "기본 탐험, 보이저 1·2호와 해왕성 조우, 아폴로 11호 달 착륙, 달 찾기, 다큐 1편, 지구돋이와 창백한 푸른 점, 출처, 기본 공유, 30·60 FPS는 무료이고, Pro 체험은 모두 무료 미리보기로 시작합니다. 심화 체험은 구독 없는 단일 Pro 구매에 포함되며, 가족 공유로 최대 6명이 함께 쓸 수 있어요. 고주사율 Pro Motion은 Pro 기능이며 실제 속도는 장면·기기·온도·전원 상태에 따라 달라집니다. 가격은 앱에서 확인하세요."
       ],
       [
         "실시간 관측인가요, 시뮬레이션인가요?",
-        "기능마다 달라요. 구름은 촬영 시각을 표시하는 관측 자료이며 누락될 수 있어요. 태양은 보관 자료와 모델 효과를 조합합니다. 보이저는 공개 궤적을 사용하고 직접 조종은 가상 비행이에요. 과거 지리는 재구성이며 초기 환경은 모델입니다. 출처와 Truth Class에서 이를 구별해요."
+        "기능마다 달라요. 구름은 촬영 시각을 표시하는 관측 자료이며 누락될 수 있어요. 태양은 보관 자료와 모델 효과를 조합합니다. 보이저는 공개 궤적을 사용하고 직접 조종은 가상 비행이에요. 과거 지리는 재구성이며 초기 환경은 모델입니다. 출처와 Truth Class에서 이를 구별해요. 우주 체험은 공개된 임무 기록과 교신, 지형으로 재구성했으며, 근사값과 재구성 값은 표시하고 화성 도시는 구상이에요."
       ],
       [
         "인터넷 없이도 사용할 수 있나요?",
@@ -496,15 +547,47 @@ export const locales = {
       ],
       [
         "App Store에 선정된 적이 있나요?",
-        "네. 2026년 7월 미국 App Store의 ‘Best New Apps and Updates’, 캐나다의 ‘Hot This Week’에 소개됐어요. 두 지역 모두 iPhone과 iPad 목록에서 2026년 7월 4일 확인한 기록이 있어요. 7월 4일은 확인일이며 최초 선정 시작일을 뜻하지 않습니다. Apple의 목록은 수시로 변경되며, 이 이력은 출시 예정인 3.0과 별개입니다."
+        "네. 2026년 7월 미국 App Store의 ‘Best New Apps and Updates’, 캐나다의 ‘Hot This Week’에 소개됐어요. 두 지역 모두 iPhone과 iPad 목록에서 2026년 7월 4일 확인한 기록이 있어요. 7월 4일은 확인일이며 최초 선정 시작일을 뜻하지 않습니다. Apple의 목록은 수시로 변경돼요."
       ]
     ],
     "finalTitle": "이제, 당신의 우주를 만나세요.",
-    "finalText": "오늘 탐험을 시작하세요. 3.0이 새로운 깊이로 이어집니다.",
+    "finalText": "오늘 탐험을 시작하세요. 3.2에서 우주 체험 20가지가 이어집니다.",
     "footerText": "SnapWorks Lab이 호기심으로 만듭니다.",
     "privacy": "개인정보 처리",
     "support": "고객 지원",
     "sources": "과학과 출처",
-    "updated": "2026년 9월 24일 갱신"
+    "updated": "2026년 11월 9일 갱신",
+    "flightLabel": "3.2의 새로운 체험",
+    "flightTitle": "실제 임무로 만든 우주 체험 20가지.",
+    "flightIntro": "실제 교신과 LRO 지형으로 아폴로 11호의 분리부터 착륙까지 다시 겪어 보세요. 그다음엔 고요의 기지를 걷고, 새턴 V로 날아오르고, ISS에 도킹하고, 화성 첫 기지가 세워지는 모습을 지켜보세요.",
+    "flightCards": [
+      [
+        "moon",
+        "아폴로 11호와 달",
+        "실제 교신과 LRO 지형 위에서 이글을 착륙시키고, 고요의 기지를 걷고, 월면차를 몰고, 망치와 깃털을 떨어뜨려 보세요. 아폴로 11호 착륙은 무료입니다.",
+        "달 표면의 아폴로 착륙선과 성조기를 담은 우주먼지 실제 화면"
+      ],
+      [
+        "launch",
+        "새턴 V에서 궤도까지",
+        "잭 킹의 실제 카운트다운과 함께 발사부터 단 분리, 탈출 타워 분리까지 올라가고, 아르테미스 II로 달을 돌아 나오세요.",
+        "지구 곡면 위로 솟아오르는 새턴 V를 담은 우주먼지 실제 화면"
+      ],
+      [
+        "iss",
+        "ISS·허블·크루 드래곤",
+        "큐폴라에서 내 도시 위를 지나는 시각을 확인하고, 우주유영과 허블 수리, 크루 드래곤 도킹을 해 보세요.",
+        "구름 낀 지구 위 국제우주정거장을 담은 우주먼지 실제 화면"
+      ],
+      [
+        "mars",
+        "착륙부터 도시까지, 화성",
+        "퍼서비어런스를 착륙시키고, 인제뉴어티를 날리고, 화성의 하루를 보낸 뒤 첫 기지와 화성 도시(구상)가 하나씩 세워지는 과정을 지켜보세요.",
+        "거주 모듈과 온실이 있는 화성 첫 기지를 담은 우주먼지 실제 화면"
+      ]
+    ],
+    "flightFreeTitle": "모든 체험을 먼저 무료로",
+    "flightFree": "Pro 체험은 첫 하이라이트 직전까지 무료 미리보기로 열리고, 다음 장면은 짧은 예고편으로 보여 줘요. 그 자리에서 Pro를 구매하면 멈춘 장면에서 바로 이어집니다. 직접 착륙은 하루 한 번 무료로 도전할 수 있어요.",
+    "flightNote": "3.2 빌드에서 앱이 직접 렌더한 화면입니다. 재구성 장면은 공개된 임무 기록을 따르며, 화성 도시는 구상이에요."
   }
 };

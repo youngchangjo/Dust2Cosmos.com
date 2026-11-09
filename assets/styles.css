@@ -399,3 +399,25 @@ p { text-wrap: pretty; }
 .launch-offer>span{font-size:28px;color:#c5e8ed}.launch-offer strong{font-size:clamp(19px,2.4vw,26px)}.launch-offer p{font-size:16px;line-height:1.6;margin:8px 0;color:#d0d5d9}.launch-offer .text-link{margin-top:12px}
 
 .pro-section:has(.launch-offer:not([hidden])){row-gap:32px}.launch-offer>div{flex:1}.launch-offer .text-link{color:#fff}
+
+/* 3.2 space experiences */
+.spaceflight { padding-block: 136px 110px; }
+.spaceflight-head { max-width: 1080px; }
+.spaceflight-head h2 { max-width: 820px; }
+.spaceflight-head .section-description { max-width: 700px; margin-top: 25px; }
+.spaceflight-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 32px; margin-top: 60px; max-width: 1280px; }
+.spaceflight-card { margin: 0; }
+.spaceflight-card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 18px; background: #000; box-shadow: 0 0 0 1px #ffffff14; }
+.spaceflight-card figcaption { padding-top: 20px; }
+.spaceflight-card h3 { font-size: clamp(19px, 1.6vw, 23px); }
+.spaceflight-card p { margin-top: 10px; color: var(--muted); font-size: 16px; line-height: 1.75; max-width: 560px; }
+.spaceflight-free { margin-top: 56px; padding: 26px 0 0; border-top: 1px solid var(--line); max-width: 860px; }
+.spaceflight-free h3 { font-size: 19px; color: var(--accent); }
+.spaceflight-free p { margin-top: 10px; color: var(--muted); font-size: 16px; line-height: 1.75; }
+.spaceflight-note { margin-top: 18px; max-width: 860px; }
+@media (max-width: 700px) {
+  .spaceflight { padding-block: 80px; }
+  .spaceflight-grid { grid-template-columns: 1fr; gap: 36px; margin-top: 36px; }
+  .spaceflight-card img { border-radius: 12px; }
+  .spaceflight-free { margin-top: 40px; }
+}

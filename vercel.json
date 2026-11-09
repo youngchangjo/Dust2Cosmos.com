@@ -5,6 +5,19 @@
   "outputDirectory": "dist",
   "headers": [
     {
+      "source": "/assets/(app-notices-v1|spaceflight-access-v1).json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        },
+        {
+          "key": "Access-Control-Expose-Headers",
+          "value": "Date, Age"
+        }
+      ]
+    },
+    {
       "source": "/assets/pro-launch-campaign.json",
       "headers": [
         {

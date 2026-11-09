@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "note": "3.2 free/Pro boundary, as with the documentaries: the Apollo 11 landing is free, the other experiences are Pro. Values: free, pro, dailyOnce, dailyMinutes:N. An unlisted experience uses the app's bundled rule (Pro).",
+  "access": {
+    "moonLanding": "free",
+    "moonWalk": "pro",
+    "moonChallenge": "pro",
+    "moonMoments": "pro",
+    "rover": "pro",
+    "iss": "pro",
+    "hubble": "pro",
+    "docking": "pro",
+    "launch": "pro",
+    "artemis": "pro",
+    "marsLanding": "pro",
+    "marsDay": "pro",
+    "ingenuity": "pro",
+    "marsBase": "pro",
+    "marsCity": "pro",
+    "huygens": "pro",
+    "venera": "pro",
+    "tagBennu": "pro",
+    "philae": "pro",
+    "jump": "pro"
+  }
+}
